@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="../css/sections.css?v=20260825u">
   <link rel="stylesheet" href="../css/ai-sidebar.css?v=20260711e">
   <link rel="stylesheet" href="../css/osmotr-wizard.css?v=20260825v">
-  <link rel="stylesheet" href="../css/landing-light.css?v=20260825p">
+  <link rel="stylesheet" href="../css/landing-light.css?v=20260826a">
 
   <style>
     /* ══════════════════════════════════════════════════════════
@@ -862,6 +862,48 @@
     .sp-more__tail { font-family: var(--font-display); font-size: 0.95rem; color: var(--color-text-muted); margin: 0; }
     .sp-more__tail a { color: var(--color-accent-ink, #0B7A94); }
 
+  
+    /* ─── ЦВЕТ РАЗДЕЛА (синий) — кнопки хиро и нижнего призыва.
+       Переменные читает и landing-light.css (светлая тема). ─── */
+    body {
+      --spa1: #2B6BA8; --spa2: #1E5A96; --spa1h: #3579B8; --spa2h: #2364A4;
+      --spaText: #ffffff; --spaGlow: 70,160,220; --spaInk: #1E5A96; --spaDark: #6FB5E8;
+    }
+    .sp-cta__glow {
+      background: radial-gradient(circle, rgba(var(--spaGlow), 0.06) 0%, transparent 65%);
+    }
+    .sp-cta__tag { color: var(--spaDark); }
+    .sp-cta__btn-primary, .sp-hero__btn-primary {
+      background: linear-gradient(118deg, var(--spa1), var(--spa2));
+      color: var(--spaText);
+    }
+    .sp-cta__btn-primary:hover, .sp-hero__btn-primary:hover {
+      background: linear-gradient(118deg, var(--spa1h), var(--spa2h));
+      box-shadow: 0 20px 50px rgba(var(--spaGlow), 0.32);
+    }
+    .sp-cta__btn-ghost, .sp-hero__btn-ghost {
+      border-color: rgba(var(--spaGlow), 0.5);
+      color: var(--spaDark);
+    }
+    .sp-cta__btn-ghost:hover, .sp-hero__btn-ghost:hover {
+      border-color: var(--spa1);
+      color: #fff;
+    }
+  
+    /* тёмная тема: явный префикс, чтобы не зависеть от порядка каскада */
+    [data-theme="dark"] .sp-cta__tag { color: var(--spaDark); }
+    [data-theme="dark"] .sp-cta__btn-ghost,
+    [data-theme="dark"] .sp-hero__btn-ghost {
+      border-color: rgba(var(--spaGlow), 0.5);
+      color: var(--spaDark);
+    }
+    [data-theme="dark"] .sp-cta__btn-ghost:hover,
+    [data-theme="dark"] .sp-hero__btn-ghost:hover { border-color: var(--spa1); color: #fff; }
+    [data-theme="dark"] .sp-cta__btn-primary,
+    [data-theme="dark"] .sp-hero__btn-primary {
+      background: linear-gradient(118deg, var(--spa1), var(--spa2));
+      color: var(--spaText);
+    }
   </style>
 </head>
 
