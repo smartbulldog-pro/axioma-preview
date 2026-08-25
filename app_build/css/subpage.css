@@ -1243,3 +1243,10 @@
   background: linear-gradient(90deg, transparent 0%, rgba(22,25,26,0.08) 25%, rgba(21,175,209,0.18) 50%, rgba(22,25,26,0.08) 75%, transparent 100%);
   background-size: 200% 100%;
 }
+
+/* ховер-слой иконок квалификации */
+.fact-card__iconwrap { position: relative; width: 44px; height: 44px;
+  flex-shrink: 0; display: block; }
+.fact-card__iconwrap .fact-card__icon { position: absolute; inset: 0; }
+.fact-card__icon--glow { opacity: 0; transition: opacity 0.35s ease; }
+.fact-card:hover .fact-card__icon--glow { opacity: 1; }
