@@ -1067,6 +1067,34 @@
       border-color: rgba(22,25,26,0.10);
       color: rgba(22,25,26,0.7);
     }
+    /* ─── Статичный блок для ИИ-краулеров перед подвалом ───
+       Без стилей он выглядел браузерным умолчанием: фиолетовые ссылки
+       во всю ширину. Приводим к виду остального сайта. */
+    .sp-breadcrumbs,
+    .sp-more__tail {
+      width: min(720px, 92vw);
+      margin: 0 auto;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      line-height: 1.65;
+      color: var(--color-text-muted);
+    }
+    .sp-breadcrumbs { padding: 2.4rem 0 0.4rem; }
+    .sp-more__tail { padding: 0 0 3rem; }
+    .sp-breadcrumbs a,
+    .sp-more__tail a {
+      color: var(--color-accent-ink, #0B7A94);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(11, 122, 148, 0.35);
+    }
+    .sp-breadcrumbs a:hover,
+    .sp-more__tail a:hover { border-bottom-color: currentColor; }
+    .sp-breadcrumbs .current { color: inherit; }
+    [data-theme="dark"] .sp-breadcrumbs a,
+    [data-theme="dark"] .sp-more__tail a {
+      color: #59C7DE;
+      border-bottom-color: rgba(89, 199, 222, 0.35);
+    }
   </style>
 </head>
 
