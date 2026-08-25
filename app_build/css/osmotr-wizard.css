@@ -1,0 +1,401 @@
+/* ═══════════════════════════════════════════════════════════
+   АКСИОМА — Онлайн-осмотр: стили мастера
+
+   Дополняет .ai-wizard из ai-sidebar.css. Отдельный файл,
+   чтобы услугу можно было снять одним движением: убрать
+   этот css, js/components/osmotr-wizard.js и блок
+   #ai-panel-wizard в shared-components.js.
+   ═══════════════════════════════════════════════════════════ */
+
+/* Правило съёмки — самое важное требование заказчицы */
+.ai-wizard__rule {
+  margin-bottom: 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: var(--ai-accent-12, rgba(21, 175, 209, 0.12));
+  border: 0.5px solid var(--ai-accent-20, rgba(21, 175, 209, 0.2));
+  font-family: var(--font-display);
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--ai-text, rgba(255, 255, 255, 0.85));
+}
+.ai-wizard__rule b { font-weight: 600; }
+
+/* Статус по фотографиям */
+.ai-wizard__photo-status {
+  margin-top: 10px;
+  padding: 9px 12px;
+  border-radius: 10px;
+  font-family: var(--font-display);
+  font-size: 12px;
+  line-height: 1.5;
+}
+.ai-wizard__photo-status.is-ok {
+  background: rgba(16, 185, 129, 0.08);
+  border: 0.5px solid rgba(16, 185, 129, 0.22);
+  color: rgba(110, 231, 183, 0.95);
+}
+.ai-wizard__photo-status.is-warn {
+  background: rgba(245, 158, 11, 0.08);
+  border: 0.5px solid rgba(245, 158, 11, 0.24);
+  color: rgba(252, 211, 77, 0.95);
+}
+
+/* Миниатюры: пометка проблемного кадра и кнопка удаления */
+.ai-wizard__photo-thumb.is-bad { border-color: rgba(245, 158, 11, 0.45); }
+.ai-wizard__photo-thumb.is-bad img { opacity: 0.45; }
+
+.ai-wizard__photo-warn {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 3px 5px;
+  background: rgba(245, 158, 11, 0.9);
+  color: #16130c;
+  font-family: var(--font-display);
+  font-size: 9px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.ai-wizard__photo-del {
+  position: absolute;
+  top: 3px; right: 3px;
+  width: 18px; height: 18px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 13px;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.ai-wizard__photo-thumb:hover .ai-wizard__photo-del,
+.ai-wizard__photo-del:focus-visible { opacity: 1; }
+
+/* Заголовок чек-листа */
+.ai-wizard__checklist-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 18px;
+  padding-bottom: 6px;
+  border-bottom: 0.5px solid var(--ai-border-soft, rgba(255, 255, 255, 0.06));
+  font-family: var(--font-display);
+  font-size: 12px;
+  color: var(--ai-text, rgba(255, 255, 255, 0.85));
+}
+.ai-wizard__checklist-count {
+  font-size: 11px;
+  color: var(--ai-muted, rgba(255, 255, 255, 0.45));
+  flex-shrink: 0;
+}
+
+/* Пункты чек-листа кликабельны */
+.ai-wizard__checklist .ai-wizard__check-item {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+.ai-wizard__checklist .ai-wizard__check-item:hover { color: var(--ai-text, rgba(255, 255, 255, 0.85)); }
+.ai-wizard__checklist .ai-wizard__check-item.is-done { color: rgba(110, 231, 183, 0.9); }
+.ai-wizard__checklist .ai-wizard__check-item.is-done .ai-wizard__check-icon {
+  border-color: rgba(16, 185, 129, 0.45);
+  background: rgba(16, 185, 129, 0.14);
+  color: rgba(110, 231, 183, 1);
+}
+
+/* Согласие на обработку ПДн (152-ФЗ) */
+.ai-wizard__consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 4px;
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-size: 11.5px;
+  line-height: 1.5;
+  color: var(--ai-muted, rgba(255, 255, 255, 0.45));
+}
+.ai-wizard__consent input {
+  position: absolute;
+  opacity: 0;
+  width: 0; height: 0;
+}
+.ai-wizard__consent-box {
+  width: 16px; height: 16px;
+  margin-top: 1px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  border: 0.5px solid var(--ai-border, rgba(255, 255, 255, 0.12));
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+.ai-wizard__consent input:checked + .ai-wizard__consent-box {
+  background: var(--ai-accent, rgba(21, 175, 209, 1));
+  border-color: var(--ai-accent, rgba(21, 175, 209, 1));
+}
+.ai-wizard__consent input:checked + .ai-wizard__consent-box::after {
+  content: '✓';
+  display: block;
+  color: #06222a;
+  font-size: 11px;
+  line-height: 15px;
+  text-align: center;
+  font-weight: 700;
+}
+.ai-wizard__consent input:focus-visible + .ai-wizard__consent-box {
+  outline: 2px solid var(--ai-accent-40, rgba(21, 175, 209, 0.4));
+  outline-offset: 2px;
+}
+.ai-wizard__consent a { color: var(--ai-accent, rgba(21, 175, 209, 1)); }
+
+/* Ошибка на шаге контактов */
+.ai-wizard__error {
+  margin-top: 10px;
+  padding: 9px 12px;
+  border-radius: 10px;
+  background: rgba(245, 158, 11, 0.08);
+  border: 0.5px solid rgba(245, 158, 11, 0.24);
+  font-family: var(--font-display);
+  font-size: 12px;
+  line-height: 1.5;
+  color: rgba(252, 211, 77, 0.95);
+}
+
+.ai-wizard__input.is-invalid { border-color: rgba(245, 158, 11, 0.5); }
+
+/* Экран отправки */
+.ai-wizard__send {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.ai-wizard__send-btn {
+  display: block;
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 0.5px solid var(--ai-border, rgba(255, 255, 255, 0.12));
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--ai-text, rgba(255, 255, 255, 0.85));
+  font-family: var(--font-display);
+  font-size: 13px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+.ai-wizard__send-btn:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.ai-wizard__send-btn--primary {
+  background: var(--ai-accent, rgba(21, 175, 209, 1));
+  border-color: var(--ai-accent, rgba(21, 175, 209, 1));
+  color: #04222a;
+  font-weight: 600;
+}
+.ai-wizard__send-btn--primary:hover { background: rgba(21, 175, 209, 0.88); }
+.ai-wizard__send-btn--ghost { background: none; }
+
+.ai-wizard__send-note {
+  margin-top: 12px;
+  font-family: var(--font-display);
+  font-size: 11.5px;
+  line-height: 1.55;
+  color: var(--ai-muted, rgba(255, 255, 255, 0.45));
+}
+
+/* Текст заявки — свернуто */
+.ai-wizard__preview {
+  margin-top: 14px;
+  font-family: var(--font-display);
+  font-size: 11.5px;
+  color: var(--ai-muted, rgba(255, 255, 255, 0.45));
+}
+.ai-wizard__preview summary { cursor: pointer; padding: 4px 0; }
+.ai-wizard__preview pre {
+  margin: 8px 0 0;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 0.5px solid var(--ai-border-soft, rgba(255, 255, 255, 0.06));
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: var(--font-display);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+/* ── Светлая тема ──
+   В ai-sidebar.css часть рамок и подложек мастера заданы белым «в лоб»,
+   без переменных, — на светлом фоне они пропадают. Возвращаем видимость. */
+[data-theme="light"] .ai-wizard__upload-zone,
+[data-theme="light"] .ai-wizard__type-card,
+[data-theme="light"] .ai-wizard__check-icon,
+[data-theme="light"] .ai-wizard__btn,
+[data-theme="light"] .ai-wizard__photo-thumb {
+  border-color: rgba(16, 25, 26, 0.14);
+}
+[data-theme="light"] .ai-wizard__type-card,
+[data-theme="light"] .ai-wizard__send-btn,
+[data-theme="light"] .ai-wizard__preview pre {
+  background: rgba(16, 25, 26, 0.03);
+}
+[data-theme="light"] .ai-wizard__upload-zone:hover,
+[data-theme="light"] .ai-wizard__type-card:hover,
+[data-theme="light"] .ai-wizard__send-btn:hover {
+  background: rgba(16, 25, 26, 0.06);
+  border-color: rgba(16, 25, 26, 0.22);
+}
+[data-theme="light"] .ai-wizard__progress-step { background: rgba(16, 25, 26, 0.1); }
+[data-theme="light"] .ai-wizard__check-item { border-bottom-color: rgba(16, 25, 26, 0.06); }
+[data-theme="light"] .ai-wizard__type-card:hover .ai-wizard__type-label,
+[data-theme="light"] .ai-wizard__type-card.is-selected .ai-wizard__type-label,
+[data-theme="light"] .ai-wizard__success-title { color: rgba(16, 25, 26, 0.88); }
+[data-theme="light"] .ai-wizard__input,
+[data-theme="light"] .ai-wizard__select { color: rgba(16, 25, 26, 0.88); }
+[data-theme="light"] .ai-wizard__input::placeholder { color: rgba(16, 25, 26, 0.3); }
+[data-theme="light"] .ai-wizard__send-btn--primary {
+  background: var(--ai-accent, rgba(21, 175, 209, 1));
+  border-color: var(--ai-accent, rgba(21, 175, 209, 1));
+  color: #04222a;
+}
+
+[data-theme="light"] .ai-wizard__rule {
+  color: rgba(15, 23, 30, 0.88);
+}
+[data-theme="light"] .ai-wizard__photo-status.is-ok {
+  background: rgba(5, 122, 85, 0.08);
+  border-color: rgba(5, 122, 85, 0.22);
+  color: rgba(4, 92, 64, 0.95);
+}
+[data-theme="light"] .ai-wizard__photo-status.is-warn,
+[data-theme="light"] .ai-wizard__error {
+  background: rgba(180, 83, 9, 0.08);
+  border-color: rgba(180, 83, 9, 0.24);
+  color: rgba(146, 64, 14, 0.95);
+}
+[data-theme="light"] .ai-wizard__checklist .ai-wizard__check-item.is-done { color: rgba(4, 108, 78, 0.95); }
+
+/* Что стало со снимками при подготовке к отправке */
+.ai-wizard__photo-note {
+  margin-top: 12px;
+  padding: 9px 12px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 0.5px solid var(--ai-border-soft, rgba(255, 255, 255, 0.06));
+  font-family: var(--font-display);
+  font-size: 11.5px;
+  line-height: 1.55;
+  color: var(--ai-muted, rgba(255, 255, 255, 0.45));
+}
+.ai-wizard__photo-note:empty { display: none; }
+[data-theme="light"] .ai-wizard__photo-note {
+  background: rgba(16, 25, 26, 0.03);
+  border-color: rgba(16, 25, 26, 0.08);
+}
+
+/* Заголовок шага в ai-sidebar.css задан белым «в лоб» — на светлой теме
+   он пропадал на белой панели. Возвращаем читаемость. */
+[data-theme="light"] .ai-wizard__step-title { color: rgba(16, 25, 26, 0.88); }
+[data-theme="light"] .ai-wizard__step-label { color: rgba(16, 25, 26, 0.45); }
+
+/* ── Мобильные правки к панели помощника ──
+   Правила лежат здесь, а не в ai-sidebar.css: тот относится к ИИ-стеку
+   второго этапа, а это чисто визуальные исправления. Файл подключается
+   после него, поэтому переопределение срабатывает. */
+
+/* Поле мельче 16 px заставляет iOS Safari зумить страницу при фокусе.
+   Внутри фиксированной панели это ломает её выравнивание. */
+.ai-wizard__input,
+.ai-wizard__select,
+.ai-chat__input { font-size: 16px; }
+
+/* Видимый фокус с клавиатуры: в ai-sidebar.css у полей стоит outline: none,
+   а единственным признаком фокуса была едва заметная рамка. */
+.ai-wizard__input:focus-visible,
+.ai-wizard__select:focus-visible,
+.ai-chat__input:focus-visible {
+  outline: 2px solid var(--ai-accent, #15AFD1);
+  outline-offset: 2px;
+}
+
+/* Кнопка закрытия была 34 px, а закрыть тапом по фону нельзя: на телефоне
+   панель занимает почти всю ширину и на диммер остаётся полоска в 8 px. */
+.ai-sidebar__close { position: relative; }
+.ai-sidebar__close::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 44px; height: 44px;
+  transform: translate(-50%, -50%);
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   🌗 СВЕТЛАЯ ТЕМА: иконки помощника и мастера
+   У этих иконок появился свой светлый набор (light-/glow-), а затемнение
+   brightness(0.7) было рассчитано на тёмную панель — на белом фоне картинки
+   оно превращало плашку в серую. Подписи были 11 px и почти прозрачные.
+   ═══════════════════════════════════════════════════════════ */
+:root[data-theme="light"] .ai-wizard__type-img--obs,
+:root[data-theme="light"] .ai-tabs__icon--obs {
+  filter: none;
+}
+/* Подписи типов объектов и вкладок: были 11 px при прозрачности 0.35 —
+   это около 2,5:1, ниже нормы контраста в обеих темах. */
+.ai-wizard__type-label,
+.ai-tabs__label {
+  font-size: 12px;
+}
+:root[data-theme="light"] .ai-wizard__type-label,
+:root[data-theme="light"] .ai-tabs__label {
+  color: rgba(16, 25, 26, 0.72);
+}
+:root[data-theme="dark"] .ai-wizard__type-label,
+:root[data-theme="dark"] .ai-tabs__label {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   ⌨️ СКРЫТОЕ — ВНЕ КЛАВИАТУРЫ
+   Неактивная вкладка панели гасилась только прозрачностью: её кнопки
+   продолжали ловить Tab, и фокус уходил на элементы, которых не видно.
+   ═══════════════════════════════════════════════════════════ */
+.ai-panel {
+  visibility: hidden;
+  transition: opacity 0.35s ease, transform 0.35s ease, visibility 0s linear 0.35s;
+}
+.ai-panel.is-active {
+  visibility: visible;
+  transition: opacity 0.35s ease, transform 0.35s ease, visibility 0s;
+}
+
+
+/* Подсказка «JPG, PNG · до 20 МБ · нужно минимум 8 фото» стояла 10 px при
+   прозрачности 0.15 — на светлой панели белым по белому, а это единственное
+   место, где названо требование к числу снимков. */
+.ai-wizard__upload-hint { font-size: 12px; }
+:root[data-theme="light"] .ai-wizard__upload-hint { color: rgba(16, 25, 26, 0.6); }
+:root[data-theme="dark"] .ai-wizard__upload-hint { color: rgba(255, 255, 255, 0.5); }
+:root[data-theme="light"] .ai-wizard__check-icon { color: rgba(16, 25, 26, 0.45); }
+
+
+/* На телефоне наведения нет, поэтому кнопка удаления фото была невидимой —
+   а мастер как раз мобильный: снимки делают телефоном. */
+@media (hover: none) {
+  .ai-wizard__photo-del { opacity: 1; background: rgba(0, 0, 0, 0.65); }
+}
+.ai-wizard__photo-del { width: 24px; height: 24px; }

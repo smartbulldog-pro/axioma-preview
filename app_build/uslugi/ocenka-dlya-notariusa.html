@@ -1,0 +1,2393 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <script>(function(){try{document.documentElement.setAttribute('data-theme',localStorage.getItem('axioma-theme')||'light')}catch(e){}})();</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Оценка имущества для нотариуса в Барнауле: наследство, дарение, сделки — от 2 500 ₽ за 1–2 дня. Отчёт по 135-ФЗ принимают нотариусы по всей России.">
+  <meta name="theme-color" content="#FAF9F7">
+  <title>Оценка для нотариуса в Барнауле — Аксиома | от 2 500 ₽</title>
+  <link rel="canonical" href="https://аксиома-ок.рф/uslugi/ocenka-dlya-notariusa.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Оценка для нотариуса в Барнауле — Аксиома | от 2 500 ₽">
+  <meta property="og:description" content="Оценка имущества для нотариуса в Барнауле: наследство, дарение, сделки — от 2 500 ₽ за 1–2 дня. Отчёт по 135-ФЗ принимают нотариусы по всей России.">
+  <meta property="og:url" content="https://аксиома-ок.рф/uslugi/ocenka-dlya-notariusa.html">
+  <meta property="og:image" content="https://аксиома-ок.рф/img/uslugi/scene-notarius.jpg">
+  <meta property="og:site_name" content="Аксиома — оценочная компания, Барнаул">
+  <meta property="og:image:width" content="1408">
+  <meta property="og:image:height" content="768">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:locale" content="ru_RU">
+
+  <link rel="stylesheet" href="../css/fonts.css">
+  <link rel="stylesheet" href="../css/main.css?v=20260825w">
+  <link rel="stylesheet" href="../css/header.css?v=20260825t">
+  <link rel="stylesheet" href="../css/sections.css?v=20260825u">
+  <link rel="stylesheet" href="../css/ai-sidebar.css?v=20260711e">
+  <link rel="stylesheet" href="../css/osmotr-wizard.css?v=20260825v">
+  <link rel="stylesheet" href="../css/landing-light.css?v=20260825p">
+
+  <style>
+    /* ══════════════════════════════════════════════════════════
+       NEDVIZHIMOST — Cinematic Subpage
+       Архитектура + визуал = эталон uslugi.html
+       ══════════════════════════════════════════════════════════ */
+
+    :root {
+      --warm:   #D4923A;
+      --warm-2: rgba(212, 146, 58, 0.12);
+      --cool:   #15AFD1;
+      --cool-2: rgba(21, 175, 209, 0.12);
+      --slate:  #7A92B5;
+      --accent: #D4923A;
+      --slate-2:rgba(122, 146, 181, 0.12);
+      --grain: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    }
+
+    body[data-page-id="uslugi"] { background: var(--color-bg); }
+
+    /* ─── Grain overlay ─── */
+    .page-grain {
+      position: fixed; inset: 0;
+      background-image: var(--grain);
+      background-size: 200px;
+      pointer-events: none;
+      z-index: 999;
+      opacity: 0.6;
+      mix-blend-mode: overlay;
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       BREADCRUMBS
+       ══════════════════════════════════════════════════════════ */
+    .sp-breadcrumbs {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: calc(var(--header-height, 64px) + 1.25rem) 2rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.55);
+      flex-wrap: wrap;
+    }
+
+    .sp-breadcrumbs a {
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .sp-breadcrumbs a:hover { color: var(--cool); }
+    .sp-breadcrumbs .sep { opacity: 0.4; }
+    .sp-breadcrumbs .current { color: rgba(255,255,255,0.75); }
+
+    /* ══════════════════════════════════════════════════════════
+       HERO — compact premium
+       ══════════════════════════════════════════════════════════ */
+    .sp-hero {
+      position: relative;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      padding: 0.5rem 2rem 2rem;
+      min-height: calc(100vh - 88px);
+    }
+
+    .sp-hero__bg {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(21,175,209,0.07) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 40% at 20% 100%, rgba(212,146,58,0.05) 0%, transparent 50%),
+        var(--color-bg);
+    }
+
+    .sp-hero__lines {
+      position: absolute; inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .sp-hero__line {
+      position: absolute;
+      background: rgba(255,255,255,0.03);
+      transform-origin: 0 0;
+    }
+    .sp-hero__line--h { left: 0; right: 0; height: 1px; }
+    .sp-hero__line--v { top: 0; bottom: 0; width: 1px; }
+
+    .sp-hero__content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 900px;
+    }
+
+    .sp-hero__tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--warm);
+      margin-bottom: 0.9rem;
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    .sp-hero__tag-dot {
+      width: 4px; height: 4px; border-radius: 50%;
+      background: var(--warm);
+      flex-shrink: 0;
+    }
+    .sp-hero__tag-line {
+      width: 28px; height: 1px; background: var(--warm);
+    }
+
+    .sp-hero__h1 {
+      font-family: 'Cormorant', 'Georgia', serif;
+      font-size: clamp(3.4rem, 9vw, 7.4rem);
+      font-weight: 300;
+      line-height: 0.98;
+      letter-spacing: -0.02em;
+      color: #fff;
+      margin: 0 0 2rem;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    .sp-hero__h1 em {
+      display: inline-block;
+      font-style: italic;
+      font-weight: 500;
+      font-size: 1.16em;
+      line-height: 0.9;
+      letter-spacing: -0.015em;
+      margin-top: 0.06em;
+      background: linear-gradient(102deg, var(--accent) 0%, var(--color-text) 94%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+
+    /* ─── Typographic hero (нотариус — тёплое золото; ключ «Мы рядом») ─── */
+    .sp-hero .sp-hero__content { max-width: min(1120px, 92vw); }
+    .sp-hero__h1--display {
+      display: block;
+      width: min(720px, 92vw); max-width: 100%;
+      margin: 0 auto 1rem;
+      line-height: 1;
+    }
+    .thd-l1, .thd-l2, .thd-l3 {
+      display: block;
+      width: 100%;
+      margin: 0;
+      text-align: justify;
+      text-align-last: justify;
+      -moz-text-align-last: justify;
+      text-justify: inter-character;
+    }
+    .thd-l1 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 900;
+      font-size: clamp(2.2rem, 12.8vw, 6.25rem);
+      text-transform: uppercase;
+      line-height: 0.86;
+      color: var(--color-text, #fff);
+    }
+    .thd-l2 {
+      font-family: 'Cormorant', 'Georgia', serif;
+      font-style: italic;
+      font-weight: 500;
+      font-size: clamp(2.3rem, 13.3vw, 6.5rem);
+      line-height: 0.98;
+      margin-top: 0.02em;
+      color: var(--color-text, #fff);
+      opacity: 0.96;
+    }
+    .thd-l3 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 900;
+      font-size: clamp(2.6rem, 14.8vw, 7.25rem);
+      text-transform: uppercase;
+      line-height: 0.92;
+      margin-top: 0.02em;
+      background: linear-gradient(118deg, #E7A94D 0%, #C2781A 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+    /* Lead — та же эталонная ширина, тоже justified, разные стили */
+    .sp-hero__lead.sp-hero__lead--typo {
+      width: min(720px, 92vw);
+      max-width: 100%;
+      margin: 0 auto 1.5rem;
+    }
+    .sp-hero__lead--typo .lead-l1,
+    .sp-hero__lead--typo .lead-l2,
+    .sp-hero__lead--typo .lead-l3 {
+      display: block;
+      width: 100%;
+      text-align: justify;
+      text-align-last: justify;
+      -moz-text-align-last: justify;
+      text-justify: inter-character;
+    }
+    .sp-hero__lead--typo .lead-l1 { font-size: 0.98em; }
+    .sp-hero__lead--typo .lead-l2 {
+      font-family: 'Cormorant', 'Georgia', serif;
+      font-style: italic;
+      font-weight: 500;
+      font-size: 1.35em;
+      line-height: 1.3;
+      margin-top: 0.4em;
+    }
+    .sp-hero__lead--typo .lead-l3 {
+      font-size: 0.98em;
+      margin-top: 0.55em;
+    }
+    /* #C2781A на светлом фоне даёт 3,3:1 — для текста берём темнее */
+    .sp-hero__lead--typo .lead-l3 b { color: #8A5A12; font-weight: 700; }
+    [data-theme="dark"] .sp-hero__lead--typo .lead-l3 b { color: #E8B45E; }
+    /* Мобайл: подзаголовок при переносе — по левому краю (без «дырявого» justify) */
+    @media (max-width: 600px) {
+      .sp-hero__lead--typo .lead-l1,
+      .sp-hero__lead--typo .lead-l2,
+      .sp-hero__lead--typo .lead-l3 {
+        text-align: left;
+        text-align-last: left;
+        -moz-text-align-last: left;
+      }
+    }
+    /* Кнопки — на всю эталонную ширину, тёплое золото */
+    #heroActions { width: min(720px, 92vw); max-width: 100%; margin: 0 auto; gap: 0.9rem; }
+    #heroActions > a { flex: 1 1 0; justify-content: center; }
+    #heroActions .sp-hero__btn-primary {
+      background: linear-gradient(118deg, #E7A94D 0%, #C2781A 100%);
+      color: #3a230a;
+    }
+    #heroActions .sp-hero__btn-primary:hover {
+      background: linear-gradient(118deg, #F0B75E 0%, #D4923A 100%);
+      box-shadow: 0 20px 50px rgba(212,146,58,0.32);
+    }
+    #heroActions .sp-hero__btn-ghost {
+      border-color: rgba(212,146,58,0.5);
+      /* было #C2781A — 3,3:1 на светлом фоне */
+      color: #8A5A12;
+    }
+    [data-theme="dark"] #heroActions .sp-hero__btn-ghost { color: #E8B45E; }
+    #heroActions .sp-hero__btn-ghost:hover {
+      border-color: #C2781A;
+      color: #8a5410;
+      background: rgba(212,146,58,0.06);
+    }
+    @media (max-width: 560px) {
+      #heroActions { flex-direction: column; }
+      #heroActions > a { width: 100%; flex: none; }
+    }
+
+    .sp-hero__lead {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(0.95rem, 1.8vw, 1.15rem);
+      font-weight: 300;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.48);
+      max-width: 560px;
+      margin: 0 auto 3rem;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .sp-hero__actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .sp-hero__btn-primary {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      padding: 0.9rem 1.8rem;
+      border-radius: 100px;
+      background: var(--cool);
+      color: #050f14;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.88rem; font-weight: 700;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.35s ease, background 0.3s ease;
+    }
+    .sp-hero__btn-primary:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 20px 50px rgba(21,175,209,0.28);
+      background: #1FD1F9;
+    }
+
+    .sp-hero__btn-ghost {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      padding: 0.9rem 1.7rem;
+      border-radius: 100px;
+      border: 1px solid rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.65);
+      font-size: 0.88rem; font-weight: 500;
+      text-decoration: none;
+      transition: border-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    }
+    .sp-hero__btn-ghost:hover {
+      border-color: rgba(255,255,255,0.3);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    /* Hero trust strip */
+    .sp-hero__trust {
+      margin-top: 1.3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    .sp-hero__trust-item {
+      display: flex; flex-direction: column; align-items: center; gap: 0.3rem;
+    }
+    .sp-hero__trust-value {
+      font-family: 'Cormorant', 'Georgia', serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 500;
+      color: #fff;
+    }
+    .sp-hero__trust-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       SECTION NAV (sticky — как sp-nav из эталона, адаптация)
+       ══════════════════════════════════════════════════════════ */
+    .sp-nav {
+      position: fixed;
+      right: 16px;
+      top: calc(var(--header-height, 64px) + 8px);
+      z-index: 79;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 4px;
+      pointer-events: none;
+    }
+    .sp-nav__glass { display: contents; }
+    .sp-nav__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 4px;
+    }
+    .sp-nav__item {
+      position: relative;
+      display: flex; align-items: center;
+      gap: 8px;
+      padding: 6px 14px 6px 10px;
+      border-radius: 100px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+      cursor: pointer;
+      border: 1px solid transparent;
+      background: transparent;
+      text-decoration: none;
+      transition: color 0.3s ease, background 0.3s ease, border-color 0.3s ease, transform 0.35s cubic-bezier(0.34,1.56,0.64,1);
+      pointer-events: auto;
+      white-space: nowrap;
+    }
+    .sp-nav__item:hover {
+      color: rgba(255,255,255,0.75);
+      background: rgba(255,255,255,0.04);
+      border-color: rgba(255,255,255,0.08);
+      transform: translateX(-3px);
+    }
+    .sp-nav__item.is-active {
+      color: #fff;
+      background: rgba(255,255,255,0.06);
+      border-color: rgba(255,255,255,0.1);
+    }
+    .sp-nav__pip {
+      width: 5px; height: 5px; border-radius: 50%;
+      flex-shrink: 0; opacity: 0.5;
+      transition: opacity 0.3s ease;
+      background: var(--warm);
+    }
+    .sp-nav__item.is-active .sp-nav__pip { opacity: 1; }
+    @media (max-width: 1024px) { .sp-nav { display: none; } }
+
+    /* ══════════════════════════════════════════════════════════
+       SCENARIO / SECTION BLOCKS (та же архитектура)
+       ══════════════════════════════════════════════════════════ */
+    .sp-scenarios { padding: 0 0 0rem; }
+
+    .sp-scenario {
+      padding: 6rem 2rem;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .sp-scenario__eyebrow {
+      display: flex; align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      overflow: hidden;
+    }
+    .sp-scenario__eyebrow-num {
+      font-family: 'Cormorant', 'Georgia', serif;
+      font-size: 0.9rem; font-style: italic;
+      color: rgba(255,255,255,0.55);
+    }
+    .sp-scenario__eyebrow-dash {
+      flex: 1; max-width: 40px; height: 1px;
+    }
+    .sp-scenario__eyebrow-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.68rem; font-weight: 700;
+      letter-spacing: 0.2em; text-transform: uppercase;
+    }
+
+    .sp-scenario__split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+      margin-bottom: 4rem;
+    }
+    @media (max-width: 900px) {
+      .sp-scenario__split { grid-template-columns: 1fr; gap: 3rem; }
+    }
+
+    .sp-scenario__title {
+      font-family: 'Cormorant', 'Georgia', serif;
+      font-size: clamp(2.4rem, 5vw, 4.2rem);
+      font-weight: 300;
+      line-height: 1.02;
+      letter-spacing: -0.02em;
+      color: #fff;
+      margin: 0 0 1.5rem;
+    }
+    .sp-scenario__title em { font-style: italic; }
+
+    .sp-scenario__quote {
+      font-family: 'Cormorant', 'Georgia', serif;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      font-weight: 400; font-style: italic;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.55);
+      border-left: 2px solid;
+      padding-left: 1.25rem;
+      margin: 0 0 2rem;
+    }
+
+    .sp-scenario__desc {
+      font-size: 0.95rem;
+      line-height: 1.85;
+      color: rgba(255,255,255,0.55);
+    }
+
+    /* ─── Scene (image placeholder) ─── */
+    .sp-scene {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+    }
+    .sp-scene__img-placeholder {
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(135deg, rgba(212,146,58,0.15) 0%, rgba(21,175,209,0.08) 50%, rgba(8,15,16,1) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+    }
+    .sp-scene__img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: brightness(0.55) saturate(0.9);
+      transform: scale(1.05);
+      transition: transform 0.8s cubic-bezier(0.16,1,0.3,1), filter 0.6s ease;
+    }
+    /* У тёмной темы свои вечерние снимки — второй раз затемнять не нужно. */
+    :root[data-theme="dark"] .sp-scene__img { filter: brightness(0.92) saturate(1); }
+    :root[data-theme="dark"] .sp-scene:hover .sp-scene__img { filter: brightness(1) saturate(1.05); }
+    .sp-scene:hover .sp-scene__img {
+      transform: scale(1.0);
+      filter: brightness(0.7) saturate(1.1);
+    }
+    .sp-scene__overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(8,15,16,0.5) 0%, transparent 60%);
+    }
+    .sp-scene__badge {
+      position: absolute;
+      top: 1.25rem; right: 1.25rem;
+      padding: 0.4rem 0.9rem;
+      border-radius: 100px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.65rem; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      background: rgba(8,15,16,0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: rgba(255,255,255,0.6);
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       SERVICE CARDS (точная копия структуры из эталона)
+       ══════════════════════════════════════════════════════════ */
+    .sp-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    @media (max-width: 768px) { .sp-cards { grid-template-columns: 1fr; } }
+    @media (min-width: 769px) and (max-width: 1100px) {
+      .sp-cards { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .sp-card {
+      position: relative;
+      display: block;
+      text-decoration: none;
+      background: var(--color-bg);
+      padding: 2.5rem 2rem;
+      overflow: hidden;
+      cursor: pointer;
+      transition: background 0.4s ease;
+      will-change: transform;
+      opacity: 0;
+      transform: translateY(32px);
+    }
+    .sp-card::before {
+      content: '';
+      position: absolute; inset: 0;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    .sp-card:hover::before { opacity: 1; }
+
+    .sp-card__light {
+      position: absolute;
+      width: 160px; height: 160px;
+      border-radius: 50%;
+      pointer-events: none;
+      transition: transform 0.1s linear, opacity 0.3s ease;
+      opacity: 0;
+      transform: translate(-50%, -50%);
+      filter: blur(40px);
+    }
+    .sp-card:hover .sp-card__light { opacity: 1; }
+
+    /* ─── Icon obsidian/crystal (точная эталонная структура) ─── */
+    .sp-card__icon {
+      position: relative;
+      width: 144px; height: 144px;
+      border-radius: 32px;
+      overflow: hidden;
+      background: rgba(255,255,255,0.02);
+      border: 0.5px solid rgba(255,255,255,0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.75rem;
+      transition:
+        transform 0.5s cubic-bezier(0.34,1.56,0.64,1),
+        background 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+      flex-shrink: 0;
+    }
+    .sp-card:hover .sp-card__icon {
+      transform: scale(1.08) rotate(-6deg);
+      background: rgba(212,146,58,0.05);
+      border-color: rgba(212,146,58,0.2);
+      box-shadow: 0 0 20px rgba(212,146,58,0.15), inset 0 0 16px rgba(212,146,58,0.05);
+    }
+
+    .sp-card__icon-img {
+      position: absolute;
+      inset: 6px;
+      width: calc(100% - 12px);
+      height: calc(100% - 12px);
+      object-fit: contain;
+      border-radius: 22px;
+      transition:
+        opacity 0.5s cubic-bezier(0.165,0.84,0.44,1),
+        transform 0.5s cubic-bezier(0.165,0.84,0.44,1),
+        filter 0.5s cubic-bezier(0.165,0.84,0.44,1);
+    }
+    .sp-card__icon-img--obs {
+      opacity: 1; transform: scale(1);
+      filter: brightness(0.7);
+      z-index: 2;
+    }
+    .sp-card__icon-img--cry {
+      opacity: 0;
+      transform: scale(0.6) rotate(15deg);
+      filter: brightness(1.2);
+      z-index: 1;
+    }
+    .sp-card:hover .sp-card__icon-img--obs {
+      opacity: 0;
+      transform: scale(1.3);
+      filter: blur(4px) brightness(0.3);
+    }
+    .sp-card:hover .sp-card__icon-img--cry {
+      opacity: 1;
+      transform: scale(1) rotate(0);
+      filter: brightness(1.1) drop-shadow(0 0 8px rgba(21,175,209,0.4));
+    }
+
+    /* Particles */
+    .sp-card__icon-particles {
+      position: absolute; inset: 0;
+      z-index: 3;
+      border-radius: 18px;
+      pointer-events: none;
+    }
+    .sp-card__icon-particles::before,
+    .sp-card__icon-particles::after {
+      content: '';
+      position: absolute;
+      width: 3px; height: 3px;
+      border-radius: 50%;
+      top: 50%; left: 50%;
+      opacity: 0;
+    }
+    .sp-card__icon-particles::before { background: rgba(160,160,160,0.6); }
+    .sp-card__icon-particles::after  { background: rgba(120,120,120,0.5); }
+    .sp-card:hover .sp-card__icon-particles::before {
+      opacity: 1;
+      animation: spParticle1 0.6s cubic-bezier(0.165,0.84,0.44,1) forwards;
+    }
+    .sp-card:hover .sp-card__icon-particles::after {
+      opacity: 1;
+      animation: spParticle2 0.6s 0.05s cubic-bezier(0.165,0.84,0.44,1) forwards;
+    }
+    @keyframes spParticle1 {
+      0%   { box-shadow: 0 0 0 rgba(160,160,160,.8), 0 0 0 rgba(160,160,160,.6), 0 0 0 rgba(160,160,160,.4); }
+      50%  { box-shadow: -14px -16px 0 rgba(160,160,160,.6), 16px -12px 0 rgba(140,140,140,.5), -18px 10px 0 rgba(130,130,130,.4); }
+      100% { box-shadow: -22px -24px 0 rgba(160,160,160,0), 24px -20px 0 rgba(140,140,140,0), -26px 16px 0 rgba(130,130,130,0); }
+    }
+    @keyframes spParticle2 {
+      0%   { box-shadow: 0 0 0 rgba(120,120,120,.7), 0 0 0 rgba(120,120,120,.5), 0 0 0 rgba(120,120,120,.4); }
+      50%  { box-shadow: 10px -18px 0 rgba(120,120,120,.5), -16px -14px 0 rgba(100,100,100,.4), 18px 14px 0 rgba(110,110,110,.3); }
+      100% { box-shadow: 16px -26px 0 rgba(120,120,120,0), -24px -22px 0 rgba(100,100,100,0), 26px 22px 0 rgba(110,110,110,0); }
+    }
+
+    .sp-card__title {
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem; font-weight: 600;
+      color: #fff;
+      margin: 0 0 0.6rem;
+    }
+    .sp-card:hover .sp-card__title { color: var(--warm); }
+
+    .sp-card__story {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      /* было 0.38 — текст читался только при наведении, на телефоне его нет */
+      color: rgba(255,255,255,0.62);
+      margin: 0 0 1.75rem;
+    }
+    .sp-card:hover .sp-card__story { color: rgba(255,255,255,0.78); }
+
+    .sp-card__foot {
+      display: flex; align-items: center;
+      justify-content: space-between; gap: 1rem;
+    }
+    .sp-card__price-wrap { display: flex; flex-direction: column; gap: 2px; }
+    .sp-card__price-label {
+      font-size: 0.6rem; font-weight: 600;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+    }
+    .sp-card__price {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.05rem; font-weight: 700;
+      color: #fff;
+      font-variant-numeric: tabular-nums;
+    }
+    .sp-card__arrow {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.08);
+      display: flex; align-items: center; justify-content: center;
+      transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1), border-color 0.3s ease, background 0.3s ease;
+      flex-shrink: 0;
+    }
+    .sp-card__arrow svg {
+      width: 14px; height: 14px;
+      color: rgba(255,255,255,0.35);
+      transition: color 0.3s ease;
+    }
+    .sp-card:hover .sp-card__arrow {
+      transform: rotate(-45deg) scale(1.1);
+      background: rgba(212,146,58,0.12);
+      border-color: rgba(212,146,58,0.35);
+    }
+    .sp-card:hover .sp-card__arrow svg { color: var(--warm); }
+
+    .sp-card__sep {
+      position: absolute;
+      bottom: 0; left: 2rem; right: 2rem;
+      height: 1px;
+      background: rgba(255,255,255,0.05);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.5s cubic-bezier(0.16,1,0.3,1);
+    }
+
+    /* Family theme (warm - for real estate) */
+    .sp-card--family::before {
+      background: radial-gradient(ellipse at var(--mx,50%) var(--my,50%), var(--warm-2) 0%, transparent 60%);
+    }
+    .sp-card--family .sp-card__light { background: var(--warm); }
+    .sp-card--family .sp-card__icon {
+      background: rgba(212,146,58,0.08);
+      border: 1px solid rgba(212,146,58,0.15);
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       STEPS (new section, same architecture language)
+       ══════════════════════════════════════════════════════════ */
+    .sp-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    @media (max-width: 1000px) { .sp-steps { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px)  { .sp-steps { grid-template-columns: 1fr; } }
+
+    .sp-step {
+      position: relative;
+      background: var(--color-bg);
+      padding: 2.2rem 1.8rem;
+      min-height: 220px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      opacity: 0;
+      transform: translateY(32px);
+    }
+    .sp-step__number {
+      font-family: 'Cormorant', 'Georgia', serif;
+      font-size: 1.4rem; font-style: italic;
+      color: var(--warm);
+      opacity: 0.9;
+    }
+    .sp-step__title {
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem; font-weight: 600;
+      color: #fff;
+      margin: 0;
+    }
+    .sp-step__desc {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.55);
+      margin: 0;
+    }
+    .sp-step__icon {
+      order: -1;
+      width: 76px; height: 76px;
+      margin-bottom: 0.5rem;
+      border-radius: 18px;
+      overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      flex-shrink: 0;
+    }
+    .sp-step__icon svg {
+      width: 20px; height: 20px;
+      color: var(--warm);
+    }
+    .sp-step__icon img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       DIVIDER
+       ══════════════════════════════════════════════════════════ */
+    .sp-divider {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    .sp-divider__line {
+      height: 1px;
+      background: linear-gradient(to right,
+        transparent,
+        rgba(255,255,255,0.06) 20%,
+        rgba(255,255,255,0.06) 80%,
+        transparent
+      );
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       BOTTOM CTA
+       ══════════════════════════════════════════════════════════ */
+    .sp-cta {
+      position: relative;
+      padding: 7rem 2rem 6rem;
+      text-align: center;
+      overflow: hidden;
+    }
+    .sp-cta__glow {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%,-50%);
+      width: min(600px, 90vw); height: min(600px, 90vw);
+      background: radial-gradient(circle, rgba(21,175,209,0.06) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .sp-cta__tag {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      font-size: 0.68rem; font-weight: 600;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--cool);
+      margin-bottom: 2rem;
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    .sp-cta__title {
+      font-family: 'Cormorant', 'Georgia', serif;
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      font-weight: 300;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: #fff;
+      margin: 0 0 2.5rem;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    .sp-cta__actions {
+      display: flex; align-items: center; justify-content: center;
+      gap: 1rem; flex-wrap: wrap;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    .sp-cta__btn-primary {
+      display: inline-flex; align-items: center; gap: 0.7rem;
+      padding: 1rem 2.2rem;
+      border-radius: 100px;
+      background: var(--cool);
+      color: #050f14;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem; font-weight: 700;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.35s ease, background 0.3s ease;
+    }
+    .sp-cta__btn-primary:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 20px 50px rgba(21,175,209,0.28);
+      background: #1FD1F9;
+    }
+    .sp-cta__btn-phone {
+      font-size: 0.85rem;
+      animation: phoneBeat 2.5s ease-in-out infinite;
+    }
+    @keyframes phoneBeat {
+      0%,80%,100% { transform: scale(1); }
+      40% { transform: scale(1.15) rotate(-8deg); }
+      60% { transform: scale(1.08) rotate(5deg); }
+    }
+    .sp-cta__btn-ghost {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      padding: 1rem 2rem;
+      border-radius: 100px;
+      border: 1px solid rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.6);
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: border-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    }
+    .sp-cta__btn-ghost:hover {
+      border-color: rgba(255,255,255,0.3);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+    .sp-cta__note {
+      margin-top: 1.5rem;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.55);
+      letter-spacing: 0.04em;
+    }
+
+    @media (max-width: 768px) {
+      /* На узком экране нижняя граница clamp давала 54 px — заголовок
+         занимал полэкрана и отодвигал кнопки под сгиб. */
+      .sp-hero__h1 { font-size: clamp(2rem, 8.5vw, 2.7rem); margin-bottom: 1.25rem; }
+      .sp-hero__h1 em { font-size: 1.08em; }
+      .sp-hero { padding: 2.5rem 1.5rem 4rem; }
+      .sp-scenario { padding: 4rem 1.5rem; }
+      .sp-hero__trust { gap: 1.5rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .sp-cta__btn-phone { animation: none; }
+      * { transition-duration: 0.01ms !important; }
+    }
+    /* Ссылки на соседние услуги. Живут прямо в HTML, а не вставляются скриптом:
+       поисковым роботам и ИИ-краулерам нужна навигация без JavaScript. */
+    .sp-more { padding: 0 0 72px; }
+    .sp-more__inner { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+    .sp-more__title {
+      font-family: var(--font-display); font-size: 0.72rem; font-weight: 500;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--color-text-muted); margin: 0 0 18px;
+    }
+    .sp-more__list { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 22px; padding: 0; list-style: none; }
+    .sp-more__link {
+      display: inline-block; padding: 9px 16px; border-radius: 999px;
+      border: 0.5px solid var(--border-subtle, rgba(255,255,255,.14));
+      font-family: var(--font-display); font-size: 0.9rem; text-decoration: none;
+      color: var(--color-text); transition: border-color .25s, background .25s;
+    }
+    .sp-more__link:hover { border-color: var(--color-accent, #15AFD1); background: rgba(21,175,209,.06); }
+    .sp-more__tail { font-family: var(--font-display); font-size: 0.95rem; color: var(--color-text-muted); margin: 0; }
+    .sp-more__tail a { color: var(--color-accent-ink, #0B7A94); }
+
+  </style>
+</head>
+
+<body data-page-id="uslugi">
+
+  <div class="page-grain" aria-hidden="true"></div>
+
+  <div id="shared-header"></div>
+
+  <!-- Breadcrumbs -->
+  <nav class="sp-breadcrumbs" aria-label="Путь к странице">
+    <a href="../index.html">Главная</a>
+    <span class="sep">/</span>
+    <a href="../uslugi.html">Услуги</a>
+    <span class="sep">/</span>
+    <span class="current">Оценка для нотариуса</span>
+  </nav>
+
+  <!-- HERO -->
+  <section class="sp-hero" id="top" aria-label="Оценка для нотариуса">
+    <div class="sp-hero__bg" aria-hidden="true"></div>
+    <div class="sp-hero__lines" aria-hidden="true">
+      <div class="sp-hero__line sp-hero__line--h" style="top:33%"></div>
+      <div class="sp-hero__line sp-hero__line--h" style="top:66%"></div>
+      <div class="sp-hero__line sp-hero__line--v" style="left:25%"></div>
+      <div class="sp-hero__line sp-hero__line--v" style="left:75%"></div>
+    </div>
+
+    <div class="sp-hero__content">
+      <div class="sp-hero__tag" id="heroTag">
+        <span class="sp-hero__tag-dot"></span>
+        Оценка для нотариуса в Барнауле · по всей России
+        <span class="sp-hero__tag-line"></span>
+      </div>
+
+      <h1 class="sp-hero__h1 sp-hero__h1--display" id="heroH1">
+        <span class="thd-l1">Спокойно</span>
+        <span class="thd-l2">всё оформим —</span>
+        <span class="thd-l3">мы рядом</span>
+      </h1>
+
+      <p class="sp-hero__lead sp-hero__lead--typo" id="heroLead">
+        <span class="lead-l1">Наследство, дарение или сделка — оценим имущество бережно и спокойно,</span>
+        <span class="lead-l2">на нужную дату, с официальной электронной подписью (ЭЦП).</span>
+        <span class="lead-l3">Отчёт по 135-ФЗ сами отправим нотариусу — <b>за 1–2 дня</b>, <b>от 2 500 ₽</b>.</span>
+      </p>
+
+      <div class="sp-hero__actions" id="heroActions">
+        <a href="tel:+79130998881" class="sp-hero__btn-primary">
+          <span class="sp-cta__btn-phone">📞</span>
+          +7 913 099-88-81
+        </a>
+        <a href="https://max.ru/u/f9LHodD0cOL0n-mRdnryGsw7EJZ7Zxtw55dK3RKrty99-5P9BsmoWjZU3_8" class="sp-hero__btn-ghost">
+          <img src="../assets/img/icon-max.png" alt="MAX" width="16" height="16" style="border-radius:3px">
+                MAX
+        </a>
+      </div>
+
+      <div class="sp-hero__trust" id="heroTrust">
+        <div class="sp-hero__trust-item">
+          <span class="sp-hero__trust-value">Команда</span>
+          <span class="sp-hero__trust-label">оценщиков и юристов</span>
+        </div>
+        <div class="sp-hero__trust-item">
+          <span class="sp-hero__trust-value">1–2 дня</span>
+          <span class="sp-hero__trust-label">готовый отчёт</span>
+        </div>
+        <div class="sp-hero__trust-item">
+          <span class="sp-hero__trust-value">30 млн ₽</span>
+          <span class="sp-hero__trust-label">работа застрахована</span>
+        </div>
+        <div class="sp-hero__trust-item">
+          <span class="sp-hero__trust-value">СРО</span>
+          <span class="sp-hero__trust-label">аттестованный оценщик</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STICKY NAV -->
+  <nav class="sp-nav" id="spNav" aria-label="Разделы услуги">
+    <div class="sp-nav__glass">
+      <div class="sp-nav__inner">
+        <button class="sp-nav__item is-active" data-target="sec-what">
+          <span class="sp-nav__pip"></span>
+          Что оцениваем
+        </button>
+        <button class="sp-nav__item" data-target="sec-when">
+          <span class="sp-nav__pip"></span>
+          Когда нужна
+        </button>
+        <button class="sp-nav__item" data-target="sec-how">
+          <span class="sp-nav__pip"></span>
+          Как проходит
+        </button>
+        <button class="sp-nav__item" data-target="sec-docs">
+          <span class="sp-nav__pip"></span>
+          Документы
+        </button>
+        <button class="sp-nav__item" data-target="sec-prices">
+          <span class="sp-nav__pip"></span>
+          Стоимость
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main-content" tabindex="-1" class="sp-scenarios">
+
+    <!-- ═══════════ ЧТО ОЦЕНИВАЕМ ═══════════ -->
+    <section class="sp-scenario" id="sec-what">
+      <div class="sp-scenario__eyebrow">
+        <span class="sp-scenario__eyebrow-num">I</span>
+        <span class="sp-scenario__eyebrow-dash" style="background:var(--warm)"></span>
+        <span class="sp-scenario__eyebrow-label" style="color:var(--warm)">Что оцениваем</span>
+      </div>
+
+      <div class="sp-scenario__split">
+        <div class="sp-scenario__left">
+          <h2 class="sp-scenario__title" id="what-title">
+            От <em>недвижимости</em><br>до автомобиля
+          </h2>
+          <blockquote class="sp-scenario__quote" style="border-color:var(--warm)">
+            «Пока вы рядом с близкими, мы аккуратно посчитаем и оформим всё, что просит нотариус.»
+          </blockquote>
+          <p class="sp-scenario__desc">
+            Для нотариуса оценим любое имущество — квартиру, дом, землю, автомобиль, долю, а также охотничье оружие. По Барнаулу и Алтайскому краю приедем сами, по всей России достаточно прислать фото и документы. Отчёт по 135-ФЗ принимают нотариусы по всей России.
+          </p>
+        </div>
+        <div class="sp-scenario__right">
+          <div class="sp-scene">
+            <img src="../img/uslugi/scene-notarius.jpg" data-dark="../img/uslugi/scene-notarius-dark.jpg" alt="Оценка имущества для нотариуса" class="sp-scene__img" loading="eager" data-img-prompt="family-house-barnaul-golden-hour">
+            <div class="sp-scene__overlay" style="background:linear-gradient(135deg,rgba(8,15,16,0.6) 0%,rgba(212,146,58,0.08) 100%)"></div>
+            <span class="sp-scene__badge">Барнаул · по всей России</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sp-cards" id="whatCards">
+
+        <a href="#sec-prices" class="sp-card sp-card--family" data-card="apartment">
+          <div class="sp-card__light" aria-hidden="true"></div>
+          <div class="sp-card__icon">
+            <img src="img/nedvizhimost/icon-apartment-light.jpg" data-dark="img/nedvizhimost/icon-apartment-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="apartment-icon-obsidian" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-apartment-glow.jpg" data-dark="img/nedvizhimost/icon-apartment-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="apartment-icon-crystal" loading="lazy" decoding="async">
+            <span class="sp-card__icon-particles"></span>
+          </div>
+          <h3 class="sp-card__title">Квартиры и комнаты</h3>
+          <p class="sp-card__story">
+            К нам чаще всего приходят именно по квартире близкого человека. Оценим на нужную дату — для нотариуса, дарения или сделки.
+          </p>
+          <div class="sp-card__foot">
+            <div class="sp-card__price-wrap">
+              <span class="sp-card__price-label">от</span>
+              <span class="sp-card__price">2 500 ₽</span>
+            </div>
+            <div class="sp-card__arrow">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </div>
+          </div>
+          <div class="sp-card__sep"></div>
+        </a>
+
+        <a href="#sec-prices" class="sp-card sp-card--family" data-card="house">
+          <div class="sp-card__light" aria-hidden="true"></div>
+          <div class="sp-card__icon">
+            <img src="img/nedvizhimost/icon-house-light.jpg" data-dark="img/nedvizhimost/icon-house-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="house-icon-obsidian" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-house-glow.jpg" data-dark="img/nedvizhimost/icon-house-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="house-icon-crystal" loading="lazy" decoding="async">
+            <span class="sp-card__icon-particles"></span>
+          </div>
+          <h3 class="sp-card__title">Дом с участком</h3>
+          <p class="sp-card__story">
+            Частный дом или коттедж с землёй. Один отчёт на всё сразу — и дом, и участок. Так удобнее и нотариусу, и наследникам.
+          </p>
+          <div class="sp-card__foot">
+            <div class="sp-card__price-wrap">
+              <span class="sp-card__price-label">от</span>
+              <span class="sp-card__price">6 000 ₽</span>
+            </div>
+            <div class="sp-card__arrow">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </div>
+          </div>
+          <div class="sp-card__sep"></div>
+        </a>
+
+        <a href="#sec-prices" class="sp-card sp-card--family" data-card="share">
+          <div class="sp-card__light" aria-hidden="true"></div>
+          <div class="sp-card__icon">
+            <img src="img/nedvizhimost/icon-share-light.jpg" data-dark="img/nedvizhimost/icon-share-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="share-icon-obsidian" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-share-glow.jpg" data-dark="img/nedvizhimost/icon-share-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="share-icon-crystal" loading="lazy" decoding="async">
+            <span class="sp-card__icon-particles"></span>
+          </div>
+          <h3 class="sp-card__title">Доля в квартире или доме</h3>
+          <p class="sp-card__story">
+            Наследование или дарение доли. Стоимость доли рассчитаем по правилам оценки и понятно покажем, как вышла цифра.
+          </p>
+          <div class="sp-card__foot">
+            <div class="sp-card__price-wrap">
+              <span class="sp-card__price-label">от</span>
+              <span class="sp-card__price">2 500 ₽</span>
+            </div>
+            <div class="sp-card__arrow">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </div>
+          </div>
+          <div class="sp-card__sep"></div>
+        </a>
+
+        <a href="#sec-prices" class="sp-card sp-card--family" data-card="land">
+          <div class="sp-card__light" aria-hidden="true"></div>
+          <div class="sp-card__icon">
+            <img src="img/nedvizhimost/icon-land-light.jpg" data-dark="img/nedvizhimost/icon-land-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="land-icon-obsidian" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-land-glow.jpg" data-dark="img/nedvizhimost/icon-land-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="land-icon-crystal" loading="lazy" decoding="async">
+            <span class="sp-card__icon-particles"></span>
+          </div>
+          <h3 class="sp-card__title">Земельный участок</h3>
+          <p class="sp-card__story">
+            ИЖС, ЛПХ, СНТ, сельхозземли. Учитываем расположение, коммуникации и вид разрешённого использования.
+          </p>
+          <div class="sp-card__foot">
+            <div class="sp-card__price-wrap">
+              <span class="sp-card__price-label">от</span>
+              <span class="sp-card__price">3 000 ₽</span>
+            </div>
+            <div class="sp-card__arrow">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </div>
+          </div>
+          <div class="sp-card__sep"></div>
+        </a>
+
+        <a href="#sec-prices" class="sp-card sp-card--family" data-card="cottage">
+          <div class="sp-card__light" aria-hidden="true"></div>
+          <div class="sp-card__icon">
+            <img src="img/nedvizhimost/icon-cottage-light.jpg" data-dark="img/nedvizhimost/icon-cottage-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="cottage-icon-obsidian" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-cottage-glow.jpg" data-dark="img/nedvizhimost/icon-cottage-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="cottage-icon-crystal" loading="lazy" decoding="async">
+            <span class="sp-card__icon-particles"></span>
+          </div>
+          <h3 class="sp-card__title">Дача и коттедж</h3>
+          <p class="sp-card__story">
+            Летний домик или зимняя дача с участком. Оценим постройки и землю единым отчётом — на нужную дату.
+          </p>
+          <div class="sp-card__foot">
+            <div class="sp-card__price-wrap">
+              <span class="sp-card__price-label">от</span>
+              <span class="sp-card__price">6 000 ₽</span>
+            </div>
+            <div class="sp-card__arrow">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </div>
+          </div>
+          <div class="sp-card__sep"></div>
+        </a>
+
+        <a href="#sec-prices" class="sp-card sp-card--family" data-card="garage">
+          <div class="sp-card__light" aria-hidden="true"></div>
+          <div class="sp-card__icon">
+            <img src="img/nedvizhimost/icon-garage-light.jpg" data-dark="img/nedvizhimost/icon-garage-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="garage-icon-obsidian" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-garage-glow.jpg" data-dark="img/nedvizhimost/icon-garage-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="garage-icon-crystal" loading="lazy" decoding="async">
+            <span class="sp-card__icon-particles"></span>
+          </div>
+          <h3 class="sp-card__title">Авто, гараж и другое</h3>
+          <p class="sp-card__story">
+            Автомобиль, гараж, машиноместо, а также охотничье оружие. Оценим для нотариуса любое имущество.
+          </p>
+          <div class="sp-card__foot">
+            <div class="sp-card__price-wrap">
+              <span class="sp-card__price-label">от</span>
+              <span class="sp-card__price">2 500 ₽</span>
+            </div>
+            <div class="sp-card__arrow">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </div>
+          </div>
+          <div class="sp-card__sep"></div>
+        </a>
+
+      </div>
+    </section>
+
+    <div class="sp-divider"><div class="sp-divider__line"></div></div>
+
+    <!-- ═══════════ КОГДА НУЖНА ═══════════ -->
+    <section class="sp-scenario" id="sec-when">
+      <div class="sp-scenario__eyebrow">
+        <span class="sp-scenario__eyebrow-num">II</span>
+        <span class="sp-scenario__eyebrow-dash" style="background:var(--cool)"></span>
+        <span class="sp-scenario__eyebrow-label" style="color:var(--cool)">Когда нужна оценка</span>
+      </div>
+
+      <div class="sp-scenario__split">
+        <div class="sp-scenario__left">
+          <h2 class="sp-scenario__title">
+            Не только<br>для <em>наследства</em>
+          </h2>
+          <blockquote class="sp-scenario__quote" style="border-color:var(--cool)">
+            «Нотариус просит оценку в важные моменты — мы рядом, чтобы всё прошло спокойно.»
+          </blockquote>
+          <p class="sp-scenario__desc">
+            Наследство, дарение, брачный договор, соглашение о разделе, нотариальная сделка. Для каждой ситуации подготовим отчёт на нужную дату, подскажем следующий шаг и будем рядом до готового документа.
+          </p>
+        </div>
+        <div class="sp-scenario__right">
+          <div class="sp-scene">
+            <img src="img/nedvizhimost/scene-expert.jpg" data-dark="img/nedvizhimost/scene-expert-dark.jpg" alt="Эксперт за работой" class="sp-scene__img" loading="lazy" data-img-prompt="expert-tablet-warm-office">
+            <div class="sp-scene__overlay" style="background:linear-gradient(135deg,rgba(8,15,16,0.6) 0%,rgba(21,175,209,0.05) 100%)"></div>
+            <span class="sp-scene__badge">Рядом до готового отчёта</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sp-cards" id="whenCards">
+
+        <div class="sp-card sp-card--family">
+          <div class="sp-card__light" aria-hidden="true"></div>
+          <div class="sp-card__icon">
+            <img src="img/icons/icon-shares-light.jpg" data-dark="img/icons/icon-shares-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="shares-icon-obsidian" loading="lazy" decoding="async">
+            <img src="img/icons/icon-shares-glow.jpg" data-dark="img/icons/icon-shares-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="shares-icon-crystal" loading="lazy" decoding="async">
+            <span class="sp-card__icon-particles"></span>
+          </div>
+          <h3 class="sp-card__title">Вступление в наследство</h3>
+          <p class="sp-card__story">Нотариус просит отчёт, чтобы рассчитать пошлину и доли наследников. Часто рыночная стоимость ниже кадастровой — и пошлина выходит меньше. Подготовим за 1–2 дня.</p>
+          <div class="sp-card__foot">
+            <div class="sp-card__price-wrap">
+              <span class="sp-card__price-label">за 1–2 дня</span>
+              <span class="sp-card__price">от 2 500 ₽</span>
+            </div>
+            <div class="sp-card__arrow">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </div>
+          </div>
+          <div class="sp-card__sep"></div>
+        </div>
+
+        <div class="sp-card sp-card--family">
+          <div class="sp-card__light" aria-hidden="true"></div>
+          <div class="sp-card__icon">
+            <img src="img/nedvizhimost/icon-inherit-light.jpg" data-dark="img/nedvizhimost/icon-inherit-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-inherit-glow.jpg" data-dark="img/nedvizhimost/icon-inherit-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <span class="sp-card__icon-particles"></span>
+          </div>
+          <h3 class="sp-card__title">Оценка на нужную дату</h3>
+          <p class="sp-card__story">Для наследства стоимость считают на день, когда открылось наследство. Бережно сделаем оценку именно на эту дату — как просит нотариус.</p>
+          <div class="sp-card__foot">
+            <div class="sp-card__price-wrap">
+              <span class="sp-card__price-label">для наследства</span>
+              <span class="sp-card__price">от 2 500 ₽</span>
+            </div>
+            <div class="sp-card__arrow">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </div>
+          </div>
+          <div class="sp-card__sep"></div>
+        </div>
+
+        <div class="sp-card sp-card--family">
+          <div class="sp-card__light" aria-hidden="true"></div>
+          <div class="sp-card__icon">
+            <img src="img/nedvizhimost/icon-divorce-light.jpg" data-dark="img/nedvizhimost/icon-divorce-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-divorce-glow.jpg" data-dark="img/nedvizhimost/icon-divorce-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <span class="sp-card__icon-particles"></span>
+          </div>
+          <h3 class="sp-card__title">Брачный договор</h3>
+          <p class="sp-card__story">Оценка имущества для брачного договора или соглашения супругов. Сделаем деликатно, в комфортном для вас темпе.</p>
+          <div class="sp-card__foot">
+            <div class="sp-card__price-wrap">
+              <span class="sp-card__price-label">для договора</span>
+              <span class="sp-card__price">от 3 000 ₽</span>
+            </div>
+            <div class="sp-card__arrow">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </div>
+          </div>
+          <div class="sp-card__sep"></div>
+        </div>
+
+        <div class="sp-card sp-card--family">
+          <div class="sp-card__light" aria-hidden="true"></div>
+          <div class="sp-card__icon">
+            <img src="img/nedvizhimost/icon-sale-light.jpg" data-dark="img/nedvizhimost/icon-sale-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-sale-glow.jpg" data-dark="img/nedvizhimost/icon-sale-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <span class="sp-card__icon-particles"></span>
+          </div>
+          <h3 class="sp-card__title">Дарение имущества</h3>
+          <p class="sp-card__story">Оценка для договора дарения у нотариуса. От рыночной стоимости зависит налог — посчитаем её точно.</p>
+          <div class="sp-card__foot">
+            <div class="sp-card__price-wrap">
+              <span class="sp-card__price-label">за 1–2 дня</span>
+              <span class="sp-card__price">от 2 500 ₽</span>
+            </div>
+            <div class="sp-card__arrow">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </div>
+          </div>
+          <div class="sp-card__sep"></div>
+        </div>
+
+        <div class="sp-card sp-card--family">
+          <div class="sp-card__light" aria-hidden="true"></div>
+          <div class="sp-card__icon">
+            <img src="img/nedvizhimost/icon-tax-light.jpg" data-dark="img/nedvizhimost/icon-tax-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-tax-glow.jpg" data-dark="img/nedvizhimost/icon-tax-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <span class="sp-card__icon-particles"></span>
+          </div>
+          <h3 class="sp-card__title">Нотариальная сделка</h3>
+          <p class="sp-card__story">Купля-продажа, рента, залог через нотариуса. Отчёт подтверждает стоимость и помогает оформить сделку уверенно.</p>
+          <div class="sp-card__foot">
+            <div class="sp-card__price-wrap">
+              <span class="sp-card__price-label">для сделки</span>
+              <span class="sp-card__price">от 2 500 ₽</span>
+            </div>
+            <div class="sp-card__arrow">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </div>
+          </div>
+          <div class="sp-card__sep"></div>
+        </div>
+
+        <div class="sp-card sp-card--family">
+          <div class="sp-card__light" aria-hidden="true"></div>
+          <div class="sp-card__icon">
+            <img src="img/nedvizhimost/icon-court-light.jpg" data-dark="img/nedvizhimost/icon-court-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-court-glow.jpg" data-dark="img/nedvizhimost/icon-court-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <span class="sp-card__icon-particles"></span>
+          </div>
+          <h3 class="sp-card__title">Раздел имущества</h3>
+          <p class="sp-card__story">Соглашение о разделе имущества у нотариуса. Независимая оценка — основа честной договорённости.</p>
+          <div class="sp-card__foot">
+            <div class="sp-card__price-wrap">
+              <span class="sp-card__price-label">по соглашению</span>
+              <span class="sp-card__price">от 3 000 ₽</span>
+            </div>
+            <div class="sp-card__arrow">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </div>
+          </div>
+          <div class="sp-card__sep"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="sp-divider"><div class="sp-divider__line"></div></div>
+
+    <!-- ═══════════ КАК ПРОХОДИТ ═══════════ -->
+    <section class="sp-scenario" id="sec-how">
+      <div class="sp-scenario__eyebrow">
+        <span class="sp-scenario__eyebrow-num">III</span>
+        <span class="sp-scenario__eyebrow-dash" style="background:var(--warm)"></span>
+        <span class="sp-scenario__eyebrow-label" style="color:var(--warm)">Как проходит оценка</span>
+      </div>
+
+      <div class="sp-scenario__split">
+        <div class="sp-scenario__left">
+          <h2 class="sp-scenario__title">
+            Спокойно<br>и <em>понятно</em>
+          </h2>
+          <blockquote class="sp-scenario__quote" style="border-color:var(--warm)">
+            «Ваше дело — один звонок. Остальное — пара фото документов, а отчёт будет готов за 1–2 дня.»
+          </blockquote>
+          <p class="sp-scenario__desc">
+            Всё сложное мы берём на себя — термины, справки, поездки. Позвоните — а дальше просто пришлите фото документов и через 1–2 дня получите готовый отчёт.
+          </p>
+        </div>
+        <div class="sp-scenario__right">
+          <div class="sp-scene">
+            <img src="img/nedvizhimost/scene-documents.jpg" data-dark="img/nedvizhimost/scene-documents-dark.jpg" alt="Документы на столе" class="sp-scene__img" loading="lazy" data-img-prompt="documents-keys-table-warm">
+            <div class="sp-scene__overlay" style="background:linear-gradient(135deg,rgba(8,15,16,0.6) 0%,rgba(212,146,58,0.08) 100%)"></div>
+            <span class="sp-scene__badge">Мы рядом на каждом шаге</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="s-timeline" style="margin-top: 4rem; --color-accent: var(--warm); --color-accent-bright: #FFB347; --s-glow: rgba(212,146,58,0.4); --s-glow-strong: rgba(212,146,58,0.8);">
+        <div class="s-tl__track-wrap">
+          <div class="s-tl__track">
+            <div class="s-tl__fill" id="tl-fill"></div>
+          </div>
+
+          <div class="s-tl__steps">
+            
+            <div class="s-tl__step" style="--i:0" data-step="1">
+              <div class="s-tl__num">01</div>
+              <div class="s-tl__dot"></div>
+              <div class="s-tl__content">
+                <h3 class="s-tl__step-title">Звонок и разговор</h3>
+                <p class="s-tl__desc">Позвоните или напишите в MAX — спокойно разберём вашу ситуацию и назовём точную цену и срок. Это бесплатно.</p>
+                <div class="s-tl__time">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                  5 минут
+                </div>
+              </div>
+            </div>
+
+            <div class="s-tl__step" style="--i:1" data-step="2">
+              <div class="s-tl__num">02</div>
+              <div class="s-tl__dot"></div>
+              <div class="s-tl__content">
+                <h3 class="s-tl__step-title">Документы и фото</h3>
+                <p class="s-tl__desc">Пришлите документы и фото через мессенджер — по всей России. Нужен выезд по Алтайскому краю? Приедем в удобное время.</p>
+                <div class="s-tl__time">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                  10 минут
+                </div>
+              </div>
+            </div>
+
+            <div class="s-tl__step" style="--i:2" data-step="3">
+              <div class="s-tl__num">03</div>
+              <div class="s-tl__dot"></div>
+              <div class="s-tl__content">
+                <h3 class="s-tl__step-title">Подготовка отчёта</h3>
+                <p class="s-tl__desc">Готовим за 1–2 дня. Отчёт по 135-ФЗ и федеральным стандартам оценки, с оценкой на нужную дату. Его принимают нотариусы по всей России.</p>
+                <div class="s-tl__time">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                  1–2 дня
+                </div>
+              </div>
+            </div>
+
+            <div class="s-tl__step" style="--i:3" data-step="4">
+              <div class="s-tl__num">04</div>
+              <div class="s-tl__dot"></div>
+              <div class="s-tl__content">
+                <h3 class="s-tl__step-title">Передача отчёта</h3>
+                <p class="s-tl__desc">Готовый отчёт — на бумаге, в PDF и с электронной подписью (ЭЦП). Электронный экземпляр сами отправим вашему нотариусу — вы просто получите готовый результат.</p>
+                <div class="s-tl__badges">
+                  <span class="s-tl__badge" style="background:rgba(212,146,58,0.08); border-color:rgba(212,146,58,0.2); color:var(--warm);">Бумага</span>
+                  <span class="s-tl__badge" style="background:rgba(212,146,58,0.08); border-color:rgba(212,146,58,0.2); color:var(--warm);">PDF</span>
+                  <span class="s-tl__badge" style="background:rgba(212,146,58,0.08); border-color:rgba(212,146,58,0.2); color:var(--warm);">ЭЦП</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="sp-divider"><div class="sp-divider__line"></div></div>
+
+    <!-- ═══════════ ДОКУМЕНТЫ ═══════════ -->
+    <section class="sp-scenario" id="sec-docs">
+      <div class="sp-scenario__eyebrow">
+        <span class="sp-scenario__eyebrow-num">IV</span>
+        <span class="sp-scenario__eyebrow-dash" style="background:var(--cool)"></span>
+        <span class="sp-scenario__eyebrow-label" style="color:var(--cool)">Документы</span>
+      </div>
+
+      <div class="sp-scenario__split">
+        <div class="sp-scenario__left">
+          <h2 class="sp-scenario__title">
+            Что нужно<br><em>подготовить</em>
+          </h2>
+          <blockquote class="sp-scenario__quote" style="border-color:var(--cool)">
+            «Какой-то документ можно донести чуть позже — подскажем, как быстро его получить.»
+          </blockquote>
+          <p class="sp-scenario__desc">
+            Документов нужно немного. Для наследства обычно достаточно паспорта, документа на имущество и свидетельства о смерти. Остальное подскажем на бесплатной консультации.
+          </p>
+        </div>
+      </div>
+
+      <div class="sp-cards" id="docsCards">
+
+        <div class="sp-card sp-card--family">
+          <div class="sp-card__light" aria-hidden="true"></div>
+          <div class="sp-card__icon">
+            <img src="img/nedvizhimost/icon-doc-passport-light.jpg" data-dark="img/nedvizhimost/icon-doc-passport-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="passport-icon-obsidian" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-doc-passport-glow.jpg" data-dark="img/nedvizhimost/icon-doc-passport-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="passport-icon-crystal" loading="lazy" decoding="async">
+            <span class="sp-card__icon-particles"></span>
+          </div>
+          <h3 class="sp-card__title">Ваш паспорт</h3>
+          <p class="sp-card__story">Нужен, чтобы заключить договор. Достаточно фото основных страниц через мессенджер.</p>
+          <div class="sp-card__foot">
+            <div class="sp-card__price-wrap">
+              <span class="sp-card__price-label">обязательно</span>
+            </div>
+            <div class="sp-card__arrow">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </div>
+          </div>
+          <div class="sp-card__sep"></div>
+        </div>
+
+        <div class="sp-card sp-card--family">
+          <div class="sp-card__light" aria-hidden="true"></div>
+          <div class="sp-card__icon">
+            <img src="img/nedvizhimost/icon-doc-title-light.jpg" data-dark="img/nedvizhimost/icon-doc-title-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="title-doc-icon-obsidian" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-doc-title-glow.jpg" data-dark="img/nedvizhimost/icon-doc-title-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="title-doc-icon-crystal" loading="lazy" decoding="async">
+            <span class="sp-card__icon-particles"></span>
+          </div>
+          <h3 class="sp-card__title">Документ на имущество</h3>
+          <p class="sp-card__story">Выписка из ЕГРН, ПТС или свидетельство — подтверждает право на объект. Достаточно фото.</p>
+          <div class="sp-card__foot">
+            <div class="sp-card__price-wrap">
+              <span class="sp-card__price-label">обязательно</span>
+            </div>
+            <div class="sp-card__arrow">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </div>
+          </div>
+          <div class="sp-card__sep"></div>
+        </div>
+
+        <div class="sp-card sp-card--family">
+          <div class="sp-card__light" aria-hidden="true"></div>
+          <div class="sp-card__icon">
+            <img src="img/nedvizhimost/icon-doc-tech-light.jpg" data-dark="img/nedvizhimost/icon-doc-tech-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="tech-passport-icon-obsidian" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-doc-tech-glow.jpg" data-dark="img/nedvizhimost/icon-doc-tech-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="tech-passport-icon-crystal" loading="lazy" decoding="async">
+            <span class="sp-card__icon-particles"></span>
+          </div>
+          <h3 class="sp-card__title">Свидетельство о смерти</h3>
+          <p class="sp-card__story">Для наследства оценку делаем на дату открытия наследства. Свидетельство можно донести чуть позже — подскажем, как быстро получить.</p>
+          <div class="sp-card__foot">
+            <div class="sp-card__price-wrap">
+              <span class="sp-card__price-label">для наследства</span>
+            </div>
+            <div class="sp-card__arrow">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </div>
+          </div>
+          <div class="sp-card__sep"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="sp-divider"><div class="sp-divider__line"></div></div>
+
+    <!-- ═══════════ СТОИМОСТЬ ═══════════ -->
+    <section class="sp-scenario" id="sec-prices">
+      <div class="sp-scenario__eyebrow">
+        <span class="sp-scenario__eyebrow-num">V</span>
+        <span class="sp-scenario__eyebrow-dash" style="background:var(--warm)"></span>
+        <span class="sp-scenario__eyebrow-label" style="color:var(--warm)">Стоимость</span>
+      </div>
+
+      <div class="sp-scenario__split">
+        <div class="sp-scenario__left">
+          <h2 class="sp-scenario__title">
+            Сколько стоит<br><em>оценка для нотариуса</em>
+          </h2>
+          <blockquote class="sp-scenario__quote" style="border-color:var(--warm)">
+            «Цену назовём на звонке и запишем в договор — к моменту оплаты она не изменится.»
+          </blockquote>
+          <p class="sp-scenario__desc">
+            Стоимость зависит от того, сколько объектов вошло в наследственное дело. Назовём её на первом звонке, до подготовки документов.
+          </p>
+        </div>
+      </div>
+
+      <div class="sp-cards" id="pricesCards">
+
+        <div class="sp-card sp-card--family">
+          <div class="sp-card__light" aria-hidden="true"></div>
+          <div class="sp-card__icon">
+            <img src="img/nedvizhimost/icon-barnaul-light.jpg" data-dark="img/nedvizhimost/icon-barnaul-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-barnaul-glow.jpg" data-dark="img/nedvizhimost/icon-barnaul-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <span class="sp-card__icon-particles"></span>
+          </div>
+          <h3 class="sp-card__title">Барнаул · по всей России</h3>
+          <p class="sp-card__story">
+            Недвижимость — от 2 500 ₽<br>
+            Доля в квартире — от 2 500 ₽<br>
+            Автомобиль — от 2 500 ₽<br>
+            Другое имущество — от 2 500 ₽<br>
+            По фото — из любого города
+          </p>
+          <div class="sp-card__foot">
+            <div class="sp-card__price-wrap">
+              <span class="sp-card__price-label">срок</span>
+              <span class="sp-card__price">1–2 дня</span>
+            </div>
+            <div class="sp-card__arrow">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </div>
+          </div>
+          <div class="sp-card__sep"></div>
+        </div>
+
+        <div class="sp-card sp-card--family">
+          <div class="sp-card__light" aria-hidden="true"></div>
+          <div class="sp-card__icon">
+            <img src="img/nedvizhimost/icon-included-light.jpg" data-dark="img/nedvizhimost/icon-included-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-included-glow.jpg" data-dark="img/nedvizhimost/icon-included-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <span class="sp-card__icon-particles"></span>
+          </div>
+          <h3 class="sp-card__title">Бесплатно с каждым отчётом</h3>
+          <p class="sp-card__story">
+            ✓ Первичная консультация эксперта<br>
+            ✓ Отправим отчёт нотариусу — электронно, с подписью<br>
+            ✓ Печатные копии + PDF с УКЭП оценщика
+          </p>
+          <div class="sp-card__foot">
+            <div class="sp-card__price-wrap">
+              <span class="sp-card__price-label">наш принцип</span>
+              <span class="sp-card__price">0 ₽</span>
+            </div>
+            <div class="sp-card__arrow">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </div>
+          </div>
+          <div class="sp-card__sep"></div>
+        </div>
+
+        <div class="sp-card sp-card--family">
+          <div class="sp-card__light" aria-hidden="true"></div>
+          <div class="sp-card__icon">
+            <img src="img/nedvizhimost/icon-included-light.jpg" data-dark="img/nedvizhimost/icon-included-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-included-glow.jpg" data-dark="img/nedvizhimost/icon-included-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <span class="sp-card__icon-particles"></span>
+          </div>
+          <h3 class="sp-card__title">Что включено</h3>
+          <p class="sp-card__story">
+            ✓ Выезд по Алтайскому краю или работа по фото<br>
+            ✓ Полный отчёт по 135-ФЗ и федеральным стандартам оценки<br>
+            ✓ 2 экземпляра + PDF с УКЭП оценщика<br>
+            ✓ Оценка на нужную дату<br>
+            ✓ Поддержка после вручения
+          </p>
+          <div class="sp-card__foot">
+            <div class="sp-card__price-wrap">
+              <span class="sp-card__price-label">всё включено</span>
+            </div>
+            <div class="sp-card__arrow">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </div>
+          </div>
+          <div class="sp-card__sep"></div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════ ДРУГИЕ УСЛУГИ ═══════════ -->
+  <nav class="sp-more" aria-label="Другие услуги компании">
+    <div class="sp-more__inner">
+      <p class="sp-more__title">Другие услуги «Аксиомы»</p>
+      <ul class="sp-more__list">
+        <li><a class="sp-more__link" href="ocenka-nedvizhimosti.html">Оценка недвижимости</a></li>
+        <li><a class="sp-more__link" href="kommercheskaya-nedvizhimost.html">Коммерческая недвижимость</a></li>
+        <li><a class="sp-more__link" href="ocenka-dlya-suda.html">Оценка для суда</a></li>
+        <li><a class="sp-more__link" href="ocenka-ushherba.html">Оценка ущерба</a></li>
+        <li><a class="sp-more__link" href="ocenka-biznesa.html">Оценка бизнеса</a></li>
+        <li><a class="sp-more__link" href="oborudovanie-i-transport.html">Оборудование и транспорт</a></li>
+        <li><a class="sp-more__link" href="yuridicheskie-uslugi.html">Юридические услуги</a></li>
+      </ul>
+      <p class="sp-more__tail">Все цены — на странице <a href="../ceny.html">Цены</a>. Адрес офиса и телефон — в <a href="../kontakty.html">Контактах</a>. Про компанию — <a href="../o-kompanii.html">О компании</a>.</p>
+    </div>
+  </nav>
+
+  <!-- ═══════════ ЧАСТЫЕ ВОПРОСЫ ═══════════ -->
+  <section class="s-faq" id="sec-faq" aria-label="Частые вопросы об оценке для нотариуса">
+    <div class="s-faq__inner">
+      <div class="s-faq__header">
+        <span class="s-faq__eyebrow">Частые вопросы</span>
+        <h2 class="s-faq__title">Коротко о главном — оценка для нотариуса</h2>
+      </div>
+
+      <div class="s-faq__content" itemscope itemtype="https://schema.org/FAQPage">
+        <div class="s-faq__category is-active" data-category="single">
+
+          <div class="s-faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <button class="s-faq__question" aria-expanded="false">
+              <span itemprop="name">Сколько стоит оценка для нотариуса?</span>
+              <svg class="s-faq__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="s-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div class="s-faq__answer-inner" itemprop="text">Оценка для нотариуса в Барнауле — от 2 500 ₽. Точную цену назовём на бесплатной консультации и зафиксируем в договоре. Стоимость зависит от вида имущества: квартира, доля, дом, автомобиль или охотничье оружие. Работаем по всей России — документы и фото достаточно отправить на электронную почту, без визита в офис.</div>
+            </div>
+          </div>
+
+          <div class="s-faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <button class="s-faq__question" aria-expanded="false">
+              <span itemprop="name">Какие документы нужны для оценки наследства?</span>
+              <svg class="s-faq__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="s-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div class="s-faq__answer-inner" itemprop="text">Для оценки наследства нужны паспорт, документ на имущество (выписка ЕГРН, ПТС или свидетельство) и свидетельство о смерти. Фото документов достаточно отправить на электронную почту, без визита в офис.</div>
+            </div>
+          </div>
+
+          <div class="s-faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <button class="s-faq__question" aria-expanded="false">
+              <span itemprop="name">Можно ли сделать оценку для наследства по фото, без визита эксперта?</span>
+              <svg class="s-faq__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="s-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div class="s-faq__answer-inner" itemprop="text">Да. Стоимость наследства определяется на дату открытия наследства, поэтому осмотр, как правило, не нужен — оцениваем по документам и фото, которые вы направите на электронную почту. Работаем по всей России: даже если наследники в разных городах, такая услуга возможна удалённо.</div>
+            </div>
+          </div>
+
+          <div class="s-faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <button class="s-faq__question" aria-expanded="false">
+              <span itemprop="name">Какой отчёт примет нотариус?</span>
+              <svg class="s-faq__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="s-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div class="s-faq__answer-inner" itemprop="text">Нотариус примет отчёт, оформленный по 135-ФЗ и стандартам ФСО. Документ заверяется усиленной ЭЦП дипломированного оценщика с квалификационным аттестатом. «Аксиома» сама отправит готовый файл вашему нотариусу в Барнауле или любом другом городе.</div>
+            </div>
+          </div>
+
+          <div class="s-faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <button class="s-faq__question" aria-expanded="false">
+              <span itemprop="name">Что выгоднее для госпошлины — рыночная или кадастровая оценка?</span>
+              <svg class="s-faq__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="s-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div class="s-faq__answer-inner" itemprop="text">Нотариус считает госпошлину от наименьшей из представленных стоимостей — обычно сравнивают рыночную и кадастровую. Если кадастровая выше, рыночный отчёт снизит платёж. Госпошлина — 0,3% для близких родственников (до 100 000 ₽) и 0,6% для остальных (до 1 000 000 ₽). Оценку готовим на дату открытия наследства.</div>
+            </div>
+          </div>
+
+          <div class="s-faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <button class="s-faq__question" aria-expanded="false">
+              <span itemprop="name">Как быстро готов отчёт для нотариуса?</span>
+              <svg class="s-faq__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="s-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div class="s-faq__answer-inner" itemprop="text">Отчёт для нотариуса «Аксиома» обычно готовит за 1–2 рабочих дня. Если нужен отчёт в кратчайшие сроки — скажите на консультации, постараемся ускорить. Точную дату готовности назовём заранее, чтобы вы успели к нотариусу по наследственному делу вовремя.</div>
+            </div>
+          </div>
+
+          <div class="s-faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <button class="s-faq__question" aria-expanded="false">
+              <span itemprop="name">Какое имущество можно оценить для наследства?</span>
+              <svg class="s-faq__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="s-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div class="s-faq__answer-inner" itemprop="text">Для наследства и нотариуса оцениваем все имущество, в том числе: недвижимость (квартиру, дом, дачу, гараж, участок, долю), автомобиль и технику, оружие, акции и др. Достаточно прислать документы (выписку ЕГРН, ПТС, разрешение и т. д.), фото на электронную почту, без визита в офис. Отчёт по 135-ФЗ подойдёт нотариусу; стоимость — от 2 500 ₽, обычно за 1–2 дня.</div>
+            </div>
+          </div>
+
+          <div class="s-faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <button class="s-faq__question" aria-expanded="false">
+              <span itemprop="name">Нужно ли каждому наследнику заказывать оценку отдельно?</span>
+              <svg class="s-faq__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="s-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div class="s-faq__answer-inner" itemprop="text">Один отчёт на объект действует сразу для всех наследников — отдельная оценка каждому не нужна, госпошлину каждый платит по своей доле. Пакетная оценка выгоднее: если в наследственную массу входит несколько объектов (например, квартира, автомобиль, дача или земельный участок), мы оформляем оценку единым заказом, что выходит значительно быстрее и дешевле по стоимости.</div>
+            </div>
+          </div>
+
+          <div class="s-faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <button class="s-faq__question" aria-expanded="false">
+              <span itemprop="name">Нужна ли оценка при дарении у нотариуса?</span>
+              <svg class="s-faq__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="s-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div class="s-faq__answer-inner" itemprop="text">Да. Для нотариального дарения оценка подтверждает стоимость имущества: от неё нотариус считает тариф, а одаряемый рассчитывает налог, если он не близкий родственник. «Аксиома» оценит квартиру, долю или автомобиль на текущую дату — от 2 500 ₽, обычно за 1–2 дня.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTTOM CTA -->
+  <section class="sp-cta" id="spCta">
+    <div class="sp-cta__glow" aria-hidden="true"></div>
+
+    <p class="sp-cta__tag" id="ctaTag">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.64 13.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.55 2.88h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.71 2.81a2 2 0 0 1-.45 2.11L7.91 10.4a16 16 0 0 0 5.69 5.69l1.88-1.88a2 2 0 0 1 2.11-.45c.91.35 1.85.58 2.81.71A2 2 0 0 1 22 16.92z"/></svg>
+      Бесплатная консультация
+    </p>
+
+    <h2 class="sp-cta__title" id="cta-title">
+      Позвоните, когда будете готовы —<br>дальше всё бережно возьмём на себя.
+    </h2>
+
+    <div class="sp-cta__actions" id="ctaActions">
+      <a href="tel:+79130998881" class="sp-cta__btn-primary">
+        <span class="sp-cta__btn-phone">📞</span>
+        +7 913 099-88-81
+      </a>
+      <a href="https://max.ru/u/f9LHodD0cOL0n-mRdnryGsw7EJZ7Zxtw55dK3RKrty99-5P9BsmoWjZU3_8" class="sp-cta__btn-ghost">
+        <img src="../assets/img/icon-max.png" alt="MAX" width="16" height="16" style="border-radius:3px">
+                MAX
+      </a>
+    </div>
+
+    <p class="sp-cta__note">Барнаул, ул. Молодёжная, 26 · Первая консультация бесплатно · Страховка ответственности 30 млн ₽ · aksiomaok@mail.ru</p>
+  </section>
+
+  <div id="shared-footer"></div>
+  <div id="shared-ai-sidebar"></div>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Главная",
+      "item": "https://аксиома-ок.рф/index.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Услуги",
+      "item": "https://аксиома-ок.рф/uslugi.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Оценка для нотариуса",
+      "item": "https://аксиома-ок.рф/uslugi/ocenka-dlya-notariusa.html"
+    }
+  ]
+}
+  </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Оценка для нотариуса",
+  "provider": {
+    "@type": [
+      "LocalBusiness",
+      "LegalService"
+    ],
+    "@id": "https://аксиома-ок.рф/#organization",
+    "name": "Оценочная компания «Аксиома»",
+    "legalName": "ООО «Аксиома»",
+    "url": "https://аксиома-ок.рф/index.html",
+    "logo": "https://аксиома-ок.рф/img/logo-full.webp",
+    "image": "https://аксиома-ок.рф/assets/img/og-default.jpg",
+    "telephone": "+7-913-099-88-81",
+    "email": "aksiomaok@mail.ru",
+    "taxID": "2222913647",
+    "priceRange": "от 2 500 ₽",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "ул. Молодёжная, 26, 6 этаж, офис 618",
+      "addressLocality": "Барнаул",
+      "addressRegion": "Алтайский край",
+      "postalCode": "656049",
+      "addressCountry": "RU"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "53.3606",
+      "longitude": "83.7636"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "17:00"
+      }
+    ],
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Барнаул"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Алтайский край"
+      },
+      {
+        "@type": "Country",
+        "name": "Россия"
+      }
+    ],
+    "sameAs": [
+      "https://max.ru/u/f9LHodD0cOL0n-mRdnryGsw7EJZ7Zxtw55dK3RKrty99-5P9BsmoWjZU3_8"
+    ]
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Барнаул"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Алтайский край"
+    },
+    {
+      "@type": "Country",
+      "name": "Россия"
+    }
+  ],
+  "description": "Оценка недвижимости, автомобиля, доли и другого имущества для нотариуса: наследство, дарение, сделки. Оценка на дату открытия наследства по 135-ФЗ. Отчёт принимают нотариусы по всей России. По фото, из любого города.",
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Оценка для нотариуса",
+      "priceCurrency": "RUB",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "minPrice": "2500",
+        "priceCurrency": "RUB"
+      },
+      "availability": "https://schema.org/InStock"
+    }
+  ],
+  "@id": "https://аксиома-ок.рф/uslugi/ocenka-dlya-notariusa.html#service",
+  "url": "https://аксиома-ок.рф/uslugi/ocenka-dlya-notariusa.html",
+  "name": "Оценка для нотариуса в Барнауле"
+}
+  </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Сколько стоит оценка для нотариуса?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Оценка для нотариуса в Барнауле — от 2 500 ₽. Точную цену назовём на бесплатной консультации и зафиксируем в договоре. Стоимость зависит от вида имущества: квартира, доля, дом, автомобиль или охотничье оружие. Работаем по всей России — документы и фото достаточно отправить на электронную почту, без визита в офис."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Какие документы нужны для оценки наследства?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Для оценки наследства нужны паспорт, документ на имущество (выписка ЕГРН, ПТС или свидетельство) и свидетельство о смерти. Фото документов достаточно отправить на электронную почту, без визита в офис."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Можно ли сделать оценку для наследства по фото, без визита эксперта?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Да. Стоимость наследства определяется на дату открытия наследства, поэтому осмотр, как правило, не нужен — оцениваем по документам и фото, которые вы направите на электронную почту. Работаем по всей России: даже если наследники в разных городах, такая услуга возможна удалённо."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Какой отчёт примет нотариус?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Нотариус примет отчёт, оформленный по 135-ФЗ и стандартам ФСО. Документ заверяется усиленной ЭЦП дипломированного оценщика с квалификационным аттестатом. «Аксиома» сама отправит готовый файл вашему нотариусу в Барнауле или любом другом городе."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Что выгоднее для госпошлины — рыночная или кадастровая оценка?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Нотариус считает госпошлину от наименьшей из представленных стоимостей — обычно сравнивают рыночную и кадастровую. Если кадастровая выше, рыночный отчёт снизит платёж. Госпошлина — 0,3% для близких родственников (до 100 000 ₽) и 0,6% для остальных (до 1 000 000 ₽). Оценку готовим на дату открытия наследства."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Как быстро готов отчёт для нотариуса?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Отчёт для нотариуса «Аксиома» обычно готовит за 1–2 рабочих дня. Если нужен отчёт в кратчайшие сроки — скажите на консультации, постараемся ускорить. Точную дату готовности назовём заранее, чтобы вы успели к нотариусу по наследственному делу вовремя."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Какое имущество можно оценить для наследства?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Для наследства и нотариуса оцениваем все имущество, в том числе: недвижимость (квартиру, дом, дачу, гараж, участок, долю), автомобиль и технику, оружие, акции и др. Достаточно прислать документы (выписку ЕГРН, ПТС, разрешение и т. д.), фото на электронную почту, без визита в офис. Отчёт по 135-ФЗ подойдёт нотариусу; стоимость — от 2 500 ₽, обычно за 1–2 дня."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Нужно ли каждому наследнику заказывать оценку отдельно?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Один отчёт на объект действует сразу для всех наследников — отдельная оценка каждому не нужна, госпошлину каждый платит по своей доле. Пакетная оценка выгоднее: если в наследственную массу входит несколько объектов (например, квартира, автомобиль, дача или земельный участок), мы оформляем оценку единым заказом, что выходит значительно быстрее и дешевле по стоимости."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Нужна ли оценка при дарении у нотариуса?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Да. Для нотариального дарения оценка подтверждает стоимость имущества: от неё нотариус считает тариф, а одаряемый рассчитывает налог, если он не близкий родственник. «Аксиома» оценит квартиру, долю или автомобиль на текущую дату — от 2 500 ₽, обычно за 1–2 дня."
+      }
+    }
+  ]
+}
+  </script>
+
+  <!-- ══════════════ SCRIPTS ══════════════ -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+
+  <script src="../js/components/shared-components.js?v=20260825t" defer></script>
+  <script src="../js/theme.js?v=20260825e" defer></script>
+
+  <!-- ══ LOCAL PATH FIXER (только для этой подстраницы) ══
+       shared-components.js использует пути от корня app_build/.
+       Мы в /uslugi/ — добавляем "../" к href/src в injected DOM. -->
+  <script>
+  (function fixSharedPaths() {
+    const scopes = ['#site-header', '#menu-overlay', '#site-footer', '#ai-sidebar'];
+    const fixAttr = (raw) => {
+      if (!raw) return raw;
+      // Внешние / абсолютные / data-URI / якорь — не трогаем
+      if (/^(https?:|mailto:|tel:|javascript:|data:|#|\/)/.test(raw)) return raw;
+      // Уже relative-up — не трогаем
+      if (raw.startsWith('../')) return raw;
+      let clean = raw.replace(/^\.\//, '');
+      // Префикс "uslugi/" — мы уже в /uslugi/, он лишний (иначе uslugi/uslugi/)
+      if (clean.startsWith('uslugi/')) return clean.slice('uslugi/'.length);
+      return '../' + clean;
+    };
+    function patchAll(root) {
+      if (!root) return;
+      root.querySelectorAll('a[href], img[src], source[srcset]').forEach(el => {
+        const a = el.getAttribute('href');
+        const s = el.getAttribute('src');
+        const ss = el.getAttribute('srcset');
+        if (a !== null) el.setAttribute('href', fixAttr(a));
+        if (s !== null) el.setAttribute('src',  fixAttr(s));
+        if (ss !== null) {
+          el.setAttribute('srcset',
+            ss.split(',').map(x => {
+              const parts = x.trim().split(/\s+/);
+              return fixAttr(parts[0]) + (parts[1] ? ' ' + parts[1] : '');
+            }).join(', ')
+          );
+        }
+      });
+      // Поддержка background-image: url(...) в inline style
+      root.querySelectorAll('[style]').forEach(el => {
+        let style = el.getAttribute('style');
+        if (/url\(['"]?\.\//.test(style) || /url\(['"]?(img|assets)/.test(style)) {
+          style = style.replace(/url\(['"]?(?!https?:|data:|\.\.\/|\/)[^)]+['"]?\)/g, (m) => {
+            const innerMatch = m.match(/url\(\/?['"]?([^)]+?)['"]?\)/);
+            if (!innerMatch) return m;
+            const inner = innerMatch[1].replace(/^\.\//, '');
+            const corrected = inner.startsWith('uslugi/') ? inner.slice('uslugi/'.length) : inner;
+            return `url(../${corrected})`;
+          });
+          el.setAttribute('style', style);
+        }
+      });
+    }
+    function run() {
+      scopes.forEach(s => patchAll(document.querySelector(s)));
+    }
+    // Запускаем после DOMContentLoaded (shared-components.js работает при загрузке)
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', run);
+    } else {
+      // На всякий случай — MutationObserver, если shared вставляется позже
+      const obs = new MutationObserver(() => { run(); obs.disconnect(); });
+      obs.observe(document.body, { childList: true, subtree: true });
+      setTimeout(run, 50);
+    }
+    console.log('[path-fixer] active on subpage');
+  })();
+  </script>
+
+  <script src="../js/components/header.js?v=20260825t" defer></script>
+  <script src="../js/sections.js?v=20260825s" defer></script>
+  <script src="../ai/rag-engine.js?v=20260711e" defer></script>
+  <script src="../js/components/neural-brain.js?v=20260711e" defer></script>
+  <script src="../js/components/ai-sidebar.js?v=20260825l" defer></script>
+  <script src="../js/components/osmotr-wizard.js?v=20260825v" defer></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      /* Библиотеки анимации грузятся с CDN. Если он недоступен, весь контент
+         страницы остался бы прозрачным: тег, заголовок, лид, карточки, шаги
+         и призыв объявлены opacity: 0 и проявляются только скриптом. */
+      if (typeof gsap === 'undefined' || typeof Lenis === 'undefined') {
+        document.documentElement.classList.add('no-anim');
+        return;
+      }
+
+      /* ─── 1. Lenis ─── */
+      const lenis = new Lenis({
+        lerp: 0.075,
+        smoothWheel: true,
+        wheelMultiplier: 0.85
+      });
+      function raf(t) { lenis.raf(t); requestAnimationFrame(raf); }
+      requestAnimationFrame(raf);
+
+      gsap.registerPlugin(ScrollTrigger);
+      lenis.on('scroll', ScrollTrigger.update);
+      gsap.ticker.add(t => lenis.raf(t * 1000));
+      gsap.ticker.lagSmoothing(0);
+
+      /* ─── 2. Hero entrance ─── */
+      const heroTl = gsap.timeline({ delay: 0.15 });
+      heroTl
+        .to('#heroTag',     { opacity:1, y:0, duration:0.8, ease:'power3.out' })
+        .to('#heroH1',      { opacity:1, y:0, duration:1.0, ease:'power3.out' }, '-=0.55')
+        .to('#heroLead',    { opacity:1, y:0, duration:0.8, ease:'power3.out' }, '-=0.65')
+        .to('#heroActions', { opacity:1, y:0, duration:0.7, ease:'power3.out' }, '-=0.5')
+        .to('#heroTrust',   { opacity:1, y:0, duration:0.7, ease:'power3.out' }, '-=0.4');
+
+      /* ─── 3. Eyebrows ─── */
+      gsap.utils.toArray('.sp-scenario__eyebrow-dash').forEach(dash => {
+        gsap.from(dash, {
+          scaleX: 0,
+          transformOrigin: 'left center',
+          duration: 0.8,
+          ease: 'power3.out',
+          scrollTrigger: { trigger: dash.closest('.sp-scenario__eyebrow'), start: 'top 85%' }
+        });
+      });
+
+      /* ─── 4. Titles ─── */
+      gsap.utils.toArray('.sp-scenario__title').forEach(el => {
+        gsap.from(el, {
+          opacity: 0, y: 50,
+          duration: 1.0,
+          ease: 'power3.out',
+          scrollTrigger: { trigger: el, start: 'top 85%' }
+        });
+      });
+
+      gsap.utils.toArray('.sp-scenario__quote, .sp-scenario__desc').forEach(el => {
+        gsap.from(el, {
+          opacity: 0, y: 30,
+          duration: 0.8,
+          ease: 'power3.out',
+          scrollTrigger: { trigger: el, start: 'top 88%' }
+        });
+      });
+
+      /* ─── 5. Scenes parallax ─── */
+      gsap.utils.toArray('.sp-scene').forEach(scene => {
+        gsap.from(scene, {
+          opacity: 0, x: 40,
+          duration: 1.0,
+          ease: 'power3.out',
+          scrollTrigger: { trigger: scene, start: 'top 80%' }
+        });
+      });
+      gsap.utils.toArray('.sp-scene__img').forEach(img => {
+        gsap.fromTo(img,
+          { yPercent: -8 },
+          {
+            yPercent: 8, ease: 'none',
+            scrollTrigger: {
+              trigger: img.closest('.sp-scene'),
+              start: 'top bottom',
+              end: 'bottom top',
+              scrub: true
+            }
+          }
+        );
+      });
+
+      /* ─── 6. Cards entrance ─── */
+      ['whatCards', 'whenCards', 'docsCards', 'pricesCards'].forEach(gridId => {
+        const grid = document.getElementById(gridId);
+        if (!grid) return;
+        const cards = grid.querySelectorAll('.sp-card');
+
+        ScrollTrigger.create({
+          trigger: grid,
+          start: 'top 78%',
+          once: true,
+          onEnter: () => {
+            gsap.to(cards, {
+              opacity: 1,
+              y: 0,
+              duration: 0.75,
+              ease: 'power3.out',
+              stagger: { each: 0.1, from: 'start' }
+            });
+            grid.querySelectorAll('.sp-card__sep').forEach((sep, i) => {
+              gsap.to(sep, {
+                scaleX: 1,
+                duration: 0.6,
+                ease: 'power3.out',
+                delay: 0.3 + i * 0.1
+              });
+            });
+          }
+        });
+      });
+
+      /* ─── 6b. Steps entrance ─── */
+      const steps = document.querySelectorAll('.sp-step');
+      if (steps.length) {
+        ScrollTrigger.create({
+          trigger: '#howSteps',
+          start: 'top 78%',
+          once: true,
+          onEnter: () => {
+            gsap.to(steps, {
+              opacity: 1,
+              y: 0,
+              duration: 0.7,
+              ease: 'power3.out',
+              stagger: { each: 0.12, from: 'start' }
+            });
+          }
+        });
+      }
+
+      /* ─── 7. Sticky nav ─── */
+      const navBtns = document.querySelectorAll('.sp-nav__item[data-target]');
+      const navObs = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            navBtns.forEach(btn => {
+              btn.classList.toggle('is-active', btn.dataset.target === id);
+            });
+          }
+        });
+      }, { rootMargin: '-15% 0px -70% 0px' });
+
+      document.querySelectorAll('.sp-scenario[id]').forEach(sec => {
+        if (sec.id) navObs.observe(sec);
+      });
+
+      navBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const target = document.getElementById(btn.dataset.target);
+          if (!target) return;
+          lenis.scrollTo(target, { offset: -100, duration: 1.1 });
+        });
+      });
+
+      /* ─── 8. MAGNETIC MOUSE + 3D TILT (магнитный ховер + tilt) ─── */
+      document.querySelectorAll('.sp-card').forEach(card => {
+        const light = card.querySelector('.sp-card__light');
+
+        card.addEventListener('mousemove', e => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+
+          card.style.setProperty('--mx', `${(x / rect.width) * 100}%`);
+          card.style.setProperty('--my', `${(y / rect.height) * 100}%`);
+
+          if (light) {
+            light.style.transform = `translate(${x}px, ${y}px) translate(-50%, -50%)`;
+          }
+
+          const rx = ((y / rect.height) - 0.5) * -6;
+          const ry = ((x / rect.width) - 0.5) * 6;
+          gsap.to(card, {
+            rotateX: rx,
+            rotateY: ry,
+            transformPerspective: 900,
+            duration: 0.35,
+            ease: 'power2.out'
+          });
+        });
+
+        card.addEventListener('mouseleave', () => {
+          gsap.to(card, {
+            rotateX: 0,
+            rotateY: 0,
+            duration: 0.55,
+            ease: 'power3.out'
+          });
+        });
+      });
+
+      /* ─── 9. CTA entrance ─── */
+      const ctaTl = gsap.timeline({
+        scrollTrigger: { trigger: '#spCta', start: 'top 75%', once: true }
+      });
+      ctaTl
+        .to('#ctaTag',        { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' })
+        .to('#cta-title',     { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out' }, '-=0.4')
+        .to('#ctaActions',    { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, '-=0.5');
+
+      /* ─── 10. Grid lines ─── */
+      gsap.from('.sp-hero__line--h', {
+        scaleX: 0,
+        transformOrigin: 'left center',
+        duration: 1.2,
+        ease: 'power3.out',
+        delay: 0.3,
+        stagger: 0.1
+      });
+      gsap.from('.sp-hero__line--v', {
+        scaleY: 0,
+        transformOrigin: 'center top',
+        duration: 1.2,
+        ease: 'power3.out',
+        delay: 0.4,
+        stagger: 0.1
+      });
+
+    });
+  </script>
+  <script src="../js/cookie-banner.js?v=20260825u" defer></script>
+  <script src="../js/mobile-call.js?v=20260825t" defer></script>
+</body>
+</html>

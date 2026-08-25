@@ -1,0 +1,1024 @@
+/* ═══════════════════════════════════════════════════════════
+   Header & Navigation — Premium Refokus reproduction v3
+   
+   Key differences from v2:
+   1. FLOATING panel with margins, border-radius, thin border
+   2. LARGER typography (28px nav links)
+   3. LARGER +/– toggle icons (24px)
+   4. 3×3 GRID for 9 sub-services with abstract icons
+   5. FLY animation on nav link hover (text slides up, clone from below)
+   6. Sub-items: smaller font, icon wobble on hover, no fly effect
+   7. No scrollbar — everything fits elegantly
+   ═══════════════════════════════════════════════════════════ */
+
+/* ─── Header Bar ─── */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  transition: background 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Scrolled state — pills already have glassmorphism, no bar needed */
+.header.is-scrolled {
+  background: transparent;
+}
+
+/* ─── Pill Buttons — Premium Glassmorphism ─── */
+.header__pill {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* 44 px — минимальная зона нажатия на телефоне; на десктопе ниже вернём 36 px */
+  height: 44px;
+  padding: 0 20px;
+  /* Frosted glass layer */
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  /* Edge highlight — mimics light catching glass rim */
+  border: 0.5px solid rgba(255, 255, 255, 0.18);
+  border-radius: 320px;
+  /* Depth — outer shadow + inner top highlight */
+  box-shadow:
+    0 2px 12px rgba(0, 0, 0, 0.2),
+    0 0.5px 0 rgba(255, 255, 255, 0.06) inset;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -webkit-tap-highlight-color: transparent;
+  white-space: nowrap;
+  will-change: background, box-shadow;
+}
+
+/* Expand tap target for touch devices to at least 44px */
+.header__pill::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 44px;
+  min-width: 44px;
+  pointer-events: auto;
+}
+
+.header__pill:hover {
+  background: rgba(255, 255, 255, 0.13);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.25),
+    0 0.5px 0 rgba(255, 255, 255, 0.1) inset;
+  color: #fff;
+}
+
+.header__pill:active {
+  transform: scale(0.97);
+  box-shadow:
+    0 1px 6px rgba(0, 0, 0, 0.3),
+    0 0.5px 0 rgba(255, 255, 255, 0.04) inset;
+}
+
+/* Dot separator */
+.header__dots {
+  display: none;
+  gap: 4px;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.header__dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* ─── Logo Pill — glassmorphism + teal, reveal down ─── */
+.header__logo {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-decoration: none;
+  z-index: 1;
+}
+
+.header__logo-pill {
+  position: relative;
+  display: block;
+  width: 90px;
+  height: 36px;
+  border-radius: 320px;
+  background: rgba(21, 175, 209, 0.7);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  border: 0.5px solid rgba(255, 255, 255, 0.18);
+  box-shadow:
+    0 2px 12px rgba(0, 0, 0, 0.2),
+    0 0.5px 0 rgba(255, 255, 255, 0.06) inset;
+  overflow: hidden;
+  cursor: pointer;
+  transition: height 0.5s cubic-bezier(0.165, 0.84, 0.44, 1),
+              border-radius 0.5s cubic-bezier(0.165, 0.84, 0.44, 1),
+              background 0.35s ease,
+              box-shadow 0.4s ease;
+}
+
+.header__logo-pill:hover {
+  height: 62px;
+  border-radius: 16px;
+  background: rgba(21, 175, 209, 0.8);
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.25),
+    0 0.5px 0 rgba(255, 255, 255, 0.1) inset;
+}
+
+.header__logo-img,
+.header__logo-full {
+  position: absolute;
+  top: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 72px;
+  height: auto;
+  object-fit: contain;
+  transition: opacity 0.4s ease;
+}
+
+.header__logo-img {
+  opacity: 1;
+  filter: brightness(1.1);
+}
+
+.header__logo-full {
+  opacity: 0;
+}
+
+.header__logo-pill:hover .header__logo-img {
+  opacity: 0;
+}
+
+.header__logo-pill:hover .header__logo-full {
+  opacity: 1;
+}
+
+/* Right zone */
+.header__right {
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 641px) {
+  .header { padding: 0 24px; }
+  .header__pill { height: 36px; }
+  .header__logo-pill { width: 90px; height: 36px; }
+  .header__logo-pill:hover { height: 62px; }
+  .header__logo-img,
+  .header__logo-full { width: 72px; }
+}
+
+@media (min-width: 969px) {
+  .header { padding: 0 32px; }
+  .header__dots { display: flex; }
+  .header__logo-pill { width: 90px; height: 36px; }
+  .header__logo-pill:hover { height: 62px; }
+  .header__logo-img,
+  .header__logo-full { width: 72px; }
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   Menu Overlay Panel — FLOATING
+   
+   The panel floats with margin, border-radius, thin border
+   ═══════════════════════════════════════════════════════════ */
+
+.menu-overlay {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  bottom: 8px;
+  z-index: 200;
+  width: calc(100% - 16px);
+  max-width: 560px;
+  background: rgba(15, 18, 21, 0.97);
+  border: 0.5px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transform: translateX(calc(-100% - 20px));
+  opacity: 0;
+  /* Закрытое меню убираем из порядка табуляции и от скринридеров: без этого
+     клавиатура уводит фокус в невидимый список из 18 ссылок. */
+  visibility: hidden;
+  transition: transform 0.55s cubic-bezier(0.165, 0.84, 0.44, 1),
+              opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+              visibility 0s linear 0.55s;
+}
+
+.menu-overlay.is-open {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+  transition: transform 0.55s cubic-bezier(0.165, 0.84, 0.44, 1),
+              opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+              visibility 0s;
+}
+
+/* Internal scroll container — only content, no visible scrollbar */
+.menu-overlay__scroll {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 0 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-overlay__scroll::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* ─── Close Button: rounded square, larger ─── */
+.menu-overlay__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin: 15px 23px 8px;
+  border: 0.5px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  flex-shrink: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.menu-overlay__close:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.menu-overlay__close svg {
+  width: 11px;
+  height: 11px;
+  stroke: currentColor;
+  stroke-width: 1.5;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   Navigation Items — LARGE typography + FLY animation
+   ═══════════════════════════════════════════════════════════ */
+
+.menu-nav {
+  padding: 8px 0 0;
+}
+
+.menu-nav__item {
+  position: relative;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Glow line — sweeps left→right on hover */
+.menu-nav__item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0.15) 50%,
+    transparent 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.menu-nav__item:hover::after {
+  transform: scaleX(1);
+}
+
+/* Active page: line always glows */
+.menu-nav__item:has(.is-active)::after {
+  transform: scaleX(1);
+  background: linear-gradient(90deg,
+    rgba(255, 255, 255, 0.45) 0%,
+    rgba(255, 255, 255, 0.12) 100%);
+}
+
+/* ─── Nav Link: large, with text-fly on hover ─── */
+.menu-nav__link {
+  --row-h: 58px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--row-h);
+  padding: 0;
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 400;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  /* Stagger entrance */
+  opacity: 0;
+  transform: translateX(-16px);
+}
+
+.menu-overlay.is-open .menu-nav__link {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.45s cubic-bezier(0.165, 0.84, 0.44, 1),
+              transform 0.45s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.menu-nav__link.is-active {
+  color: var(--color-accent, #15AFD1);
+  font-weight: 500;
+}
+
+/* Overflow mask — clips the fly animation.
+   Height = full row height for dramatic border-to-border travel */
+.menu-nav__link-wrap {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  height: var(--row-h);
+}
+
+/* Text fly container — moves up/down inside the mask */
+.menu-nav__link-text {
+  display: block;
+  transition: transform 1.0s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+  will-change: transform;
+}
+
+/* Clone text that flies in from below — travels full row height */
+.menu-nav__link-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(var(--row-h));
+  color: rgba(255, 255, 255, 0.85);
+  white-space: nowrap;
+}
+
+/* Hover: text flies up by full row height, clone enters from below */
+.menu-nav__link:hover .menu-nav__link-text {
+  transform: translateY(calc(-1 * var(--row-h)));
+}
+
+/* Active state — teal stays teal on fly */
+.menu-nav__link.is-active .menu-nav__link-text::after {
+  color: var(--color-accent, #15AFD1);
+}
+
+
+/* ─── Accordion Toggle Icon: LARGER ─── */
+.menu-accordion__icon {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.4);
+  transition: transform 1.0s cubic-bezier(0.165, 0.84, 0.44, 1),
+              color 0.4s ease;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.menu-nav__item.is-expanded .menu-accordion__icon {
+  transform: rotate(45deg);
+  color: var(--color-accent, #15AFD1);
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   Accordion Body — 3×3 Grid with icons
+   ═══════════════════════════════════════════════════════════ */
+
+.menu-accordion__body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1.0s cubic-bezier(0.165, 0.84, 0.44, 1),
+              padding 1.0s cubic-bezier(0.165, 0.84, 0.44, 1);
+  padding-bottom: 0;
+}
+
+.menu-nav__item.is-expanded .menu-accordion__body {
+  max-height: 600px;
+  padding-bottom: 20px;
+}
+
+/* ─── 3×3 Grid ─── */
+.menu-services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px;
+  padding-top: 8px;
+}
+
+/* Each service cell */
+.menu-service-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 6px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 0.5px solid rgba(255, 255, 255, 0.06);
+  text-decoration: none;
+  transition: background 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+              border-color 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+              box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  cursor: pointer;
+}
+
+.menu-service-card:hover {
+  background: rgba(21, 175, 209, 0.04);
+  border-color: rgba(21, 175, 209, 0.2);
+  box-shadow: 0 0 20px rgba(21, 175, 209, 0.08),
+              inset 0 0 20px rgba(21, 175, 209, 0.03);
+}
+
+/* ─── Icon Wrap: stacks obs + cry + particles ─── */
+.menu-service-card__icon-wrap {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+/* Both icon layers */
+.menu-service-card__icon {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: contain;
+  transition: opacity 0.5s cubic-bezier(0.165, 0.84, 0.44, 1),
+              transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1),
+              filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Obsidian: visible by default */
+.menu-service-card__icon--obs {
+  opacity: 1;
+  transform: scale(1);
+  filter: brightness(0.7);
+  z-index: 2;
+}
+
+/* Crystal: hidden by default */
+.menu-service-card__icon--cry {
+  opacity: 0;
+  transform: scale(0.6) rotate(15deg);
+  filter: brightness(1.2);
+  z-index: 1;
+}
+
+/* ─── Hover: obsidian shatters away, crystal appears ─── */
+.menu-service-card:hover .menu-service-card__icon--obs {
+  opacity: 0;
+  transform: scale(1.3);
+  filter: blur(4px) brightness(0.3);
+}
+
+.menu-service-card:hover .menu-service-card__icon--cry {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+  filter: brightness(1) drop-shadow(0 0 6px rgba(21, 175, 209, 0.5));
+}
+
+/* ─── Particle Explosion ─── */
+.menu-service-card__particles {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* 8 pseudo-particles via box-shadow trick */
+.menu-service-card__particles::before,
+.menu-service-card__particles::after {
+  content: '';
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transition: none;
+}
+
+.menu-service-card__particles::before {
+  background: rgba(160, 160, 160, 0.6);
+  box-shadow:
+    0 0 0 rgba(160, 160, 160, 0.6),
+    0 0 0 rgba(160, 160, 160, 0.5),
+    0 0 0 rgba(160, 160, 160, 0.4),
+    0 0 0 rgba(160, 160, 160, 0.3);
+}
+
+.menu-service-card__particles::after {
+  background: rgba(120, 120, 120, 0.5);
+  box-shadow:
+    0 0 0 rgba(120, 120, 120, 0.5),
+    0 0 0 rgba(120, 120, 120, 0.4),
+    0 0 0 rgba(120, 120, 120, 0.3),
+    0 0 0 rgba(120, 120, 120, 0.2);
+}
+
+/* On hover: particles explode outward */
+.menu-service-card:hover .menu-service-card__particles::before {
+  opacity: 1;
+  animation: particleBurst1 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+.menu-service-card:hover .menu-service-card__particles::after {
+  opacity: 1;
+  animation: particleBurst2 0.6s 0.05s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+@keyframes particleBurst1 {
+  0% {
+    opacity: 0.8;
+    box-shadow:
+      0 0 0 rgba(160, 160, 160, 0.8),
+      0 0 0 rgba(160, 160, 160, 0.7),
+      0 0 0 rgba(160, 160, 160, 0.6),
+      0 0 0 rgba(160, 160, 160, 0.5);
+  }
+  50% {
+    opacity: 0.6;
+    box-shadow:
+      -12px -14px 0 rgba(160, 160, 160, 0.6),
+      14px -10px 0 rgba(140, 140, 140, 0.5),
+      -16px 8px 0 rgba(130, 130, 130, 0.4),
+      10px 16px 0 rgba(150, 150, 150, 0.3);
+  }
+  100% {
+    opacity: 0;
+    box-shadow:
+      -20px -22px 0 rgba(160, 160, 160, 0),
+      22px -18px 0 rgba(140, 140, 140, 0),
+      -24px 14px 0 rgba(130, 130, 130, 0),
+      16px 24px 0 rgba(150, 150, 150, 0);
+  }
+}
+
+@keyframes particleBurst2 {
+  0% {
+    opacity: 0.7;
+    box-shadow:
+      0 0 0 rgba(120, 120, 120, 0.7),
+      0 0 0 rgba(120, 120, 120, 0.6),
+      0 0 0 rgba(120, 120, 120, 0.5),
+      0 0 0 rgba(120, 120, 120, 0.4);
+  }
+  50% {
+    opacity: 0.5;
+    box-shadow:
+      8px -16px 0 rgba(120, 120, 120, 0.5),
+      -14px -12px 0 rgba(100, 100, 100, 0.4),
+      16px 12px 0 rgba(110, 110, 110, 0.3),
+      -10px 18px 0 rgba(130, 130, 130, 0.3);
+  }
+  100% {
+    opacity: 0;
+    box-shadow:
+      14px -24px 0 rgba(120, 120, 120, 0),
+      -22px -20px 0 rgba(100, 100, 100, 0),
+      24px 20px 0 rgba(110, 110, 110, 0),
+      -16px 26px 0 rgba(130, 130, 130, 0);
+  }
+}
+
+/* Label in card */
+.menu-service-card__label {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.45);
+  text-align: center;
+  line-height: 1.3;
+  transition: color 0.35s ease;
+}
+
+.menu-service-card:hover .menu-service-card__label {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* On desktop, expand services to 4 columns */
+@media (min-width: 1025px) {
+  .menu-services-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   Menu Footer: two-column secondary links
+   ═══════════════════════════════════════════════════════════ */
+
+.menu-footer {
+  padding: 16px 32px 24px;
+  flex-shrink: 0;
+  border-top: 0.5px solid rgba(255, 255, 255, 0.08);
+}
+
+.menu-footer__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 24px;
+}
+
+.menu-footer__link {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  line-height: 1.6;
+}
+
+.menu-footer__link:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Телефон в меню — во всю ширину и заметнее прочих ссылок: с телефона
+   это самый короткий путь к разговору. */
+.menu-footer__link--tel {
+  grid-column: 1 / -1;
+  font-size: 20px;
+  letter-spacing: 0.01em;
+  color: rgba(255, 255, 255, 0.92);
+  padding: 6px 0;
+}
+.menu-footer__link--tel:hover { color: #1FD1F9; }
+
+
+/* ═══════════════════════════════════════════════════════════
+   Menu Logo — full logo in teal backdrop
+   ═══════════════════════════════════════════════════════════ */
+
+.menu-logo {
+  padding: 20px 0;
+  margin: auto 0;
+}
+
+.menu-logo__backdrop {
+  width: 100%;
+  height: 120px;
+  border-radius: 16px;
+  background: rgba(21, 175, 209, 0.15);
+  border: 0.5px solid rgba(21, 175, 209, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.4s ease;
+}
+
+.menu-logo__backdrop:hover {
+  background: rgba(21, 175, 209, 0.22);
+}
+
+.menu-logo__full {
+  width: 120px;
+  object-fit: contain;
+  opacity: 0.8;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   Dimmer
+   ═══════════════════════════════════════════════════════════ */
+
+.menu-dimmer {
+  position: fixed;
+  inset: 0;
+  z-index: 199;
+  background: rgba(0, 0, 0, 0);
+  pointer-events: none;
+  transition: background 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.menu-dimmer.is-active {
+  background: rgba(0, 0, 0, 0.5);
+  pointer-events: auto;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   Body lock
+   ═══════════════════════════════════════════════════════════ */
+
+body.menu-is-open {
+  overflow: hidden;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   Desktop adjustments
+   ═══════════════════════════════════════════════════════════ */
+
+@media (min-width: 641px) {
+  .menu-overlay {
+    top: 12px;
+    left: 12px;
+    bottom: 12px;
+    width: calc(100% - 24px);
+    max-width: 560px;
+    border-radius: 20px;
+  }
+
+  .menu-nav__link {
+    --row-h: 66px;
+    font-size: 26px;
+  }
+
+  .menu-accordion__icon {
+    font-size: 24px;
+  }
+
+  .menu-service-card__icon-wrap {
+    width: 52px;
+    height: 52px;
+  }
+
+  .menu-service-card__label {
+    font-size: 12px;
+  }
+
+  .menu-service-card {
+    padding: 16px 8px;
+  }
+}
+
+@media (min-width: 969px) {
+  .menu-overlay {
+    top: 16px;
+    left: 16px;
+    bottom: 16px;
+    border-radius: 24px;
+  }
+
+  .menu-nav__link {
+    --row-h: 72px;
+    font-size: 28px;
+  }
+
+  .menu-accordion__icon {
+    font-size: 26px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   🎨 THEME TOGGLE PILL (обе темы)
+   ═══════════════════════════════════════════════════════════ */
+.header__pill--theme {
+  width: 44px;
+  padding: 0;
+  margin-right: 8px;
+}
+.header__pill--theme svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease;
+}
+.header__pill--theme .theme-icon-sun { display: none; }
+.header__pill--theme .theme-icon-moon { display: block; }
+[data-theme="light"] .header__pill--theme .theme-icon-sun { display: block; }
+[data-theme="light"] .header__pill--theme .theme-icon-moon { display: none; }
+.header__pill--theme:hover svg { transform: rotate(25deg) scale(1.1); }
+
+/* ═══════════════════════════════════════════════════════════
+   🎨 LIGHT THEME OVERRIDES — шапка и меню
+   Светлое стекло, тёмный текст, teal-акценты.
+   ═══════════════════════════════════════════════════════════ */
+[data-theme="light"] .header__pill {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  border: 0.5px solid rgba(22, 25, 26, 0.10);
+  box-shadow: 0 6px 24px rgba(22, 25, 26, 0.07);
+  color: rgba(22, 25, 26, 0.85);
+}
+[data-theme="light"] .header__pill:hover {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(21, 175, 209, 0.35);
+  box-shadow: 0 8px 28px rgba(22, 25, 26, 0.10);
+  color: #16191A;
+}
+[data-theme="light"] .header__dot { background: rgba(22, 25, 26, 0.3); }
+
+/* Меню-панель — светлое стекло */
+[data-theme="light"] .menu-overlay {
+  background: rgba(250, 249, 247, 0.97);
+  border-color: rgba(22, 25, 26, 0.10);
+  box-shadow: 0 24px 80px rgba(22, 25, 26, 0.18);
+}
+[data-theme="light"] .menu-overlay__close {
+  border-color: rgba(22, 25, 26, 0.18);
+  color: rgba(22, 25, 26, 0.66);
+}
+[data-theme="light"] .menu-overlay__close:hover {
+  border-color: rgba(22, 25, 26, 0.4);
+  color: #16191A;
+  background: rgba(22, 25, 26, 0.04);
+}
+[data-theme="light"] .menu-nav__item { border-bottom-color: rgba(22, 25, 26, 0.10); }
+[data-theme="light"] .menu-nav__item::after {
+  background: linear-gradient(90deg,
+    rgba(11, 122, 148, 0.5) 0%,
+    rgba(11, 122, 148, 0.15) 50%,
+    transparent 100%);
+}
+[data-theme="light"] .menu-nav__link { color: #16191A; }
+[data-theme="light"] .menu-nav__link.is-active { color: #0B7A94; }
+[data-theme="light"] .menu-nav__link-text::after { color: rgba(22, 25, 26, 0.85); }
+[data-theme="light"] .menu-nav__link.is-active .menu-nav__link-text::after { color: #0B7A94; }
+[data-theme="light"] .menu-accordion__icon { color: rgba(22, 25, 26, 0.66); }
+[data-theme="light"] .menu-nav__item.is-expanded .menu-accordion__icon { color: #0B7A94; }
+
+[data-theme="light"] .menu-service-card {
+  background: #FFFFFF;
+  border-color: rgba(22, 25, 26, 0.08);
+  box-shadow: 0 2px 10px rgba(22, 25, 26, 0.04);
+}
+[data-theme="light"] .menu-service-card:hover {
+  background: #FFFFFF;
+  border-color: rgba(21, 175, 209, 0.35);
+  box-shadow: 0 6px 20px rgba(21, 175, 209, 0.12);
+}
+[data-theme="light"] .menu-service-card__icon--obs { filter: brightness(1); }
+[data-theme="light"] .menu-service-card__label { color: rgba(22, 25, 26, 0.66); }
+[data-theme="light"] .menu-service-card:hover .menu-service-card__label { color: #16191A; }
+
+[data-theme="light"] .menu-footer { border-top-color: rgba(22, 25, 26, 0.10); }
+[data-theme="light"] .menu-footer__link { color: rgba(22, 25, 26, 0.66); }
+[data-theme="light"] .menu-footer__link:hover { color: #0B7A94; }
+[data-theme="light"] .menu-dimmer.is-active { background: rgba(22, 25, 26, 0.25); }
+
+
+/* ═══════════════════════════════════════════════════════════
+   СВЕТЛАЯ ТЕМА — оверрайды шапки/меню (базовые стили были под тёмную)
+   Добавлено 2026-07-11: светлая тема по умолчанию.
+   ═══════════════════════════════════════════════════════════ */
+:root[data-theme="light"] .header__pill {
+  background: rgba(16, 25, 26, 0.05);
+  color: #16191A;
+}
+:root[data-theme="light"] .header__pill:hover { background: rgba(16, 25, 26, 0.09); }
+:root[data-theme="light"] .header__dot { background: rgba(16, 25, 26, 0.30); }
+
+:root[data-theme="light"] .menu-overlay {
+  background: rgba(250, 249, 247, 0.98);
+  border-color: rgba(16, 25, 26, 0.10);
+  box-shadow: 0 30px 90px rgba(16, 25, 26, 0.14);
+}
+:root[data-theme="light"] .menu-overlay__close {
+  border-color: rgba(16, 25, 26, 0.18);
+  color: rgba(16, 25, 26, 0.55);
+}
+:root[data-theme="light"] .menu-overlay__close:hover {
+  border-color: rgba(16, 25, 26, 0.45);
+  color: #16191A;
+  background: rgba(16, 25, 26, 0.05);
+}
+:root[data-theme="light"] .menu-nav__item { border-bottom-color: rgba(16, 25, 26, 0.10); }
+:root[data-theme="light"] .menu-nav__item::after,
+:root[data-theme="light"] .menu-nav__item:has(.is-active)::after {
+  background: linear-gradient(90deg, rgba(11,122,148,0.55) 0%, rgba(11,122,148,0.15) 55%, transparent 100%);
+}
+:root[data-theme="light"] .menu-nav__link { color: #16191A; }
+:root[data-theme="light"] .menu-nav__link-text::after { color: rgba(16, 25, 26, 0.85); }
+:root[data-theme="light"] .menu-nav__link.is-active,
+:root[data-theme="light"] .menu-nav__link.is-active .menu-nav__link-text::after { color: #0B7A94; }
+:root[data-theme="light"] .menu-accordion__icon { color: rgba(16, 25, 26, 0.40); }
+:root[data-theme="light"] .menu-nav__item.is-expanded .menu-accordion__icon { color: #0B7A94; }
+:root[data-theme="light"] .menu-service-card {
+  background: rgba(16, 25, 26, 0.03);
+  border-color: rgba(16, 25, 26, 0.08);
+}
+:root[data-theme="light"] .menu-service-card:hover {
+  background: rgba(21, 175, 209, 0.06);
+  border-color: rgba(21, 175, 209, 0.28);
+}
+:root[data-theme="light"] .menu-service-card__label { color: rgba(16, 25, 26, 0.80); }
+:root[data-theme="light"] .menu-service-card__icon--obs { filter: none; }
+/* Обсидиановая плашка была обходом: у иконок меню был один тёмный набор на обе
+   темы, и на белом фоне они читались как чёрный тайл. Теперь у светлой темы
+   свой набор (light-/glow-), плашка не нужна. */
+:root[data-theme="light"] .menu-footer,
+:root[data-theme="light"] .menu-footer__grid { border-top-color: rgba(16, 25, 26, 0.10); }
+:root[data-theme="light"] .menu-footer__link { color: rgba(16, 25, 26, 0.60); }
+:root[data-theme="light"] .menu-footer__link:hover { color: #0B7A94; }
+:root[data-theme="light"] .menu-footer__link--tel { color: #0B7A94; }
+:root[data-theme="light"] .menu-footer__link--tel:hover { color: #15AFD1; }
+
+/* Светлая тема — подложка логотипа в меню: фирменная бирюза, белый лого виден */
+:root[data-theme="light"] .menu-logo__backdrop{
+  background:linear-gradient(135deg,#15AFD1,#1FD1F9);
+  border-color:transparent;
+}
+:root[data-theme="light"] .menu-logo__backdrop:hover{background:linear-gradient(135deg,#0B7A94,#15AFD1);}
+:root[data-theme="light"] .menu-logo__full{opacity:1;}
+
+
+/* ═══════════════════════════════════════════════════════════
+   📱 ШАПКА НА ТЕЛЕФОНЕ — кнопка помощника только значком
+   Подпись «Помощник» растягивала правую группу, а логотип центрирован
+   абсолютно поверх неё: переключатель темы физически не нажимался
+   (elementFromPoint возвращал картинку логотипа) на ширинах до ~456 px.
+   Значок вместо подписи уводит группу правее логотипа. С 641 px — как было.
+   ═══════════════════════════════════════════════════════════ */
+.header__pill--ai {
+  width: 44px;
+  padding: 0;
+}
+.header__pill-ai-label { display: none; }
+.header__pill-ai-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.header__pill-ai-icon svg { width: 18px; height: 18px; }
+
+@media (min-width: 641px) {
+  /* .header__pill--theme объявлена ниже раннего медиа-запроса, поэтому размер возвращаем здесь */
+  .header__pill--theme { width: 36px; }
+  .header__pill--ai { width: auto; padding: 0 18px; gap: 8px; }
+  .header__pill-ai-label { display: inline; }
+  .header__pill-ai-icon svg { width: 16px; height: 16px; }
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   ⌨️ ССЫЛКА «ПЕРЕЙТИ К СОДЕРЖИМОМУ»
+   Без неё человек с клавиатуры каждый раз проходил шапку заново.
+   Видна только когда на неё встал фокус.
+   ═══════════════════════════════════════════════════════════ */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 300;
+}
+.skip-link:focus {
+  left: 8px;
+  top: 8px;
+  padding: 12px 20px;
+  background: var(--color-bg);
+  color: var(--color-text);
+  border-radius: 10px;
+  outline: 2px solid #0B7A94;
+  outline-offset: 2px;
+  font-family: var(--font-display);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+/* Текущая услуга в меню: раньше подпись красилась инлайном в белый
+   и на светлой теме пропадала совсем. */
+.menu-service-card.is-current { border-color: var(--color-accent, #15AFD1); }
+.menu-service-card.is-current .menu-service-card__label {
+  color: var(--color-accent-ink, #0A6E85);
+  font-weight: 500;
+}
