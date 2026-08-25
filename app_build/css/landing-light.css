@@ -18,15 +18,15 @@
 [data-theme="light"] .sp-hero__h1 em { -webkit-text-stroke: 1px rgba(22,25,26,0.4); }
 [data-theme="light"] .sp-hero__lead { color: rgba(22,25,26,0.66); }
 [data-theme="light"] .sp-hero__btn-primary {
-  background: linear-gradient(135deg, #0B7A94, #15AFD1);
-  color: #fff;
+  background: linear-gradient(135deg, var(--spa2, #0B7A94), var(--spa1, #15AFD1));
+  color: var(--spaText, #fff);
 }
-[data-theme="light"] .sp-hero__btn-primary:hover { background: #15AFD1; }
+[data-theme="light"] .sp-hero__btn-primary:hover { background: linear-gradient(135deg, var(--spa2h, #15AFD1), var(--spa1h, #15AFD1)); }
 [data-theme="light"] .sp-hero__btn-ghost {
-  border-color: rgba(22,25,26,0.18);
-  color: rgba(22,25,26,0.65);
+  border-color: rgba(var(--spaGlow, 22,25,26), 0.45);
+  color: var(--spaInk, rgba(22,25,26,0.65));
 }
-[data-theme="light"] .sp-hero__btn-ghost:hover { border-color: rgba(22,25,26,0.4); color: #16191A; }
+[data-theme="light"] .sp-hero__btn-ghost:hover { border-color: var(--spa2, rgba(22,25,26,0.4)); color: var(--spaInk, #16191A); }
 [data-theme="light"] .sp-hero__trust-value { color: var(--color-accent-ink); }
 [data-theme="light"] .sp-hero__trust-label { color: rgba(22,25,26,0.66); }
 [data-theme="light"] .sp-hero__cue-text { color: rgba(22,25,26,0.66); }
@@ -105,16 +105,16 @@
 }
 
 /* CTA */
-[data-theme="light"] .sp-cta__tag { color: var(--color-accent-ink); }
+[data-theme="light"] .sp-cta__tag { color: var(--spaInk, var(--color-accent-ink)); }
 [data-theme="light"] .sp-cta__title { color: var(--color-text); }
 [data-theme="light"] .sp-cta__btn-primary {
-  background: linear-gradient(135deg, #0B7A94, #15AFD1);
-  color: #fff;
+  background: linear-gradient(135deg, var(--spa2, #0B7A94), var(--spa1, #15AFD1));
+  color: var(--spaText, #fff);
 }
-[data-theme="light"] .sp-cta__btn-primary:hover { background: #15AFD1; }
+[data-theme="light"] .sp-cta__btn-primary:hover { background: linear-gradient(135deg, var(--spa2h, #15AFD1), var(--spa1h, #15AFD1)); }
 [data-theme="light"] .sp-cta__btn-ghost {
-  border-color: rgba(22,25,26,0.18);
-  color: rgba(22,25,26,0.65);
+  border-color: rgba(var(--spaGlow, 22,25,26), 0.45);
+  color: var(--spaInk, rgba(22,25,26,0.65));
 }
-[data-theme="light"] .sp-cta__btn-ghost:hover { border-color: rgba(22,25,26,0.4); color: #16191A; }
+[data-theme="light"] .sp-cta__btn-ghost:hover { border-color: var(--spa2, rgba(22,25,26,0.4)); color: var(--spaInk, #16191A); }
 [data-theme="light"] .sp-cta__note { color: rgba(22,25,26,0.66); }

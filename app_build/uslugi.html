@@ -38,9 +38,9 @@
     :root {
       --warm:   #D4923A;
       --warm-2: rgba(212, 146, 58, 0.12);
-      --cool:   #2E74B5;
+      --cool:   #1E5A96; /* группа бизнеса = синий лендингов */
       --cool-2: rgba(46, 116, 181, 0.12);
-      --slate:  #828A94;
+      --slate:  #545C66; /* группа суда = графит лендингов */
       --slate-2:rgba(130, 138, 148, 0.12);
       --grain: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
     }
@@ -246,7 +246,7 @@
     /* Цвет задан инлайном через var(--...), поэтому перебиваем сами переменные:
        обычное правило color инлайну проиграет. */
     [data-theme="dark"] .sp-scenario__eyebrow-label {
-      --warm: #E8B45E; --cool: #6FB6EE; --slate: #AEB6C0;
+      --warm: #E8B45E; --cool: #6FB5E8; --slate: #AEB8C4;
     }
     [data-theme="dark"] .sp-cta__btn-primary { background: #6FB6EE; color: #06121b; }
     .sp-hero__chip--family:hover {
@@ -1095,6 +1095,13 @@
       color: #59C7DE;
       border-bottom-color: rgba(89, 199, 222, 0.35);
     }
+  
+    /* ─── Бренд-бирюза: метка хиро и CTA в тёмной теме (группа бизнеса
+       теперь синяя #1E5A96, ей эти места принадлежать не должны) ─── */
+    .sp-hero__tag { color: #2AC6E6; }
+    .sp-hero__tag-dot, .sp-hero__tag-line { background: #2AC6E6; }
+    [data-theme="dark"] .sp-cta__btn-primary { background: #15AFD1; color: #050f14; }
+    [data-theme="dark"] .sp-cta__btn-primary:hover { background: #1FD1F9; }
   </style>
 </head>
 
