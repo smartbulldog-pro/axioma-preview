@@ -1,0 +1,2613 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <script>(function(){try{document.documentElement.setAttribute('data-theme',localStorage.getItem('axioma-theme')||'light')}catch(e){}})();</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Услуги компании Аксиома в Барнауле: оценка недвижимости, бизнеса, имущества и юридическая помощь. Работаем по всей России. Консультация бесплатная.">
+  <meta name="theme-color" content="#FAF9F7">
+  <title>Услуги Аксиомы в Барнауле — оценка и юридическая помощь</title>
+  <link rel="canonical" href="https://аксиома-ок.рф/uslugi.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Услуги Аксиомы в Барнауле — оценка и юридическая помощь">
+  <meta property="og:description" content="Услуги компании Аксиома в Барнауле: оценка недвижимости, бизнеса, имущества и юридическая помощь. Работаем по всей России. Консультация бесплатная.">
+  <meta property="og:url" content="https://аксиома-ок.рф/uslugi.html">
+  <meta property="og:image" content="https://аксиома-ок.рф/assets/img/og-default.jpg">
+  <meta property="og:site_name" content="Аксиома — оценочная компания, Барнаул">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:locale" content="ru_RU">
+
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/main.css?v=20260825w">
+  <link rel="stylesheet" href="css/header.css?v=20260825t">
+  <link rel="stylesheet" href="css/sections.css?v=20260825u">
+  <link rel="stylesheet" href="css/ai-sidebar.css?v=20260711e">
+  <link rel="stylesheet" href="css/osmotr-wizard.css?v=20260825v">
+
+  <style>
+    /* ══════════════════════════════════════════════════════════
+       USLUGI v2 — Cinematic Premium Experience
+       Концепция: три жизненных сценария как три отдельных мира.
+       Каждый — своя атмосфера, свой свет, своя эмоция.
+       ══════════════════════════════════════════════════════════ */
+
+    /* ─── Custom Properties ─── */
+    :root {
+      --warm:   #D4923A;
+      --warm-2: rgba(212, 146, 58, 0.12);
+      --cool:   #2E74B5;
+      --cool-2: rgba(46, 116, 181, 0.12);
+      --slate:  #828A94;
+      --slate-2:rgba(130, 138, 148, 0.12);
+      --grain: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    }
+
+    /* ─── Base ─── */
+    body[data-page-id="uslugi"] {
+      background: var(--color-bg);
+    }
+
+    /* ─── Grain overlay ─── */
+    .page-grain {
+      position: fixed;
+      inset: 0;
+      background-image: var(--grain);
+      background-size: 200px;
+      pointer-events: none;
+      z-index: 999;
+      opacity: 0.6;
+      mix-blend-mode: overlay;
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       CINEMATIC HERO
+       ══════════════════════════════════════════════════════════ */
+    .sp-hero {
+      position: relative;
+      min-height: 100vh;
+      min-height: 100svh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    /* Background canvas — radial dark gradient + subtle noise */
+    .sp-hero__bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(21,175,209,0.07) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 40% at 20% 100%, rgba(212,146,58,0.05) 0%, transparent 50%),
+        var(--color-bg);
+    }
+
+    /* Geometric lines decoration */
+    .sp-hero__lines {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .sp-hero__line {
+      position: absolute;
+      background: rgba(255,255,255,0.03);
+      transform-origin: 0 0;
+    }
+    .sp-hero__line--h {
+      left: 0; right: 0;
+      height: 1px;
+    }
+    .sp-hero__line--v {
+      top: 0; bottom: 0;
+      width: 1px;
+    }
+
+    /* Content */
+    .sp-hero__content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: calc(var(--header-height) + 3rem) 2rem 4rem;
+      max-width: 1000px;
+    }
+
+    .sp-hero__tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--cool);
+      margin-bottom: 2.5rem;
+      opacity: 0;
+      transform: translateY(16px);
+    }
+
+    .sp-hero__tag-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--cool);
+      flex-shrink: 0;
+    }
+
+    .sp-hero__tag-line {
+      width: 28px;
+      height: 1px;
+      background: var(--cool);
+    }
+
+    /* Typographic hero — Cormorant, как на главной */
+    .sp-hero__h1 {
+      font-family: 'Cormorant', 'Georgia', serif;
+      font-size: clamp(3.5rem, 10vw, 8rem);
+      font-weight: 300;
+      line-height: 0.95;
+      letter-spacing: -0.025em;
+      color: #fff;
+      margin: 0 0 2rem;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .sp-hero__h1 em {
+      font-style: italic;
+      color: transparent;
+      -webkit-text-stroke: 1px rgba(255,255,255,0.35);
+    }
+
+    .sp-hero__h1 span.accent {
+      color: var(--cool);
+    }
+
+    .sp-hero__h1--display{ display:block; width:min(720px,92vw); max-width:100%; margin:0 auto 1.3rem; line-height:1; letter-spacing:normal; font-weight:900; }
+    .uhd-l1,.uhd-l2,.uhd-l3{ display:block; width:100%; margin:0; text-align:justify; text-align-last:justify; -moz-text-align-last:justify; text-justify:inter-character; }
+    .uhd-l1{ font-family:'Inter',sans-serif; font-weight:900; font-size:clamp(2.4rem,15vw,7rem); text-transform:uppercase; line-height:.9; background:linear-gradient(118deg,#2AC6E6 0%,#0B7A94 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent; }
+    .uhd-l2{ font-family:'Cormorant','Georgia',serif; font-style:italic; font-weight:500; font-size:clamp(1.9rem,13vw,5.8rem); line-height:.98; margin-top:-.02em; color:var(--color-text); opacity:.9; }
+    .uhd-l3{ font-family:'Inter',sans-serif; font-weight:900; font-size:clamp(1.55rem,9.3vw,4.9rem); text-transform:uppercase; line-height:.92; margin-top:-.02em; color:var(--color-text); }
+
+    .sp-hero__lead {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(0.95rem, 1.8vw, 1.15rem);
+      font-weight: 300;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.45);
+      max-width: 520px;
+      margin: 0 auto 3.5rem;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    #heroLead.sp-hero__lead{ width:min(720px,92vw); max-width:100%; margin:0 auto; display:flex; flex-direction:column; gap:.5rem; }
+    #heroLead .uhl-l1,#heroLead .uhl-l2,#heroLead .uhl-l3{ display:block; width:100%; margin:0; text-align:justify; text-align-last:justify; -moz-text-align-last:justify; text-justify:inter-character; }
+    #heroLead .uhl-l1{ font-family:'Inter',sans-serif; font-weight:400; font-size:clamp(.92rem,1.5vw,1.05rem); line-height:1.4; color:var(--color-text-muted); }
+    #heroLead .uhl-l2{ font-family:'Inter',sans-serif; font-weight:400; font-size:clamp(.98rem,1.6vw,1.12rem); line-height:1.4; color:var(--color-text); }
+    #heroLead .uhl-l3{ font-family:'Inter',sans-serif; font-weight:400; font-size:clamp(.95rem,1.55vw,1.08rem); line-height:1.4; margin-top:.1rem; color:var(--color-text-muted); }
+    /* #0E9CC0 на светлом фоне — 3,05:1; берём тёмную бирюзу текста */
+    #heroLead .uhl-l3 b{ font-weight:800; color:#0A6E85; -webkit-text-fill-color:#0A6E85; }
+    [data-theme="dark"] #heroLead .uhl-l3 b{ color:#6FB6EE; -webkit-text-fill-color:#6FB6EE; }
+    #heroLead .uhl-l3 i{ font-style:italic; }
+    @media(max-width:600px){ #heroLead .uhl-l1,#heroLead .uhl-l2,#heroLead .uhl-l3{ text-align:left; text-align-last:left; -moz-text-align-last:left; } }
+
+    /* Four scenario chips — single row */
+    .sp-hero__chips{ width:min(860px,94vw); margin:2.2rem auto 0; display:grid; grid-template-columns:repeat(4,1fr); gap:.6rem; opacity:0; transform:translateY(20px); }
+    @media(max-width:660px){ .sp-hero__chips{ grid-template-columns:1fr 1fr; } }
+    @media(max-width:400px){ .sp-hero__chips{ grid-template-columns:1fr; } }
+
+    .sp-hero__chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      padding: 0.85rem 0.5rem;
+      border-radius: 14px;
+      border: 1px solid;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      text-decoration: none;
+      cursor: pointer;
+      white-space: nowrap;
+      transition:
+        background 0.35s ease,
+        transform 0.35s cubic-bezier(0.34,1.56,0.64,1),
+        box-shadow 0.35s ease;
+      background: transparent;
+      /* Без этого чип без модификатора («Другое») красился ссылочным синим браузера */
+      color: var(--color-text);
+      border-color: var(--border-subtle, rgba(255,255,255,0.18));
+    }
+
+    .sp-hero__chip:hover {
+      transform: translateY(-3px) scale(1.03);
+    }
+
+    .sp-hero__chip--family {
+      border-color: rgba(212,146,58,0.4);
+      color: var(--warm);
+    }
+    /* Цвет раздела как текст на светлом фоне даёт 2,5–3,3:1 — берём
+       затемнённые варианты тех же цветов, рамки и заливки не трогаем. */
+    [data-theme="light"] .sp-hero__chip--family { color: #8A5A12; }
+    [data-theme="light"] .sp-hero__chip--business { color: #0A6E85; }
+    [data-theme="light"] .sp-hero__chip--court { color: #546A88; }
+    /* В тёмной теме те же цвета, наоборот, слишком тёмные для текста */
+    [data-theme="dark"] .sp-hero__chip--family { color: #E8B45E; }
+    [data-theme="dark"] .sp-hero__chip--business { color: #6FB6EE; }
+    [data-theme="dark"] .sp-hero__chip--court { color: #AEB6C0; }
+    /* Цвет задан инлайном через var(--...), поэтому перебиваем сами переменные:
+       обычное правило color инлайну проиграет. */
+    [data-theme="dark"] .sp-scenario__eyebrow-label {
+      --warm: #E8B45E; --cool: #6FB6EE; --slate: #AEB6C0;
+    }
+    [data-theme="dark"] .sp-cta__btn-primary { background: #6FB6EE; color: #06121b; }
+    .sp-hero__chip--family:hover {
+      background: rgba(212,146,58,0.1);
+      box-shadow: 0 12px 32px rgba(212,146,58,0.15);
+    }
+
+    .sp-hero__chip--business {
+      border-color: rgba(21,175,209,0.4);
+      color: var(--cool);
+    }
+    .sp-hero__chip--business:hover {
+      background: rgba(21,175,209,0.1);
+      box-shadow: 0 12px 32px rgba(21,175,209,0.15);
+    }
+
+    .sp-hero__chip--court {
+      border-color: rgba(122,146,181,0.4);
+      color: var(--slate);
+    }
+    .sp-hero__chip--court:hover {
+      background: rgba(122,146,181,0.1);
+      box-shadow: 0 12px 32px rgba(122,146,181,0.12);
+    }
+
+    /* Scroll cue */
+    .sp-hero__cue {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      opacity: 0;
+    }
+
+    .sp-hero__cue-text {
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+    }
+
+    .sp-hero__cue-line {
+      width: 1px;
+      height: 52px;
+      background: linear-gradient(to bottom, var(--cool), transparent);
+      animation: cueAnim 2.2s ease-in-out infinite;
+    }
+
+    @keyframes cueAnim {
+      0%   { transform: scaleY(0); transform-origin: top; opacity: 0; }
+      40%  { transform: scaleY(1); transform-origin: top; opacity: 1; }
+      80%  { transform: scaleY(1); transform-origin: top; opacity: 0; }
+      100% { transform: scaleY(0); transform-origin: top; opacity: 0; }
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       SCENARIO NAV — fixed справа под Помощником
+       ══════════════════════════════════════════════════════════ */
+    .sp-nav {
+      position: fixed;
+      right: 16px;
+      top: calc(var(--header-height, 64px) + 8px);
+      z-index: 79;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 4px;
+      pointer-events: none;
+    }
+
+    .sp-nav__glass { display: contents; }
+    .sp-nav__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 4px;
+    }
+
+    .sp-nav__item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px 6px 10px;
+      border-radius: 100px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+      cursor: pointer;
+      border: 1px solid transparent;
+      background: transparent;
+      text-decoration: none;
+      transition:
+        color 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.35s cubic-bezier(0.34,1.56,0.64,1);
+      pointer-events: auto;
+      white-space: nowrap;
+    }
+
+    .sp-nav__item::after { display: none; }
+
+    .sp-nav__item:hover {
+      color: rgba(255,255,255,0.75);
+      background: rgba(255,255,255,0.04);
+      border-color: rgba(255,255,255,0.08);
+      transform: translateX(-3px);
+    }
+
+    .sp-nav__item.is-active {
+      color: #fff;
+      background: rgba(255,255,255,0.06);
+      border-color: rgba(255,255,255,0.1);
+    }
+
+    .sp-nav__pip {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      opacity: 0.5;
+      transition: opacity 0.3s ease;
+    }
+    .sp-nav__item.is-active .sp-nav__pip { opacity: 1; }
+    .sp-nav__item--family .sp-nav__pip  { background: var(--warm); }
+    .sp-nav__item--business .sp-nav__pip { background: var(--cool); }
+    .sp-nav__item--court .sp-nav__pip   { background: var(--slate); }
+
+    /* Скрываем на мобайле */
+    @media (max-width: 1024px) { .sp-nav { display: none; } }
+
+    /* ══════════════════════════════════════════════════════════
+       SCENARIO BLOCKS
+       ══════════════════════════════════════════════════════════ */
+    .sp-scenarios { padding: 0 0 8rem; }
+
+    .sp-scenario {
+      padding: 6rem 2rem;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    /* ─── Section Label ─── */
+    .sp-scenario__eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      overflow: hidden;
+    }
+
+    .sp-scenario__eyebrow-num {
+      font-family: 'Cormorant', 'Georgia', serif;
+      font-size: 0.9rem;
+      font-style: italic;
+      color: rgba(255,255,255,0.55);
+    }
+
+    .sp-scenario__eyebrow-dash {
+      flex: 1;
+      max-width: 40px;
+      height: 1px;
+    }
+
+    .sp-scenario__eyebrow-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    /* ─── Split Layout ─── */
+    .sp-scenario__split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+      margin-bottom: 4rem;
+    }
+
+    @media (max-width: 900px) {
+      .sp-scenario__split { grid-template-columns: 1fr; gap: 3rem; }
+    }
+
+    .sp-scenario__left {}
+
+    .sp-scenario__title {
+      font-family: 'Cormorant', 'Georgia', serif;
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      font-weight: 300;
+      line-height: 1.0;
+      letter-spacing: -0.02em;
+      color: #fff;
+      margin: 0 0 1.5rem;
+    }
+
+    .sp-scenario__title em {
+      font-style: italic;
+    }
+
+    .sp-scenario__quote {
+      font-family: 'Cormorant', 'Georgia', serif;
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      font-weight: 400;
+      font-style: italic;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.45);
+      border-left: 2px solid;
+      padding-left: 1.25rem;
+      margin: 0 0 2rem;
+    }
+
+    .sp-scenario__desc {
+      font-size: 0.95rem;
+      line-height: 1.85;
+      color: rgba(255,255,255,0.4);
+    }
+
+    /* ─── Cinematic Scene Image ─── */
+    .sp-scenario__right {
+      position: relative;
+    }
+
+    .sp-scene {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+    }
+
+    .sp-scene__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: brightness(0.55) saturate(0.9);
+      transform: scale(1.05);
+      transition: transform 0.8s cubic-bezier(0.16,1,0.3,1), filter 0.6s ease;
+    }
+
+    .sp-scene:hover .sp-scene__img {
+      transform: scale(1.0);
+      filter: brightness(0.7) saturate(1.1);
+    }
+
+    .sp-scene__overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(8,15,16,0.5) 0%, transparent 60%);
+    }
+
+    .sp-scene__badge {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.25rem;
+      padding: 0.4rem 0.9rem;
+      border-radius: 100px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: rgba(8,15,16,0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: rgba(255,255,255,0.6);
+    }
+
+    /* Hover credit */
+    .sp-scene__credit {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 1.5rem;
+      right: 1.5rem;
+      font-family: 'Cormorant', 'Georgia', serif;
+      font-size: 1rem;
+      font-style: italic;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.5;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    .sp-scene:hover .sp-scene__credit {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       SERVICE CARDS — The real magic
+       ══════════════════════════════════════════════════════════ */
+    .sp-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    @media (max-width: 768px) {
+      .sp-cards { grid-template-columns: 1fr; }
+    }
+    @media (min-width: 769px) and (max-width: 1100px) {
+      .sp-cards { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* Court block has only 2 cards — center them */
+    #courtCards {
+      display: grid !important;
+      grid-template-columns: repeat(2, 1fr) !important;
+      max-width: 720px;
+      margin-inline: auto;
+    }
+    @media (max-width: 768px) {
+      #courtCards { grid-template-columns: 1fr !important; max-width: 100%; }
+    }
+
+    .sp-card {
+      position: relative;
+      display: block;
+      text-decoration: none;
+      background: var(--color-bg);
+      padding: 2.5rem 2rem;
+      overflow: hidden;
+      cursor: pointer;
+      transition: background 0.4s ease;
+      will-change: transform;
+    }
+
+    /* Glass shimmer on hover */
+    .sp-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .sp-card:hover::before { opacity: 1; }
+
+    /* Moving highlight */
+    .sp-card__light {
+      position: absolute;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      pointer-events: none;
+      transition: transform 0.1s linear, opacity 0.3s ease;
+      opacity: 0;
+      transform: translate(-50%, -50%);
+      filter: blur(40px);
+    }
+
+    .sp-card:hover .sp-card__light { opacity: 1; }
+
+    /* Icon — obsidian/crystal dual layer */
+    .sp-card__icon {
+      position: relative;
+      width: 76px;
+      height: 76px;
+      border-radius: 18px;
+      overflow: hidden;
+      background: rgba(255,255,255,0.02);
+      border: 0.5px solid rgba(255,255,255,0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.75rem;
+      transition:
+        transform 0.5s cubic-bezier(0.34,1.56,0.64,1),
+        background 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+      flex-shrink: 0;
+    }
+
+    .sp-card:hover .sp-card__icon {
+      transform: scale(1.08) rotate(-6deg);
+      background: rgba(21,175,209,0.04);
+      border-color: rgba(21,175,209,0.2);
+      box-shadow: 0 0 20px rgba(21,175,209,0.1), inset 0 0 16px rgba(21,175,209,0.04);
+    }
+
+    /* Both icon image layers */
+    .sp-card__icon-img {
+      position: absolute;
+      inset: 8px;
+      width: calc(100% - 16px);
+      height: calc(100% - 16px);
+      object-fit: contain;
+      border-radius: 10px;
+      transition:
+        opacity 0.5s cubic-bezier(0.165,0.84,0.44,1),
+        transform 0.5s cubic-bezier(0.165,0.84,0.44,1),
+        filter 0.5s cubic-bezier(0.165,0.84,0.44,1);
+    }
+
+    /* Obsidian: dark, visible by default */
+    .sp-card__icon-img--obs {
+      opacity: 1;
+      transform: scale(1);
+      filter: brightness(0.7);
+      z-index: 2;
+    }
+
+    /* Crystal: hidden by default */
+    .sp-card__icon-img--cry {
+      opacity: 0;
+      transform: scale(0.6) rotate(15deg);
+      filter: brightness(1.2);
+      z-index: 1;
+    }
+
+    /* Hover: obsidian shatters, crystal emerges */
+    .sp-card:hover .sp-card__icon-img--obs {
+      opacity: 0;
+      transform: scale(1.3);
+      filter: blur(4px) brightness(0.3);
+    }
+
+    .sp-card:hover .sp-card__icon-img--cry {
+      opacity: 1;
+      transform: scale(1) rotate(0deg);
+      filter: brightness(1.1) drop-shadow(0 0 8px rgba(21,175,209,0.5));
+    }
+
+    /* Particle layer */
+    .sp-card__icon-particles {
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+      border-radius: 18px;
+      pointer-events: none;
+    }
+
+    .sp-card__icon-particles::before,
+    .sp-card__icon-particles::after {
+      content: '';
+      position: absolute;
+      width: 3px; height: 3px;
+      border-radius: 50%;
+      top: 50%; left: 50%;
+      opacity: 0;
+      transition: none;
+    }
+
+    .sp-card__icon-particles::before { background: rgba(160,160,160,0.6); }
+    .sp-card__icon-particles::after  { background: rgba(120,120,120,0.5); }
+
+    .sp-card:hover .sp-card__icon-particles::before {
+      opacity: 1;
+      animation: spParticle1 0.6s cubic-bezier(0.165,0.84,0.44,1) forwards;
+    }
+    .sp-card:hover .sp-card__icon-particles::after {
+      opacity: 1;
+      animation: spParticle2 0.6s 0.05s cubic-bezier(0.165,0.84,0.44,1) forwards;
+    }
+
+    @keyframes spParticle1 {
+      0%   { box-shadow: 0 0 0 rgba(160,160,160,.8), 0 0 0 rgba(160,160,160,.6), 0 0 0 rgba(160,160,160,.4), 0 0 0 rgba(160,160,160,.3); }
+      50%  { box-shadow: -14px -16px 0 rgba(160,160,160,.6), 16px -12px 0 rgba(140,140,140,.5), -18px 10px 0 rgba(130,130,130,.4), 12px 18px 0 rgba(150,150,150,.3); }
+      100% { box-shadow: -22px -24px 0 rgba(160,160,160,0), 24px -20px 0 rgba(140,140,140,0), -26px 16px 0 rgba(130,130,130,0), 18px 26px 0 rgba(150,150,150,0); }
+    }
+    @keyframes spParticle2 {
+      0%   { box-shadow: 0 0 0 rgba(120,120,120,.7), 0 0 0 rgba(120,120,120,.5), 0 0 0 rgba(120,120,120,.4), 0 0 0 rgba(120,120,120,.3); }
+      50%  { box-shadow: 10px -18px 0 rgba(120,120,120,.5), -16px -14px 0 rgba(100,100,100,.4), 18px 14px 0 rgba(110,110,110,.3), -12px 20px 0 rgba(130,130,130,.3); }
+      100% { box-shadow: 16px -26px 0 rgba(120,120,120,0), -24px -22px 0 rgba(100,100,100,0), 26px 22px 0 rgba(110,110,110,0), -18px 28px 0 rgba(130,130,130,0); }
+    }
+
+    /* Title */
+    .sp-card__title {
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff;
+      margin: 0 0 0.6rem;
+      transition: color 0.3s ease;
+    }
+
+    /* Situation = mini-story */
+    .sp-card__story {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      /* было 0.38 — текст читался только при наведении, на телефоне его нет */
+      color: rgba(255,255,255,0.62);
+      margin: 0 0 1.75rem;
+      transition: color 0.3s ease;
+    }
+
+    .sp-card:hover .sp-card__story {
+      color: rgba(255,255,255,0.78);
+    }
+
+    /* Bottom row */
+    .sp-card__foot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .sp-card__price-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .sp-card__price-label {
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+    }
+
+    .sp-card__price {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #fff;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Arrow CTA */
+    .sp-card__arrow {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition:
+        transform 0.35s cubic-bezier(0.34,1.56,0.64,1),
+        border-color 0.3s ease,
+        background 0.3s ease;
+      flex-shrink: 0;
+    }
+
+    .sp-card__arrow svg {
+      width: 14px;
+      height: 14px;
+      color: rgba(255,255,255,0.35);
+      transition: color 0.3s ease;
+    }
+
+    .sp-card:hover .sp-card__arrow {
+      transform: rotate(-45deg) scale(1.1);
+    }
+
+    /* Separator line that animates in */
+    .sp-card__sep {
+      position: absolute;
+      bottom: 0;
+      left: 2rem;
+      right: 2rem;
+      height: 1px;
+      background: rgba(255,255,255,0.05);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.5s cubic-bezier(0.16,1,0.3,1);
+    }
+
+    /* ─── FAMILY theme ─── */
+    .sp-card--family::before {
+      background: radial-gradient(ellipse at var(--mx,50%) var(--my,50%), var(--warm-2) 0%, transparent 60%);
+    }
+    .sp-card--family .sp-card__light { background: var(--warm); }
+    .sp-card--family .sp-card__icon { background: rgba(212,146,58,0.1); border: 1px solid rgba(212,146,58,0.2); }
+    .sp-card--family:hover .sp-card__title { color: var(--warm); }
+    .sp-card--family:hover .sp-card__arrow { background: rgba(212,146,58,0.12); border-color: rgba(212,146,58,0.35); }
+    .sp-card--family:hover .sp-card__arrow svg { color: var(--warm); }
+
+    /* ─── BUSINESS theme ─── */
+    .sp-card--business::before {
+      background: radial-gradient(ellipse at var(--mx,50%) var(--my,50%), var(--cool-2) 0%, transparent 60%);
+    }
+    .sp-card--business .sp-card__light { background: var(--cool); }
+    .sp-card--business .sp-card__icon { background: rgba(21,175,209,0.1); border: 1px solid rgba(21,175,209,0.2); }
+    .sp-card--business:hover .sp-card__title { color: var(--cool); }
+    .sp-card--business:hover .sp-card__arrow { background: rgba(21,175,209,0.12); border-color: rgba(21,175,209,0.35); }
+    .sp-card--business:hover .sp-card__arrow svg { color: var(--cool); }
+
+    /* ─── COURT theme ─── */
+    .sp-card--court::before {
+      background: radial-gradient(ellipse at var(--mx,50%) var(--my,50%), var(--slate-2) 0%, transparent 60%);
+    }
+    .sp-card--court .sp-card__light { background: var(--slate); }
+    .sp-card--court .sp-card__icon { background: rgba(122,146,181,0.1); border: 1px solid rgba(122,146,181,0.2); }
+    .sp-card--court:hover .sp-card__title { color: var(--slate); }
+    .sp-card--court:hover .sp-card__arrow { background: rgba(122,146,181,0.12); border-color: rgba(122,146,181,0.35); }
+    .sp-card--court:hover .sp-card__arrow svg { color: var(--slate); }
+
+    /* ── Card entrance state (GSAP sets initial) ── */
+    .sp-card {
+      opacity: 0;
+      transform: translateY(32px);
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       DIVIDERS between scenarios
+       ══════════════════════════════════════════════════════════ */
+    .sp-divider {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    .sp-divider__line {
+      height: 1px;
+      background: linear-gradient(to right,
+        transparent,
+        rgba(255,255,255,0.06) 20%,
+        rgba(255,255,255,0.06) 80%,
+        transparent
+      );
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       BOTTOM CTA
+       ══════════════════════════════════════════════════════════ */
+    .sp-cta {
+      position: relative;
+      padding: 7rem 2rem 6rem;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .sp-cta__glow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: min(600px, 90vw);
+      height: min(600px, 90vw);
+      background: radial-gradient(circle, rgba(21,175,209,0.06) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .sp-cta__tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--cool);
+      margin-bottom: 2rem;
+      opacity: 0;
+      transform: translateY(16px);
+    }
+
+    .sp-cta__title {
+      font-family: 'Cormorant', 'Georgia', serif;
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      font-weight: 300;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: #fff;
+      margin: 0 0 2.5rem;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .sp-cta__actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .sp-cta__btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      padding: 1rem 2.2rem;
+      border-radius: 100px;
+      background: var(--cool);
+      color: #050f14;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      transition:
+        transform 0.35s cubic-bezier(0.34,1.56,0.64,1),
+        box-shadow 0.35s ease,
+        background 0.3s ease;
+    }
+
+    .sp-cta__btn-primary:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 20px 50px rgba(21,175,209,0.28);
+      background: #1FD1F9;
+    }
+
+    .sp-cta__btn-phone {
+      font-size: 0.85rem;
+      animation: phoneBeat 2.5s ease-in-out infinite;
+    }
+
+    @keyframes phoneBeat {
+      0%,80%,100% { transform: scale(1); }
+      40% { transform: scale(1.15) rotate(-8deg); }
+      60% { transform: scale(1.08) rotate(5deg); }
+    }
+
+    .sp-cta__btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 1rem 2rem;
+      border-radius: 100px;
+      border: 1px solid rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.6);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 400;
+      text-decoration: none;
+      transition: border-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    }
+    .sp-cta__btn-ghost:hover {
+      border-color: rgba(255,255,255,0.3);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    .sp-cta__note {
+      margin-top: 1.5rem;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.55);
+      letter-spacing: 0.04em;
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       REDUCED MOTION
+       ══════════════════════════════════════════════════════════ */
+    @media (prefers-reduced-motion: reduce) {
+      .sp-hero__cue-line { animation: none; opacity: 0.4; }
+      .sp-cta__btn-phone { animation: none; }
+      * { transition-duration: 0.01ms !important; }
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       🎨 LIGHT THEME — [data-theme="light"]
+       Светлый киношный вариант: тёплая бумага, белые карточки.
+       ══════════════════════════════════════════════════════════ */
+    [data-theme="light"] .page-grain { opacity: 0.25; }
+    [data-theme="light"] .sp-hero__line { background: rgba(22,25,26,0.05); }
+    [data-theme="light"] .sp-hero__tag { color: var(--color-accent-ink); }
+    [data-theme="light"] .sp-hero__tag-dot,
+    [data-theme="light"] .sp-hero__tag-line { background: var(--color-accent-ink); }
+    [data-theme="light"] .sp-hero__h1 { color: var(--color-text); }
+    [data-theme="light"] .sp-hero__h1 em { -webkit-text-stroke: 1px rgba(22,25,26,0.4); }
+    [data-theme="light"] .sp-hero__h1 span.accent { color: var(--color-accent-ink); }
+    [data-theme="light"] .sp-hero__lead { color: rgba(22,25,26,0.66); }
+    [data-theme="light"] .sp-hero__cue-text { color: rgba(22,25,26,0.66); }
+    [data-theme="light"] .sp-nav__item { color: rgba(22,25,26,0.66); }
+    [data-theme="light"] .sp-nav__item:hover {
+      color: rgba(22,25,26,0.85);
+      background: rgba(255,255,255,0.75);
+      border-color: rgba(22,25,26,0.10);
+    }
+    [data-theme="light"] .sp-nav__item.is-active {
+      color: #16191A;
+      background: rgba(255,255,255,0.85);
+      border-color: rgba(22,25,26,0.12);
+      box-shadow: var(--shadow-card);
+    }
+    [data-theme="light"] .sp-scenario__eyebrow-num { color: rgba(22,25,26,0.66); }
+    [data-theme="light"] .sp-scenario__title { color: var(--color-text); }
+    [data-theme="light"] .sp-scenario__quote { color: rgba(22,25,26,0.66); }
+    [data-theme="light"] .sp-scenario__desc { color: rgba(22,25,26,0.66); }
+    [data-theme="light"] .sp-scene__img { filter: brightness(0.92) saturate(1); }
+    [data-theme="light"] .sp-scene:hover .sp-scene__img { filter: brightness(1) saturate(1.05); }
+    [data-theme="light"] .sp-cards { background: rgba(22,25,26,0.08); }
+    [data-theme="light"] .sp-card { background: #FFFFFF; }
+    [data-theme="light"] .sp-card__title { color: var(--color-text); }
+    /* Базовый цвет — читаемый: на телефоне наведения нет, а текст был бледным */
+    [data-theme="light"] .sp-card__story { color: rgba(22,25,26,0.68); }
+    [data-theme="light"] .sp-card:hover .sp-card__story { color: rgba(22,25,26,0.82); }
+    [data-theme="light"] .sp-card__price-label { color: rgba(22,25,26,0.66); }
+    [data-theme="light"] .sp-card__price { color: var(--color-text); }
+    [data-theme="light"] .sp-card__arrow { border-color: rgba(22,25,26,0.12); }
+    [data-theme="light"] .sp-card__arrow svg { color: rgba(22,25,26,0.66); }
+    [data-theme="light"] .sp-card__sep { background: rgba(22,25,26,0.06); }
+    [data-theme="light"] .sp-card__icon { background: var(--color-bg-elevated); border-color: var(--border-subtle); }
+    [data-theme="light"] .sp-card__icon-img--obs { filter: brightness(1); }
+    [data-theme="light"] .sp-divider__line {
+      background: linear-gradient(to right, transparent, rgba(22,25,26,0.08) 20%, rgba(22,25,26,0.08) 80%, transparent);
+    }
+    [data-theme="light"] .sp-cta__tag { color: var(--color-accent-ink); }
+    [data-theme="light"] .sp-cta__title { color: var(--color-text); }
+    [data-theme="light"] .sp-cta__btn-primary { background: linear-gradient(135deg, #0B7A94, #15AFD1); color: #fff; }
+    [data-theme="light"] .sp-cta__btn-primary:hover { background: #15AFD1; }
+    [data-theme="light"] .sp-cta__btn-ghost {
+      border-color: rgba(22,25,26,0.18);
+      color: rgba(22,25,26,0.65);
+    }
+    [data-theme="light"] .sp-cta__btn-ghost:hover { border-color: rgba(22,25,26,0.4); color: #16191A; }
+    [data-theme="light"] .sp-cta__note { color: rgba(22,25,26,0.66); }
+    [data-theme="light"] .sp-scene__badge {
+      background: rgba(255,255,255,0.75);
+      border-color: rgba(22,25,26,0.10);
+      color: rgba(22,25,26,0.7);
+    }
+  </style>
+</head>
+
+<body data-page-id="uslugi">
+
+  <!-- Film grain overlay -->
+  <div class="page-grain" aria-hidden="true"></div>
+
+  <!-- ═══ HEADER + MENU (из shared-components.js) ═══ -->
+  <div id="shared-header"></div>
+
+
+  <!-- ══════════════════════════════════════════════
+       CINEMATIC HERO
+       ══════════════════════════════════════════════ -->
+  <section class="sp-hero" aria-label="Каталог услуг">
+    <div class="sp-hero__bg" aria-hidden="true"></div>
+
+    <!-- Geometric grid lines -->
+    <div class="sp-hero__lines" aria-hidden="true">
+      <div class="sp-hero__line sp-hero__line--h" style="top:33%"></div>
+      <div class="sp-hero__line sp-hero__line--h" style="top:66%"></div>
+      <div class="sp-hero__line sp-hero__line--v" style="left:25%"></div>
+      <div class="sp-hero__line sp-hero__line--v" style="left:75%"></div>
+    </div>
+
+    <div class="sp-hero__content">
+      <div class="sp-hero__tag" id="heroTag">
+        <span class="sp-hero__tag-dot"></span>
+        Оценка и юридическая помощь в Барнауле — под одной крышей
+        <span class="sp-hero__tag-line"></span>
+      </div>
+
+      <h1 class="sp-hero__h1 sp-hero__h1--display" id="heroH1">
+        <span class="uhd-l1">С любой</span>
+        <span class="uhd-l2">задачей — есть</span>
+        <span class="uhd-l3">к кому прийти</span>
+      </h1>
+
+      <p class="sp-hero__lead" id="heroLead">
+        <span class="uhl-l1">Дом и семья, своё дело или важный документ для банка, суда или ведомства —</span>
+        <span class="uhl-l2">с чем бы вы ни пришли, рядом будет живой человек.</span>
+        <span class="uhl-l3"><b>Какая у вас ситуация?</b> <i>Просто расскажите — мы подскажем, с чего начать.</i></span>
+      </p>
+
+      <div class="sp-hero__chips" id="heroChips">
+        <a href="#scenario-family" class="sp-hero__chip sp-hero__chip--family" id="chipFamily">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Для семьи и дома
+        </a>
+        <a href="#scenario-business" class="sp-hero__chip sp-hero__chip--business" id="chipBusiness">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          Для бизнеса
+        </a>
+        <a href="#scenario-court" class="sp-hero__chip sp-hero__chip--court" id="chipCourt">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          Для суда и госорганов
+        </a>
+        <a href="https://max.ru/u/f9LHodD0cOL0n-mRdnryGsw7EJZ7Zxtw55dK3RKrty99-5P9BsmoWjZU3_8" class="sp-hero__chip" id="chipHelp" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+          Другое — подскажем
+        </a>
+      </div>
+    </div>
+
+    <div class="sp-hero__cue" id="heroCue" aria-hidden="true">
+      <div class="sp-hero__cue-line"></div>
+      <span class="sp-hero__cue-text">Прокрутите</span>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       STICKY NAV
+       ══════════════════════════════════════════════ -->
+  <nav class="sp-nav" id="spNav" aria-label="Разделы услуг">
+    <div class="sp-nav__glass">
+      <div class="sp-nav__inner">
+        <button class="sp-nav__item sp-nav__item--family is-active" data-target="scenario-family" id="navFamily">
+          <span class="sp-nav__pip"></span>
+          Семья и дом
+        </button>
+        <button class="sp-nav__item sp-nav__item--business" data-target="scenario-business" id="navBusiness">
+          <span class="sp-nav__pip"></span>
+          Бизнес
+        </button>
+        <button class="sp-nav__item sp-nav__item--court" data-target="scenario-court" id="navCourt">
+          <span class="sp-nav__pip"></span>
+          Суд и госорганы
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════
+       SCENARIOS
+       ══════════════════════════════════════════════ -->
+  <main id="main-content" tabindex="-1" class="sp-scenarios">
+
+    <!-- ─────────────────────────────────────────
+         SCENARIO 1: СЕМЬЯ
+         ───────────────────────────────────────── -->
+    <section class="sp-scenario" id="scenario-family" aria-labelledby="family-title">
+      <div class="sp-scenario__eyebrow">
+        <span class="sp-scenario__eyebrow-num">I</span>
+        <span class="sp-scenario__eyebrow-dash" style="background:var(--warm)"></span>
+        <span class="sp-scenario__eyebrow-label" style="color:var(--warm)">Семья и дом</span>
+      </div>
+
+      <div class="sp-scenario__split">
+        <div class="sp-scenario__left">
+          <h2 class="sp-scenario__title" id="family-title">
+            Ваш дом —<br><em>ваше спокойствие</em>
+          </h2>
+          <blockquote class="sp-scenario__quote" style="border-color:var(--warm)">
+            «Ипотека, наследство, развод — у каждой задачи свои тонкости.<br>Их и учитываем, а не просто считаем метры.»
+          </blockquote>
+          <p class="sp-scenario__desc">
+            Ипотека, наследство, развод — моменты, когда особенно важно, чтобы кто-то взял расчёты на себя. Дальше вам остаётся только уверенность.
+          </p>
+        </div>
+
+        <div class="sp-scenario__right">
+          <div class="sp-scene" id="familyScene">
+            <img src="img/uslugi/scene-nedvizhimost.jpg" data-dark="img/uslugi/scene-nedvizhimost-dark.jpg" alt="Семейный дом — оценка недвижимости" class="sp-scene__img" loading="eager">
+            <div class="sp-scene__overlay" style="background:linear-gradient(135deg,rgba(8,15,16,0.6) 0%,rgba(212,146,58,0.05) 100%)"></div>
+            <span class="sp-scene__badge">Бережно и по-человечески</span>
+            <p class="sp-scene__credit">«Считаем под вашу ситуацию, а не по шаблону»</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cards -->
+      <div class="sp-cards" id="familyCards">
+
+        <!-- Оценка недвижимости -->
+        <a href="uslugi/ocenka-nedvizhimosti.html" class="sp-card sp-card--family" id="fc1">
+          <div class="sp-card__light" aria-hidden="true"></div>
+          <div class="sp-card__icon">
+            <img src="assets/img/icons/light-nedvizhimost.webp" data-dark="assets/img/icons/obs-nedvizhimost.webp" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
+            <img src="assets/img/icons/glow-nedvizhimost.webp" data-dark="assets/img/icons/cry-nedvizhimost.webp" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <span class="sp-card__icon-particles"></span>
+          </div>
+          <h3 class="sp-card__title">Оценка недвижимости</h3>
+          <p class="sp-card__story">
+            Квартира, дом, доля, земля. Официальный отчёт по 135-ФЗ и ФСО — для банков, нотариусов и судов. Документы примем через мессенджер и всё оформим сами.
+          </p>
+          <div class="sp-card__foot">
+            <div class="sp-card__price-wrap">
+              <span class="sp-card__price-label">стоимость от</span>
+              <span class="sp-card__price">2 500 ₽</span>
+            </div>
+            <div class="sp-card__arrow">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path d="M3 8h10M9 4l4 4-4 4"/>
+              </svg>
+            </div>
+          </div>
+          <div class="sp-card__sep"></div>
+        </a>
+
+        <!-- Для нотариуса -->
+        <a href="uslugi/ocenka-dlya-notariusa.html" class="sp-card sp-card--family" id="fc2">
+          <div class="sp-card__light" aria-hidden="true"></div>
+          <div class="sp-card__icon">
+            <img src="assets/img/icons/light-notarius.webp" data-dark="assets/img/icons/obs-notarius.webp" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
+            <img src="assets/img/icons/glow-notarius.webp" data-dark="assets/img/icons/cry-notarius.webp" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <span class="sp-card__icon-particles"></span>
+          </div>
+          <h3 class="sp-card__title">Оценка для нотариуса</h3>
+          <p class="sp-card__story">
+            Нужна оценка для вступления в наследство? Пришлёте документы через мессенджер, а готовый отчёт мы сами передадим вашему нотариусу.
+          </p>
+          <div class="sp-card__foot">
+            <div class="sp-card__price-wrap">
+              <span class="sp-card__price-label">стоимость от</span>
+              <span class="sp-card__price">2 500 ₽</span>
+            </div>
+            <div class="sp-card__arrow">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path d="M3 8h10M9 4l4 4-4 4"/>
+              </svg>
+            </div>
+          </div>
+          <div class="sp-card__sep"></div>
+        </a>
+
+        <!-- Ущерб -->
+        <a href="uslugi/ocenka-ushherba.html" class="sp-card sp-card--family" id="fc3">
+          <div class="sp-card__light" aria-hidden="true"></div>
+          <div class="sp-card__icon">
+            <img src="assets/img/icons/light-ushherb.webp" data-dark="assets/img/icons/obs-ushherb.webp" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
+            <img src="assets/img/icons/glow-ushherb.webp" data-dark="assets/img/icons/cry-ushherb.webp" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <span class="sp-card__icon-particles"></span>
+          </div>
+          <h3 class="sp-card__title">Оценка ущерба</h3>
+          <p class="sp-card__story">
+            Залив, пожар, ДТП — оценим ущерб точной цифрой по каждому дефекту. Это надёжная основа для обращения к страховой или в суд.
+          </p>
+          <div class="sp-card__foot">
+            <div class="sp-card__price-wrap">
+              <span class="sp-card__price-label">стоимость от</span>
+              <span class="sp-card__price">5 000 ₽</span>
+            </div>
+            <div class="sp-card__arrow">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path d="M3 8h10M9 4l4 4-4 4"/>
+              </svg>
+            </div>
+          </div>
+          <div class="sp-card__sep"></div>
+        </a>
+
+      </div>
+    </section>
+
+    <div class="sp-divider"><div class="sp-divider__line"></div></div>
+
+    <!-- ─────────────────────────────────────────
+         SCENARIO 2: БИЗНЕС
+         ───────────────────────────────────────── -->
+    <section class="sp-scenario" id="scenario-business" aria-labelledby="business-title">
+      <div class="sp-scenario__eyebrow">
+        <span class="sp-scenario__eyebrow-num">II</span>
+        <span class="sp-scenario__eyebrow-dash" style="background:var(--cool)"></span>
+        <span class="sp-scenario__eyebrow-label" style="color:var(--cool)">Бизнес</span>
+      </div>
+
+      <div class="sp-scenario__split">
+        <div class="sp-scenario__left">
+          <h2 class="sp-scenario__title" id="business-title">
+            Бизнесу<br>нужна <em>ясность</em>
+          </h2>
+          <blockquote class="sp-scenario__quote" style="border-color:var(--cool)">
+            «Считаем не только выручку и активы.<br>Покажем, чего по-настоящему стоит созданное вами.»
+          </blockquote>
+          <p class="sp-scenario__desc">
+            Привлекаете инвестора, продаёте дело, оформляете залог или делите доли — покажем честную, обоснованную стоимость, с которой спокойно идти на переговоры.
+          </p>
+        </div>
+
+        <div class="sp-scenario__right">
+          <div class="sp-scene" id="businessScene">
+            <img src="img/uslugi/scene-biznes.jpg" data-dark="img/uslugi/scene-biznes-dark.jpg" alt="Оценка для бизнеса" class="sp-scene__img" loading="lazy">
+            <div class="sp-scene__overlay" style="background:linear-gradient(135deg,rgba(8,15,16,0.6) 0%,rgba(46,116,181,0.05) 100%)"></div>
+            <span class="sp-scene__badge">Всё останется между нами</span>
+            <p class="sp-scene__credit">«Честная стоимость — фундамент для взвешенного решения»</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="sp-cards" id="businessCards">
+
+        <!-- Коммерческая -->
+        <a href="uslugi/kommercheskaya-nedvizhimost.html" class="sp-card sp-card--business" id="bc1">
+          <div class="sp-card__light" aria-hidden="true"></div>
+          <div class="sp-card__icon">
+            <img src="assets/img/icons/light-commercial.webp" data-dark="assets/img/icons/obs-commercial.webp" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
+            <img src="assets/img/icons/glow-commercial.webp" data-dark="assets/img/icons/cry-commercial.webp" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <span class="sp-card__icon-particles"></span>
+          </div>
+          <h3 class="sp-card__title">Коммерческая недвижимость</h3>
+          <p class="sp-card__story">
+            Офис, склад, торговый центр — для кредита под залог, взноса в уставный капитал, аренды или продажи. Расчёты, оформленные по требованиям банков и налоговой.
+          </p>
+          <div class="sp-card__foot">
+            <div class="sp-card__price-wrap">
+              <span class="sp-card__price-label">стоимость от</span>
+              <span class="sp-card__price">5 000 ₽</span>
+            </div>
+            <div class="sp-card__arrow">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path d="M3 8h10M9 4l4 4-4 4"/>
+              </svg>
+            </div>
+          </div>
+          <div class="sp-card__sep"></div>
+        </a>
+
+        <!-- Оценка бизнеса -->
+        <a href="uslugi/ocenka-biznesa.html" class="sp-card sp-card--business" id="bc2">
+          <div class="sp-card__light" aria-hidden="true"></div>
+          <div class="sp-card__icon">
+            <img src="assets/img/icons/light-biznes.webp" data-dark="assets/img/icons/obs-biznes.webp" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
+            <img src="assets/img/icons/glow-biznes.webp" data-dark="assets/img/icons/cry-biznes.webp" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <span class="sp-card__icon-particles"></span>
+          </div>
+          <h3 class="sp-card__title">Оценка бизнеса</h3>
+          <p class="sp-card__story">
+            Продажа компании, выход партнёра, привлечение инвестора. Покажем реальную стоимость вашего дела — обоснованную и готовую к переговорам. Отчёт получите только вы — кому его показать, решаете сами.
+          </p>
+          <div class="sp-card__foot">
+            <div class="sp-card__price-wrap">
+              <span class="sp-card__price-label">стоимость от</span>
+              <span class="sp-card__price">15 000 ₽</span>
+            </div>
+            <div class="sp-card__arrow">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path d="M3 8h10M9 4l4 4-4 4"/>
+              </svg>
+            </div>
+          </div>
+          <div class="sp-card__sep"></div>
+        </a>
+
+        <!-- Оборудование -->
+        <a href="uslugi/oborudovanie-i-transport.html" class="sp-card sp-card--business" id="bc3">
+          <div class="sp-card__light" aria-hidden="true"></div>
+          <div class="sp-card__icon">
+            <img src="assets/img/icons/light-oborudovanie.webp" data-dark="assets/img/icons/obs-oborudovanie.webp" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
+            <img src="assets/img/icons/glow-oborudovanie.webp" data-dark="assets/img/icons/cry-oborudovanie.webp" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <span class="sp-card__icon-particles"></span>
+          </div>
+          <h3 class="sp-card__title">Оборудование и транспорт</h3>
+          <p class="sp-card__story">
+            Станки, комбайны, спецтехника, грузовики. Сельхозтехника Алтая и заводское оборудование — для залога, лизинга или обновления парка.
+          </p>
+          <div class="sp-card__foot">
+            <div class="sp-card__price-wrap">
+              <span class="sp-card__price-label">стоимость от</span>
+              <span class="sp-card__price">2 500 ₽</span>
+            </div>
+            <div class="sp-card__arrow">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path d="M3 8h10M9 4l4 4-4 4"/>
+              </svg>
+            </div>
+          </div>
+          <div class="sp-card__sep"></div>
+        </a>
+
+      </div>
+    </section>
+
+    <div class="sp-divider"><div class="sp-divider__line"></div></div>
+
+    <!-- ─────────────────────────────────────────
+         SCENARIO 3: СУД И ГОСОРГАНЫ
+         ───────────────────────────────────────── -->
+    <section class="sp-scenario" id="scenario-court" aria-labelledby="court-title">
+      <div class="sp-scenario__eyebrow">
+        <span class="sp-scenario__eyebrow-num">III</span>
+        <span class="sp-scenario__eyebrow-dash" style="background:var(--slate)"></span>
+        <span class="sp-scenario__eyebrow-label" style="color:var(--slate)">Суд и госорганы</span>
+      </div>
+
+      <div class="sp-scenario__split">
+        <div class="sp-scenario__left">
+          <h2 class="sp-scenario__title" id="court-title">
+            Каждый довод —<br><em>обоснован и услышан</em>
+          </h2>
+          <blockquote class="sp-scenario__quote" style="border-color:var(--slate)">
+            «Перед судом рядом эксперт,<br>который лично отвечает за каждый вывод.»
+          </blockquote>
+          <p class="sp-scenario__desc">
+            Иногда достаточно спокойно договориться, а иногда нужно официальное решение — мы на связи в любом случае. Оценщик обоснует каждый вывод и по вызову суда пояснит расчёт как специалист. Работа застрахована на 30 млн ₽ — ваша дополнительная уверенность.
+          </p>
+        </div>
+
+        <div class="sp-scenario__right">
+          <div class="sp-scene" id="courtScene">
+            <img src="img/uslugi/scene-sud.jpg" data-dark="img/uslugi/scene-sud-dark.jpg" alt="Оценка для суда и госорганов" class="sp-scene__img" loading="lazy">
+            <div class="sp-scene__overlay" style="background:linear-gradient(135deg,rgba(8,15,16,0.65) 0%,rgba(130,138,148,0.05) 100%)"></div>
+            <span class="sp-scene__badge">Отчёты по 135-ФЗ и ФСО — для судов по всей России</span>
+            <p class="sp-scene__credit">«Представляем вас в суде по доверенности — и словом, и делом»</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="sp-cards" id="courtCards">
+
+        <!-- Оценка для суда -->
+        <a href="uslugi/ocenka-dlya-suda.html" class="sp-card sp-card--court" id="cc1">
+          <div class="sp-card__light" aria-hidden="true"></div>
+          <div class="sp-card__icon">
+            <img src="assets/img/icons/light-sud.webp" data-dark="assets/img/icons/obs-sud.webp" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
+            <img src="assets/img/icons/glow-sud.webp" data-dark="assets/img/icons/cry-sud.webp" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <span class="sp-card__icon-particles"></span>
+          </div>
+          <h3 class="sp-card__title">Оценка для суда</h3>
+          <p class="sp-card__story">
+            Отчёт по 135-ФЗ и ФСО — для арбитражных и районных судов. При судебной экспертизе — строго по 73-ФЗ. Эксперт лично отвечает на вопросы каждой стороны в заседании — и на него можно положиться.
+          </p>
+          <div class="sp-card__foot">
+            <div class="sp-card__price-wrap">
+              <span class="sp-card__price-label">стоимость от</span>
+              <span class="sp-card__price">2 500 ₽</span>
+            </div>
+            <div class="sp-card__arrow">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path d="M3 8h10M9 4l4 4-4 4"/>
+              </svg>
+            </div>
+          </div>
+          <div class="sp-card__sep"></div>
+        </a>
+
+        <!-- Юридические услуги -->
+        <a href="uslugi/yuridicheskie-uslugi.html" class="sp-card sp-card--court" id="cc3">
+          <div class="sp-card__light" aria-hidden="true"></div>
+          <div class="sp-card__icon">
+            <img src="assets/img/icons/light-yuridicheskie.webp" data-dark="assets/img/icons/obs-yuridicheskie.webp" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
+            <img src="assets/img/icons/glow-yuridicheskie.webp" data-dark="assets/img/icons/cry-yuridicheskie.webp" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <span class="sp-card__icon-particles"></span>
+          </div>
+          <h3 class="sp-card__title">Юридические услуги</h3>
+          <p class="sp-card__story">
+            Семейные, наследственные и корпоративные дела. Сначала ищем мирный путь через переговоры и медиацию. А если нужен суд — сопровождаем дело от первого документа до решения.
+          </p>
+          <div class="sp-card__foot">
+            <div class="sp-card__price-wrap">
+              <span class="sp-card__price-label">стоимость от</span>
+              <span class="sp-card__price">15 000 ₽</span>
+            </div>
+            <div class="sp-card__arrow">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path d="M3 8h10M9 4l4 4-4 4"/>
+              </svg>
+            </div>
+          </div>
+          <div class="sp-card__sep"></div>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════════════
+       BOTTOM CTA
+       ══════════════════════════════════════════════ -->
+  <section class="sp-cta" id="spCta" aria-labelledby="cta-title">
+    <div class="sp-cta__glow" aria-hidden="true"></div>
+
+    <p class="sp-cta__tag" id="ctaTag">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.64 13.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.55 2.88h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.71 2.81a2 2 0 0 1-.45 2.11L7.91 10.4a16 16 0 0 0 5.69 5.69l1.88-1.88a2 2 0 0 1 2.11-.45c.91.35 1.85.58 2.81.71A2 2 0 0 1 22 16.92z"/></svg>
+      Бесплатная консультация
+    </p>
+
+    <h2 class="sp-cta__title" id="cta-title">
+      Расскажите о вашей задаче —<br>дальше действуем мы.
+    </h2>
+
+    <div class="sp-cta__actions" id="ctaActions">
+      <a href="tel:+79130998881" class="sp-cta__btn-primary">
+        <span class="sp-cta__btn-phone">📞</span>
+        +7 913 099-88-81
+      </a>
+      <a href="https://max.ru/u/f9LHodD0cOL0n-mRdnryGsw7EJZ7Zxtw55dK3RKrty99-5P9BsmoWjZU3_8" class="sp-cta__btn-ghost">
+        <img src="assets/img/icon-max.png" alt="MAX" width="16" height="16" style="border-radius:3px">
+                MAX
+      </a>
+    </div>
+
+    <p class="sp-cta__note">Барнаул, ул. Молодёжная, 26 · Работаем по всей России дистанционно · Первая консультация бесплатно · Ответственность застрахована на 30 млн ₽</p>
+  </section>
+
+
+  <!-- ═══ FOOTER (из shared-components.js) ═══ -->
+  <!-- Статичный текстовый блок: ИИ-краулеры не выполняют JavaScript,
+       а шапку и подвал вставляет скрипт — без него страница была тупиком. -->
+  <nav class="sp-breadcrumbs" aria-label="Хлебные крошки">
+    <a href="index.html">Главная</a> <span aria-hidden="true">·</span> <span class="current">Услуги</span>
+  </nav>
+  <p class="sp-more__tail">
+    Цены на все услуги — на странице <a href="ceny.html">Цены</a>.
+    Адрес офиса и телефон — в <a href="kontakty.html">Контактах</a>.
+    Про компанию — <a href="o-kompanii.html">О компании</a>.
+    ООО «Аксиома», г. Барнаул, ул. Молодёжная, 26, 6 этаж, офис 618 ·
+    <a href="tel:+79130998881">+7 913 099-88-81</a> ·
+    <a href="mailto:aksiomaok@mail.ru">aksiomaok@mail.ru</a> · Пн–Пт, 09:00–17:00
+  </p>
+
+  <div id="shared-footer"></div>
+
+  <!-- ═══ AI SIDEBAR (из shared-components.js) ═══ -->
+  <div id="shared-ai-sidebar"></div>
+
+
+  <!-- ══════════════════════════════════════════════
+       SCRIPTS
+       ══════════════════════════════════════════════ -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+
+  <script src="js/components/shared-components.js?v=20260825t" defer></script>
+  <script src="js/theme.js?v=20260825e" defer></script>
+  <script src="js/components/header.js?v=20260825t" defer></script>
+  <script src="js/sections.js?v=20260825s" defer></script>
+  <script src="ai/rag-engine.js?v=20260711e" defer></script>
+  <script src="js/components/neural-brain.js?v=20260711e" defer></script>
+  <script src="js/components/ai-sidebar.js?v=20260825l" defer></script>
+  <script src="js/components/osmotr-wizard.js?v=20260825v" defer></script>
+
+  <script>
+    /* ══════════════════════════════════════════
+       USLUGI v2 — Animation Engine
+       ══════════════════════════════════════════ */
+    document.addEventListener('DOMContentLoaded', () => {
+
+      /* ── 1. Lenis smooth scroll ── */
+      const lenis = new Lenis({
+        lerp: 0.075,
+        smoothWheel: true,
+        wheelMultiplier: 0.85,
+      });
+
+      function raf(t) { lenis.raf(t); requestAnimationFrame(raf); }
+      requestAnimationFrame(raf);
+
+      gsap.registerPlugin(ScrollTrigger);
+      lenis.on('scroll', ScrollTrigger.update);
+      gsap.ticker.add(t => lenis.raf(t * 1000));
+      gsap.ticker.lagSmoothing(0);
+
+      /* ── 2. Hero entrance — cinematic stagger ── */
+      const heroTl = gsap.timeline({ delay: 0.15 });
+      heroTl
+        .to('#heroTag', { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' })
+        .to('#heroH1',  { opacity: 1, y: 0, duration: 1.0, ease: 'power3.out' }, '-=0.55')
+        .to('#heroLead',{ opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }, '-=0.65')
+        .to('#heroChips',{ opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, '-=0.5')
+        .to('#heroCue', { opacity: 1, duration: 0.6, ease: 'power2.out' }, '-=0.3');
+
+      /* ── 3. Hero BG subtle parallax ── */
+      gsap.to('.sp-hero__bg', {
+        yPercent: 15,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: '.sp-hero',
+          start: 'top top',
+          end: 'bottom top',
+          scrub: true,
+        }
+      });
+
+      /* ── 4. Scenario eyebrows — line draw ── */
+      gsap.utils.toArray('.sp-scenario__eyebrow-dash').forEach(dash => {
+        gsap.from(dash, {
+          scaleX: 0,
+          transformOrigin: 'left center',
+          duration: 0.8,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: dash.closest('.sp-scenario__eyebrow'),
+            start: 'top 85%',
+          }
+        });
+      });
+
+      /* ── 5. Scenario titles — text slide up ── */
+      gsap.utils.toArray('.sp-scenario__title').forEach(el => {
+        gsap.from(el, {
+          opacity: 0,
+          y: 50,
+          duration: 1.0,
+          ease: 'power3.out',
+          scrollTrigger: { trigger: el, start: 'top 85%' }
+        });
+      });
+
+      gsap.utils.toArray('.sp-scenario__quote, .sp-scenario__desc').forEach(el => {
+        gsap.from(el, {
+          opacity: 0,
+          y: 30,
+          duration: 0.8,
+          ease: 'power3.out',
+          scrollTrigger: { trigger: el, start: 'top 88%' }
+        });
+      });
+
+      /* ── 6. Scene images — reveal on scroll ── */
+      gsap.utils.toArray('.sp-scene').forEach(scene => {
+        gsap.from(scene, {
+          opacity: 0,
+          x: 40,
+          duration: 1.0,
+          ease: 'power3.out',
+          scrollTrigger: { trigger: scene, start: 'top 80%' }
+        });
+      });
+
+      /* Scene parallax */
+      gsap.utils.toArray('.sp-scene__img').forEach(img => {
+        gsap.fromTo(img,
+          { yPercent: -8 },
+          {
+            yPercent: 8,
+            ease: 'none',
+            scrollTrigger: {
+              trigger: img.closest('.sp-scene'),
+              start: 'top bottom',
+              end: 'bottom top',
+              scrub: true,
+            }
+          }
+        );
+      });
+
+      /* ── 7. Cards — cascade stagger per group ── */
+      [
+        { gridId: 'familyCards',   cls: '.sp-card--family' },
+        { gridId: 'businessCards', cls: '.sp-card--business' },
+        { gridId: 'courtCards',    cls: '.sp-card--court' },
+      ].forEach(({ gridId, cls }) => {
+        const grid = document.getElementById(gridId);
+        if (!grid) return;
+        const cards = grid.querySelectorAll(cls);
+
+        ScrollTrigger.create({
+          trigger: grid,
+          start: 'top 78%',
+          once: true,
+          onEnter: () => {
+            gsap.to(cards, {
+              opacity: 1,
+              y: 0,
+              duration: 0.75,
+              ease: 'power3.out',
+              stagger: { each: 0.1, from: 'start' },
+            });
+            // Animate sep lines
+            grid.querySelectorAll('.sp-card__sep').forEach((sep, i) => {
+              gsap.to(sep, {
+                scaleX: 1,
+                duration: 0.6,
+                ease: 'power3.out',
+                delay: 0.3 + i * 0.1,
+                scrollTrigger: { trigger: sep.closest('.sp-card'), start: 'top 90%' }
+              });
+            });
+          }
+        });
+      });
+
+      /* ── 8. Sticky nav active state ── */
+      const navBtns = document.querySelectorAll('.sp-nav__item[data-target]');
+      const scenarioIds = ['scenario-family', 'scenario-business', 'scenario-court'];
+
+      const navObs = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            navBtns.forEach(btn => {
+              btn.classList.toggle('is-active', btn.dataset.target === id);
+            });
+          }
+        });
+      }, { rootMargin: '-15% 0px -70% 0px' });
+
+      scenarioIds.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) navObs.observe(el);
+      });
+
+      navBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const target = document.getElementById(btn.dataset.target);
+          if (!target) return;
+          const navH = document.getElementById('spNav').offsetHeight;
+          const hdrH = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-height')) || 64;
+          lenis.scrollTo(target, { offset: -(navH + hdrH + 16), duration: 1.1 });
+        });
+      });
+
+      /* ── 9. Chip smooth scroll ── */
+      document.querySelectorAll('.sp-hero__chip[href^="#"]').forEach(chip => {
+        chip.addEventListener('click', e => {
+          e.preventDefault();
+          const targetId = chip.getAttribute('href').slice(1);
+          const target = document.getElementById(targetId);
+          if (target) {
+            const navH = document.getElementById('spNav').offsetHeight;
+            const hdrH = 64;
+            lenis.scrollTo(target, { offset: -(navH + hdrH + 16), duration: 1.3 });
+          }
+        });
+      });
+
+      /* ── 10. Card magnetic mouse light ── */
+      document.querySelectorAll('.sp-card').forEach(card => {
+        const light = card.querySelector('.sp-card__light');
+
+        card.addEventListener('mousemove', e => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+
+          // CSS custom props for the radial gradient
+          card.style.setProperty('--mx', `${(x / rect.width) * 100}%`);
+          card.style.setProperty('--my', `${(y / rect.height) * 100}%`);
+
+          if (light) {
+            light.style.transform = `translate(${x}px, ${y}px) translate(-50%, -50%)`;
+          }
+
+          // Subtle tilt
+          const rx = ((y / rect.height) - 0.5) * -6;
+          const ry = ((x / rect.width) - 0.5) * 6;
+          gsap.to(card, {
+            rotateX: rx,
+            rotateY: ry,
+            transformPerspective: 900,
+            duration: 0.35,
+            ease: 'power2.out',
+          });
+        });
+
+        card.addEventListener('mouseleave', () => {
+          gsap.to(card, {
+            rotateX: 0,
+            rotateY: 0,
+            duration: 0.55,
+            ease: 'power3.out',
+          });
+        });
+      });
+
+      /* ── 11. CTA entrance ── */
+      const ctaTl = gsap.timeline({
+        scrollTrigger: { trigger: '#spCta', start: 'top 75%', once: true }
+      });
+      ctaTl
+        .to('#ctaTag',     { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' })
+        .to('#spCta .sp-cta__title', { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out' }, '-=0.4')
+        .to('#ctaActions', { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, '-=0.5');
+
+      /* ── 12. Hero grid lines animate in ── */
+      gsap.from('.sp-hero__line--h', {
+        scaleX: 0,
+        transformOrigin: 'left center',
+        duration: 1.8,
+        ease: 'power3.out',
+        stagger: 0.2,
+        delay: 0.5,
+      });
+      gsap.from('.sp-hero__line--v', {
+        scaleY: 0,
+        transformOrigin: 'top center',
+        duration: 1.8,
+        ease: 'power3.out',
+        stagger: 0.2,
+        delay: 0.6,
+      });
+
+    }); // DOMContentLoaded
+  </script>
+
+  <!-- GEO: каталог услуг -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Главная",
+      "item": "https://аксиома-ок.рф/index.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Услуги",
+      "item": "https://аксиома-ок.рф/uslugi.html"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Услуги оценки и юридической помощи — Аксиома, Барнаул",
+  "numberOfItems": 8,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "Service",
+        "name": "Оценка недвижимости",
+        "url": "https://аксиома-ок.рф/uslugi/ocenka-nedvizhimosti.html",
+        "serviceType": "Оценка недвижимости",
+        "description": "Оценка квартиры, дома, доли и земли по 135-ФЗ и ФСО для банков, нотариусов и судов.",
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Барнаул"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Алтайский край"
+          },
+          {
+            "@type": "Country",
+            "name": "Россия"
+          }
+        ],
+        "provider": {
+          "@type": [
+            "LocalBusiness",
+            "LegalService"
+          ],
+          "@id": "https://аксиома-ок.рф/#organization",
+          "name": "Оценочная компания «Аксиома»",
+          "legalName": "ООО «Аксиома»",
+          "url": "https://аксиома-ок.рф/index.html",
+          "logo": "https://аксиома-ок.рф/img/logo-full.webp",
+          "image": "https://аксиома-ок.рф/assets/img/og-default.jpg",
+          "telephone": "+7-913-099-88-81",
+          "email": "aksiomaok@mail.ru",
+          "taxID": "2222913647",
+          "priceRange": "от 2 500 ₽",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ул. Молодёжная, 26, 6 этаж, офис 618",
+            "addressLocality": "Барнаул",
+            "addressRegion": "Алтайский край",
+            "postalCode": "656049",
+            "addressCountry": "RU"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "53.3606",
+            "longitude": "83.7636"
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "09:00",
+              "closes": "17:00"
+            }
+          ],
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Барнаул"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Алтайский край"
+            },
+            {
+              "@type": "Country",
+              "name": "Россия"
+            }
+          ],
+          "sameAs": [
+            "https://max.ru/u/f9LHodD0cOL0n-mRdnryGsw7EJZ7Zxtw55dK3RKrty99-5P9BsmoWjZU3_8"
+          ]
+        },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "RUB",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": "2500",
+            "priceCurrency": "RUB"
+          },
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "Service",
+        "name": "Оценка коммерческой недвижимости",
+        "url": "https://аксиома-ок.рф/uslugi/kommercheskaya-nedvizhimost.html",
+        "serviceType": "Оценка коммерческой недвижимости",
+        "description": "Оценка офисов, складов и торговых площадей для кредита под залог, аренды и продажи.",
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Барнаул"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Алтайский край"
+          },
+          {
+            "@type": "Country",
+            "name": "Россия"
+          }
+        ],
+        "provider": {
+          "@type": [
+            "LocalBusiness",
+            "LegalService"
+          ],
+          "@id": "https://аксиома-ок.рф/#organization",
+          "name": "Оценочная компания «Аксиома»",
+          "legalName": "ООО «Аксиома»",
+          "url": "https://аксиома-ок.рф/index.html",
+          "logo": "https://аксиома-ок.рф/img/logo-full.webp",
+          "image": "https://аксиома-ок.рф/assets/img/og-default.jpg",
+          "telephone": "+7-913-099-88-81",
+          "email": "aksiomaok@mail.ru",
+          "taxID": "2222913647",
+          "priceRange": "от 2 500 ₽",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ул. Молодёжная, 26, 6 этаж, офис 618",
+            "addressLocality": "Барнаул",
+            "addressRegion": "Алтайский край",
+            "postalCode": "656049",
+            "addressCountry": "RU"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "53.3606",
+            "longitude": "83.7636"
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "09:00",
+              "closes": "17:00"
+            }
+          ],
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Барнаул"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Алтайский край"
+            },
+            {
+              "@type": "Country",
+              "name": "Россия"
+            }
+          ],
+          "sameAs": [
+            "https://max.ru/u/f9LHodD0cOL0n-mRdnryGsw7EJZ7Zxtw55dK3RKrty99-5P9BsmoWjZU3_8"
+          ]
+        },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "RUB",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": "5000",
+            "priceCurrency": "RUB"
+          },
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "Service",
+        "name": "Оценка для нотариуса",
+        "url": "https://аксиома-ок.рф/uslugi/ocenka-dlya-notariusa.html",
+        "serviceType": "Оценка для нотариуса",
+        "description": "Оценка имущества для нотариуса и вступления в наследство — на нужную дату.",
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Барнаул"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Алтайский край"
+          },
+          {
+            "@type": "Country",
+            "name": "Россия"
+          }
+        ],
+        "provider": {
+          "@type": [
+            "LocalBusiness",
+            "LegalService"
+          ],
+          "@id": "https://аксиома-ок.рф/#organization",
+          "name": "Оценочная компания «Аксиома»",
+          "legalName": "ООО «Аксиома»",
+          "url": "https://аксиома-ок.рф/index.html",
+          "logo": "https://аксиома-ок.рф/img/logo-full.webp",
+          "image": "https://аксиома-ок.рф/assets/img/og-default.jpg",
+          "telephone": "+7-913-099-88-81",
+          "email": "aksiomaok@mail.ru",
+          "taxID": "2222913647",
+          "priceRange": "от 2 500 ₽",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ул. Молодёжная, 26, 6 этаж, офис 618",
+            "addressLocality": "Барнаул",
+            "addressRegion": "Алтайский край",
+            "postalCode": "656049",
+            "addressCountry": "RU"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "53.3606",
+            "longitude": "83.7636"
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "09:00",
+              "closes": "17:00"
+            }
+          ],
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Барнаул"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Алтайский край"
+            },
+            {
+              "@type": "Country",
+              "name": "Россия"
+            }
+          ],
+          "sameAs": [
+            "https://max.ru/u/f9LHodD0cOL0n-mRdnryGsw7EJZ7Zxtw55dK3RKrty99-5P9BsmoWjZU3_8"
+          ]
+        },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "RUB",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": "2500",
+            "priceCurrency": "RUB"
+          },
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "Service",
+        "name": "Оценка и экспертиза для суда",
+        "url": "https://аксиома-ок.рф/uslugi/ocenka-dlya-suda.html",
+        "serviceType": "Оценка для суда",
+        "description": "Отчёт и судебная экспертиза для арбитражных и районных судов (135-ФЗ, ФСО, 73-ФЗ).",
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Барнаул"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Алтайский край"
+          },
+          {
+            "@type": "Country",
+            "name": "Россия"
+          }
+        ],
+        "provider": {
+          "@type": [
+            "LocalBusiness",
+            "LegalService"
+          ],
+          "@id": "https://аксиома-ок.рф/#organization",
+          "name": "Оценочная компания «Аксиома»",
+          "legalName": "ООО «Аксиома»",
+          "url": "https://аксиома-ок.рф/index.html",
+          "logo": "https://аксиома-ок.рф/img/logo-full.webp",
+          "image": "https://аксиома-ок.рф/assets/img/og-default.jpg",
+          "telephone": "+7-913-099-88-81",
+          "email": "aksiomaok@mail.ru",
+          "taxID": "2222913647",
+          "priceRange": "от 2 500 ₽",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ул. Молодёжная, 26, 6 этаж, офис 618",
+            "addressLocality": "Барнаул",
+            "addressRegion": "Алтайский край",
+            "postalCode": "656049",
+            "addressCountry": "RU"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "53.3606",
+            "longitude": "83.7636"
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "09:00",
+              "closes": "17:00"
+            }
+          ],
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Барнаул"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Алтайский край"
+            },
+            {
+              "@type": "Country",
+              "name": "Россия"
+            }
+          ],
+          "sameAs": [
+            "https://max.ru/u/f9LHodD0cOL0n-mRdnryGsw7EJZ7Zxtw55dK3RKrty99-5P9BsmoWjZU3_8"
+          ]
+        },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "RUB",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": "2500",
+            "priceCurrency": "RUB"
+          },
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "item": {
+        "@type": "Service",
+        "name": "Оценка ущерба имущества",
+        "url": "https://аксиома-ок.рф/uslugi/ocenka-ushherba.html",
+        "serviceType": "Оценка ущерба",
+        "description": "Оценка ущерба после залива, пожара и ДТП — основа для страховой и суда.",
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Барнаул"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Алтайский край"
+          },
+          {
+            "@type": "Country",
+            "name": "Россия"
+          }
+        ],
+        "provider": {
+          "@type": [
+            "LocalBusiness",
+            "LegalService"
+          ],
+          "@id": "https://аксиома-ок.рф/#organization",
+          "name": "Оценочная компания «Аксиома»",
+          "legalName": "ООО «Аксиома»",
+          "url": "https://аксиома-ок.рф/index.html",
+          "logo": "https://аксиома-ок.рф/img/logo-full.webp",
+          "image": "https://аксиома-ок.рф/assets/img/og-default.jpg",
+          "telephone": "+7-913-099-88-81",
+          "email": "aksiomaok@mail.ru",
+          "taxID": "2222913647",
+          "priceRange": "от 2 500 ₽",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ул. Молодёжная, 26, 6 этаж, офис 618",
+            "addressLocality": "Барнаул",
+            "addressRegion": "Алтайский край",
+            "postalCode": "656049",
+            "addressCountry": "RU"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "53.3606",
+            "longitude": "83.7636"
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "09:00",
+              "closes": "17:00"
+            }
+          ],
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Барнаул"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Алтайский край"
+            },
+            {
+              "@type": "Country",
+              "name": "Россия"
+            }
+          ],
+          "sameAs": [
+            "https://max.ru/u/f9LHodD0cOL0n-mRdnryGsw7EJZ7Zxtw55dK3RKrty99-5P9BsmoWjZU3_8"
+          ]
+        },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "RUB",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": "5000",
+            "priceCurrency": "RUB"
+          },
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "item": {
+        "@type": "Service",
+        "name": "Оценка бизнеса",
+        "url": "https://аксиома-ок.рф/uslugi/ocenka-biznesa.html",
+        "serviceType": "Оценка бизнеса",
+        "description": "Оценка бизнеса и доли при продаже, выходе партнёра и привлечении инвестора.",
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Барнаул"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Алтайский край"
+          },
+          {
+            "@type": "Country",
+            "name": "Россия"
+          }
+        ],
+        "provider": {
+          "@type": [
+            "LocalBusiness",
+            "LegalService"
+          ],
+          "@id": "https://аксиома-ок.рф/#organization",
+          "name": "Оценочная компания «Аксиома»",
+          "legalName": "ООО «Аксиома»",
+          "url": "https://аксиома-ок.рф/index.html",
+          "logo": "https://аксиома-ок.рф/img/logo-full.webp",
+          "image": "https://аксиома-ок.рф/assets/img/og-default.jpg",
+          "telephone": "+7-913-099-88-81",
+          "email": "aksiomaok@mail.ru",
+          "taxID": "2222913647",
+          "priceRange": "от 2 500 ₽",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ул. Молодёжная, 26, 6 этаж, офис 618",
+            "addressLocality": "Барнаул",
+            "addressRegion": "Алтайский край",
+            "postalCode": "656049",
+            "addressCountry": "RU"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "53.3606",
+            "longitude": "83.7636"
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "09:00",
+              "closes": "17:00"
+            }
+          ],
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Барнаул"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Алтайский край"
+            },
+            {
+              "@type": "Country",
+              "name": "Россия"
+            }
+          ],
+          "sameAs": [
+            "https://max.ru/u/f9LHodD0cOL0n-mRdnryGsw7EJZ7Zxtw55dK3RKrty99-5P9BsmoWjZU3_8"
+          ]
+        },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "RUB",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": "15000",
+            "priceCurrency": "RUB"
+          },
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "item": {
+        "@type": "Service",
+        "name": "Оценка оборудования и транспорта",
+        "url": "https://аксиома-ок.рф/uslugi/oborudovanie-i-transport.html",
+        "serviceType": "Оценка движимого имущества",
+        "description": "Оценка станков, спецтехники и транспорта для залога, лизинга и продажи.",
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Барнаул"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Алтайский край"
+          },
+          {
+            "@type": "Country",
+            "name": "Россия"
+          }
+        ],
+        "provider": {
+          "@type": [
+            "LocalBusiness",
+            "LegalService"
+          ],
+          "@id": "https://аксиома-ок.рф/#organization",
+          "name": "Оценочная компания «Аксиома»",
+          "legalName": "ООО «Аксиома»",
+          "url": "https://аксиома-ок.рф/index.html",
+          "logo": "https://аксиома-ок.рф/img/logo-full.webp",
+          "image": "https://аксиома-ок.рф/assets/img/og-default.jpg",
+          "telephone": "+7-913-099-88-81",
+          "email": "aksiomaok@mail.ru",
+          "taxID": "2222913647",
+          "priceRange": "от 2 500 ₽",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ул. Молодёжная, 26, 6 этаж, офис 618",
+            "addressLocality": "Барнаул",
+            "addressRegion": "Алтайский край",
+            "postalCode": "656049",
+            "addressCountry": "RU"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "53.3606",
+            "longitude": "83.7636"
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "09:00",
+              "closes": "17:00"
+            }
+          ],
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Барнаул"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Алтайский край"
+            },
+            {
+              "@type": "Country",
+              "name": "Россия"
+            }
+          ],
+          "sameAs": [
+            "https://max.ru/u/f9LHodD0cOL0n-mRdnryGsw7EJZ7Zxtw55dK3RKrty99-5P9BsmoWjZU3_8"
+          ]
+        },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "RUB",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": "2500",
+            "priceCurrency": "RUB"
+          },
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "item": {
+        "@type": "Service",
+        "name": "Юридические услуги",
+        "url": "https://аксиома-ок.рф/uslugi/yuridicheskie-uslugi.html",
+        "serviceType": "Юридические услуги",
+        "description": "Сопровождение сделок, семейные, наследственные и корпоративные дела, представительство в суде.",
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Барнаул"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Алтайский край"
+          },
+          {
+            "@type": "Country",
+            "name": "Россия"
+          }
+        ],
+        "provider": {
+          "@type": [
+            "LocalBusiness",
+            "LegalService"
+          ],
+          "@id": "https://аксиома-ок.рф/#organization",
+          "name": "Оценочная компания «Аксиома»",
+          "legalName": "ООО «Аксиома»",
+          "url": "https://аксиома-ок.рф/index.html",
+          "logo": "https://аксиома-ок.рф/img/logo-full.webp",
+          "image": "https://аксиома-ок.рф/assets/img/og-default.jpg",
+          "telephone": "+7-913-099-88-81",
+          "email": "aksiomaok@mail.ru",
+          "taxID": "2222913647",
+          "priceRange": "от 2 500 ₽",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ул. Молодёжная, 26, 6 этаж, офис 618",
+            "addressLocality": "Барнаул",
+            "addressRegion": "Алтайский край",
+            "postalCode": "656049",
+            "addressCountry": "RU"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "53.3606",
+            "longitude": "83.7636"
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "09:00",
+              "closes": "17:00"
+            }
+          ],
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Барнаул"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Алтайский край"
+            },
+            {
+              "@type": "Country",
+              "name": "Россия"
+            }
+          ],
+          "sameAs": [
+            "https://max.ru/u/f9LHodD0cOL0n-mRdnryGsw7EJZ7Zxtw55dK3RKrty99-5P9BsmoWjZU3_8"
+          ]
+        },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "RUB",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": "15000",
+            "priceCurrency": "RUB"
+          },
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    }
+  ]
+}
+  </script>
+
+  <script src="js/cookie-banner.js?v=20260825u" defer></script>
+  <script src="js/mobile-call.js?v=20260825t" defer></script>
+</body>
+</html>

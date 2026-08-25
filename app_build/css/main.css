@@ -1,0 +1,490 @@
+/* ═══════════════════════════════════════════════════════════
+   АКСИОМА — Main Stylesheet
+   Scroll-Bound Hero + Typographic Design System
+   ═══════════════════════════════════════════════════════════ */
+
+/* ─── Design Tokens ─── */
+:root {
+  /* Palette — Brand Teal #15AFD1 from logo */
+  --color-bg:            #080f10;
+  --color-bg-surface:    #0f1719;
+  --color-bg-elevated:   #182224;
+  --color-text:          #ffffff;
+  --color-text-muted:    rgba(255, 255, 255, 0.5);
+  --color-accent:        #15AFD1;
+  --color-accent-bright: #1FD1F9;
+  --color-accent-glow:   rgba(21, 175, 209, 0.25);
+
+  /* Light sections (dark ↔ light alternation) */
+  --color-light-bg:      #f2f6f7;
+  --color-light-surface: #edf1f1;
+  --color-light-text:    #0f1719;
+  /* приглушённый текст на светлых карточках внутри тёмной темы: 0.55 давало 3,9:1 */
+  --color-light-muted:   rgba(15, 23, 25, 0.66);
+
+  /* Borders */
+  --border-subtle:       rgba(255, 255, 255, 0.06);
+  --border-hover:        rgba(21, 175, 209, 0.2);
+
+  /* Typography */
+  --font-display:        'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --fw-light:            300;
+  --fw-regular:          400;
+  --fw-bold:             700;
+  --fw-black:            900;
+
+  /* Spacing */
+  --space-xs:            0.5rem;
+  --space-sm:            1rem;
+  --space-md:            2rem;
+  --space-lg:            4rem;
+  --space-xl:            8rem;
+
+  /* Header */
+  --header-height:       64px;
+
+  /* Transitions — Refokus-level easings */
+  --ease-out-expo:       cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quart:      cubic-bezier(0.165, 0.84, 0.44, 1);
+  --ease-out-spring:     cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-in-out:         cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth:   0.6s var(--ease-out-expo);
+
+  /* Theme extensions (dark defaults) */
+  --color-accent-ink:    #1FD1F9;   /* teal for text/links */
+  --shadow-card:         0 8px 30px rgba(0, 0, 0, 0.45);
+  --font-serif:          'Cormorant', 'Georgia', serif;
+}
+
+/* ─── 🎨 LIGHT THEME — по умолчанию на страницах с data-theme="light"
+       (тёплый off-white, teal только акцент — см. DESIGN.md) ─── */
+[data-theme="light"] {
+  --color-bg:            #FAF9F7;
+  --color-bg-surface:    #FFFFFF;
+  --color-bg-elevated:   #F2F1EE;
+  --color-text:          #16191A;
+  --color-text-muted:    rgba(22, 25, 26, 0.66);   /* 0.58 давало контраст 4.26:1 при норме AA 4.5:1 */
+  --color-accent:        #15AFD1;
+  --color-accent-bright: #1FD1F9;
+  --color-accent-glow:   rgba(21, 175, 209, 0.18);
+  /* Тёмная бирюза для текста: #0B7A94 на подкрашенных плашках давала 4,4:1 —
+     чуть ниже нормы. #0A6E85 держит 5,2:1 и там. */
+  --color-accent-ink:    #0A6E85;
+
+  --color-light-bg:      #F2F1EE;
+  --color-light-surface: #FFFFFF;
+  --color-light-text:    #16191A;
+  /* 0.58 давало 4,2–4,3:1 на светлых карточках — чуть ниже нормы */
+  --color-light-muted:   rgba(22, 25, 26, 0.66);
+
+  --border-subtle:       rgba(22, 25, 26, 0.10);
+  --border-hover:        rgba(21, 175, 209, 0.35);
+  --shadow-card:         0 6px 24px rgba(22, 25, 26, 0.07);
+}
+[data-theme="light"] body { color-scheme: light; }
+
+
+/* ─── Reset & Base ─── */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto; /* Disable smooth scroll — conflicts with canvas rAF */
+  -webkit-text-size-adjust: 100%;
+  width: 100%;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-weight: var(--fw-regular);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   HERO SECTION
+   ═══════════════════════════════════════════════════════════ */
+
+.hero {
+  position: relative;
+  height: 400vh;
+  width: 100%;
+}
+
+.hero__sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  /* Hero — фирменная тёмная «сцена» в обеих темах (кадры тёмные) */
+  background: #080f10; /* Prevent white flash before first frame */
+}
+
+/* ─── Canvas ─── */
+.hero__canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover is handled programmatically in JS via drawImage math */
+}
+
+/* ─── Typography Overlay: "On the Wall" ─── */
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;            /* Left-aligned on the wall */
+  pointer-events: none;
+  /* Smooth CSS transition for silky slide-out */
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+              opacity 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.hero__overlay-content {
+  /*
+   * Position on the left gallery wall with perspective.
+   * The wall recedes toward the upper-left, so we apply
+   * a subtle rotateY to simulate that depth.
+   */
+  padding-left: clamp(1.5rem, 4vw, 3rem);
+  transform-origin: left center;
+  perspective: 1200px;
+}
+
+.hero__title {
+  font-size: clamp(2rem, 14vw, 3.5rem);
+  font-weight: var(--fw-black);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 0.95;
+  display: flex;
+  gap: 0;
+
+  /* Depth: subtle 3D perspective matching the gallery wall */
+  transform: perspective(1200px) rotateY(1deg);
+  transform-origin: left center;
+
+  /* Will be animated via JS — translateX for right-to-left exit */
+  will-change: transform, opacity;
+}
+
+/* ─── Individual Floating Letters ─── */
+.hero__letter {
+  display: inline-block;
+  position: relative;
+  pointer-events: auto;               /* Enable hover on each letter */
+  cursor: default;
+
+  /* Stone texture clipped into each letter */
+  background-image: url('../../assets/textures/background_letters_axioma.jpeg');
+  background-size: 700% auto;          /* Stretch across all 7 letters */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+
+  /* White wall-shadow for depth separation from the dark rock */
+  filter: drop-shadow(0 3px 6px rgba(255, 255, 255, 0.6))
+          drop-shadow(0 6px 20px rgba(255, 255, 255, 0.3))
+          drop-shadow(0 12px 40px rgba(255, 255, 255, 0.12));
+
+  /* Entrance: letters fly in from below with staggered delay */
+  opacity: 0;
+  transform: translateY(40px);
+  animation: letterEntrance 1.2s var(--ease-out-expo) forwards,
+             letterFloat 4s ease-in-out infinite;
+  animation-delay:
+    calc(var(--i) * 0.12s),
+    calc(1.2s + var(--i) * 0.12s);
+
+  /* Smooth spring-like transition for hover micro-movement */
+  transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
+              filter 0.4s ease;
+  will-change: transform, filter;
+}
+
+/* ─── Hover Micro-Interaction ─── */
+.hero__letter:hover {
+  animation-play-state: paused;        /* Freeze float on hover */
+  transform: translateY(-8px) scale(1.08);
+  filter: drop-shadow(0 6px 12px rgba(255, 255, 255, 0.8))
+          drop-shadow(0 12px 30px rgba(255, 255, 255, 0.4))
+          drop-shadow(0 0 60px var(--color-accent-glow));
+}
+
+/* Stagger index via data-index → CSS custom property */
+.hero__letter[data-index="0"] { --i: 0; background-position: 0% center; }
+.hero__letter[data-index="1"] { --i: 1; background-position: 16.67% center; }
+.hero__letter[data-index="2"] { --i: 2; background-position: 33.33% center; }
+.hero__letter[data-index="3"] { --i: 3; background-position: 50% center; }
+.hero__letter[data-index="4"] { --i: 4; background-position: 66.67% center; }
+.hero__letter[data-index="5"] { --i: 5; background-position: 83.33% center; }
+.hero__letter[data-index="6"] { --i: 6; background-position: 100% center; }
+
+/* Entrance animation */
+@keyframes letterEntrance {
+  0%   { opacity: 0; transform: translateY(40px) scale(0.9); }
+  60%  { opacity: 1; }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Subtle continuous floating bob */
+@keyframes letterFloat {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
+}
+
+/* ─── Scroll Cue ─── */
+.hero__scroll-cue {
+  position: absolute;
+  bottom: var(--space-sm);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  opacity: 0.5;
+  transition: opacity var(--transition-smooth);
+}
+
+.hero__scroll-cue-text {
+  font-size: 0.65rem;
+  font-weight: var(--fw-regular);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.hero__scroll-cue-line {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(
+    to bottom,
+    var(--color-accent),
+    transparent
+  );
+  animation: scrollPulse 2s var(--ease-out-expo) infinite;
+}
+
+@keyframes scrollPulse {
+  0%   { opacity: 0; transform: scaleY(0); transform-origin: top; }
+  50%  { opacity: 1; transform: scaleY(1); transform-origin: top; }
+  100% { opacity: 0; transform: scaleY(1); transform-origin: top; }
+}
+
+/* ─── Loading Indicator ─── */
+.hero__loader {
+  position: absolute;
+  bottom: var(--space-lg);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  z-index: 5;
+  transition: opacity 0.8s ease;
+}
+
+.hero__loader.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.hero__loader-bar {
+  width: 120px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 1px;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero__loader-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: var(--progress, 0%);
+  background: var(--color-accent);
+  border-radius: 1px;
+  box-shadow: 0 0 10px var(--color-accent-glow);
+  transition: width 0.15s linear;
+}
+
+.hero__loader-text {
+  font-size: 0.6rem;
+  font-weight: var(--fw-regular);
+  letter-spacing: 0.15em;
+  color: var(--color-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   CONTENT SECTION (Placeholder after Hero)
+   ═══════════════════════════════════════════════════════════ */
+
+.content-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg-surface);
+  padding: var(--space-xl) var(--space-md);
+}
+
+.content-section__inner {
+  max-width: 700px;
+  text-align: center;
+}
+
+.content-section__heading {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  margin-bottom: var(--space-sm);
+  background: linear-gradient(135deg, var(--color-text), var(--color-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.content-section__text {
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
+  font-weight: var(--fw-light);
+  color: var(--color-text-muted);
+  letter-spacing: 0.02em;
+  line-height: 1.8;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   RESPONSIVE (Mobile First — min-width)
+   ═══════════════════════════════════════════════════════════ */
+
+@media (min-width: 481px) {
+  .hero__title {
+    font-size: clamp(2.5rem, 12vw, 5rem);
+    letter-spacing: 0.12em;
+    transform: perspective(1200px) rotateY(2deg);
+  }
+
+  .hero__scroll-cue {
+    bottom: var(--space-md);
+  }
+}
+
+@media (min-width: 969px) {
+  .hero__overlay-content {
+    padding-left: clamp(3rem, 6vw, 8rem);
+  }
+
+  .hero__title {
+    font-size: clamp(3.5rem, 11vw, 12rem);
+    transform: perspective(1200px) rotateY(4deg) rotateX(-1deg);
+  }
+}
+
+/* ─── Reduced Motion ─── */
+@media (prefers-reduced-motion: reduce) {
+  .hero__scroll-cue-line {
+    animation: none;
+    opacity: 0.5;
+  }
+}
+
+/* Текст только для скринридеров и поисковиков — визуально не занимает места.
+   Нужен там, где картинка или анимация несёт смысл, которого нет в тексте. */
+.a11y-only {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   ⌨️ ВИДИМЫЙ ФОКУС С КЛАВИАТУРЫ
+   Ни у кнопок шапки, ни у карточек лендингов, ни у кнопок призыва
+   не было ни одного правила :focus-visible — по Tab не было видно,
+   где ты находишься. Собрано в одном месте, чтобы не расходилось
+   по восьми страницам с инлайновыми стилями.
+   ═══════════════════════════════════════════════════════════ */
+.header__pill:focus-visible,
+.header__logo:focus-visible .header__logo-pill,
+.menu-overlay__close:focus-visible,
+.menu-nav__link:focus-visible,
+.menu-service-card:focus-visible,
+.menu-footer__link:focus-visible,
+.s-footer__link:focus-visible,
+.s-svc-card:focus-visible,
+.s-faq__tab:focus-visible,
+.sp-card:focus-visible,
+.sp-nav__item:focus-visible,
+.sp-hero__btn-primary:focus-visible,
+.sp-hero__btn-ghost:focus-visible,
+.sp-cta__btn-primary:focus-visible,
+.sp-cta__btn-ghost:focus-visible,
+.s-cta__btn:focus-visible,
+.s-cta__phone:focus-visible,
+.s-cta__channel:focus-visible,
+.ceny-cta__btn:focus-visible,
+.ceny-cta__phone:focus-visible,
+.ceny-cta__channel:focus-visible,
+.ceny-card__link:focus-visible,
+.cta-banner__btn:focus-visible,
+.cta-banner__phone:focus-visible,
+.cta-banner__channel:focus-visible,
+.contact-form__btn:focus-visible,
+.subpage-hero__btn-primary:focus-visible,
+.subpage-hero__btn-ghost:focus-visible,
+.fact-card:focus-visible,
+.sp-hero__chip:focus-visible,
+.breadcrumbs__link:focus-visible,
+.s-footer__messenger:focus-visible,
+.s-services__header-link:focus-visible,
+.sp-more__link:focus-visible {
+  outline: 2px solid #0B7A94;
+  outline-offset: 3px;
+}
+
+:root[data-theme="dark"] .header__pill:focus-visible,
+:root[data-theme="dark"] .header__logo:focus-visible .header__logo-pill,
+:root[data-theme="dark"] .menu-overlay__close:focus-visible,
+:root[data-theme="dark"] .menu-nav__link:focus-visible,
+:root[data-theme="dark"] .menu-service-card:focus-visible,
+:root[data-theme="dark"] .menu-footer__link:focus-visible,
+:root[data-theme="dark"] .s-footer__link:focus-visible,
+:root[data-theme="dark"] .s-svc-card:focus-visible,
+:root[data-theme="dark"] .s-faq__tab:focus-visible,
+:root[data-theme="dark"] .sp-card:focus-visible,
+:root[data-theme="dark"] .sp-nav__item:focus-visible,
+:root[data-theme="dark"] .sp-hero__btn-primary:focus-visible,
+:root[data-theme="dark"] .sp-hero__btn-ghost:focus-visible,
+:root[data-theme="dark"] .sp-cta__btn-primary:focus-visible,
+:root[data-theme="dark"] .sp-cta__btn-ghost:focus-visible,
+:root[data-theme="dark"] .sp-more__link:focus-visible {
+  outline-color: #1FD1F9;
+}

@@ -1,0 +1,120 @@
+/* ═══════════════════════════════════════════════════════════
+   🎨 LANDING LIGHT — светлая тема для лендингов услуг (sp-*)
+   Подключается на uslugi/*.html после основных стилей.
+   Селекторы [data-theme="light"] перебивают инлайн-стили страниц.
+   ═══════════════════════════════════════════════════════════ */
+
+[data-theme="light"] .page-grain { opacity: 0.25; }
+
+/* Breadcrumbs */
+[data-theme="light"] .sp-breadcrumbs { color: rgba(22,25,26,0.66); }
+[data-theme="light"] .sp-breadcrumbs a { color: rgba(22,25,26,0.66); }
+[data-theme="light"] .sp-breadcrumbs a:hover { color: var(--color-accent-ink); }
+[data-theme="light"] .sp-breadcrumbs .current { color: rgba(22,25,26,0.75); }
+
+/* Hero */
+[data-theme="light"] .sp-hero__line { background: rgba(22,25,26,0.05); }
+[data-theme="light"] .sp-hero__h1 { color: var(--color-text); }
+[data-theme="light"] .sp-hero__h1 em { -webkit-text-stroke: 1px rgba(22,25,26,0.4); }
+[data-theme="light"] .sp-hero__lead { color: rgba(22,25,26,0.66); }
+[data-theme="light"] .sp-hero__btn-primary {
+  background: linear-gradient(135deg, #0B7A94, #15AFD1);
+  color: #fff;
+}
+[data-theme="light"] .sp-hero__btn-primary:hover { background: #15AFD1; }
+[data-theme="light"] .sp-hero__btn-ghost {
+  border-color: rgba(22,25,26,0.18);
+  color: rgba(22,25,26,0.65);
+}
+[data-theme="light"] .sp-hero__btn-ghost:hover { border-color: rgba(22,25,26,0.4); color: #16191A; }
+[data-theme="light"] .sp-hero__trust-value { color: var(--color-accent-ink); }
+[data-theme="light"] .sp-hero__trust-label { color: rgba(22,25,26,0.66); }
+[data-theme="light"] .sp-hero__cue-text { color: rgba(22,25,26,0.66); }
+
+/* Sticky nav */
+[data-theme="light"] .sp-nav__item { color: rgba(22,25,26,0.66); }
+[data-theme="light"] .sp-nav__item:hover {
+  color: rgba(22,25,26,0.85);
+  background: rgba(255,255,255,0.75);
+  border-color: rgba(22,25,26,0.10);
+}
+[data-theme="light"] .sp-nav__item.is-active {
+  color: #16191A;
+  background: rgba(255,255,255,0.85);
+  border-color: rgba(22,25,26,0.12);
+  box-shadow: var(--shadow-card);
+}
+
+/* Scenario sections */
+[data-theme="light"] .sp-scenario__eyebrow-num { color: rgba(22,25,26,0.66); }
+[data-theme="light"] .sp-scenario__title { color: var(--color-text); }
+[data-theme="light"] .sp-scenario__quote { color: rgba(22,25,26,0.66); }
+[data-theme="light"] .sp-scenario__desc { color: rgba(22,25,26,0.66); }
+
+/* Scene images */
+[data-theme="light"] .sp-scene__img { filter: brightness(0.92) saturate(1); }
+[data-theme="light"] .sp-scene:hover .sp-scene__img { filter: brightness(1) saturate(1.05); }
+[data-theme="light"] .sp-scene__badge {
+  background: rgba(255,255,255,0.75);
+  border-color: rgba(22,25,26,0.10);
+  color: rgba(22,25,26,0.7);
+}
+[data-theme="light"] .sp-scene__img-placeholder {
+  background: linear-gradient(135deg, rgba(212,146,58,0.12) 0%, rgba(21,175,209,0.08) 50%, #F2F1EE 100%);
+  color: rgba(22,25,26,0.66);
+}
+
+/* Cards */
+[data-theme="light"] .sp-cards { background: rgba(22,25,26,0.08); }
+[data-theme="light"] .sp-card { background: #FFFFFF; }
+[data-theme="light"] .sp-card__title { color: var(--color-text); }
+/* Базовый цвет — читаемый: на телефоне наведения нет, а текст был бледным */
+[data-theme="light"] .sp-card__story { color: rgba(22,25,26,0.68); }
+[data-theme="light"] .sp-card:hover .sp-card__story { color: rgba(22,25,26,0.82); }
+[data-theme="light"] .sp-card__price-label { color: rgba(22,25,26,0.66); }
+[data-theme="light"] .sp-card__price { color: var(--color-text); }
+[data-theme="light"] .sp-card__arrow { border-color: rgba(22,25,26,0.12); }
+[data-theme="light"] .sp-card__arrow svg { color: rgba(22,25,26,0.66); }
+[data-theme="light"] .sp-card__sep { background: rgba(22,25,26,0.06); }
+/* Плашка под иконку в светлой теме.
+   Раньше здесь был обсидиановый чип: тогда во всех темах показывалась одна и та же
+   тёмная картинка, и белая плашка выглядела бы чёрным тайлом. Теперь у светлой темы
+   свой набор (-light/-glow) — рисунок на белом, поэтому и плашка светлая,
+   как на эталонной странице недвижимости. */
+[data-theme="light"] .sp-card__icon {
+  background: #f8f8f8 !important;
+  border: 1px solid rgba(212,146,58,0.22) !important;
+  box-shadow: 0 6px 16px rgba(22,25,26,0.06), inset 0 1px 0 rgba(255,255,255,0.7);
+}
+[data-theme="light"] .sp-card:hover .sp-card__icon {
+  background: #f8f8f8 !important;
+  border-color: rgba(212,146,58,0.5) !important;
+}
+[data-theme="light"] .sp-card__icon-img--obs { filter: none; }
+
+/* Steps */
+[data-theme="light"] .sp-steps { background: rgba(22,25,26,0.08); }
+[data-theme="light"] .sp-step { background: #FFFFFF; }
+[data-theme="light"] .sp-step__title { color: var(--color-text); }
+[data-theme="light"] .sp-step__desc { color: rgba(22,25,26,0.66); }
+[data-theme="light"] .sp-step__icon { box-shadow: var(--shadow-card); }
+
+/* Dividers */
+[data-theme="light"] .sp-divider__line {
+  background: linear-gradient(to right, transparent, rgba(22,25,26,0.08) 20%, rgba(22,25,26,0.08) 80%, transparent);
+}
+
+/* CTA */
+[data-theme="light"] .sp-cta__tag { color: var(--color-accent-ink); }
+[data-theme="light"] .sp-cta__title { color: var(--color-text); }
+[data-theme="light"] .sp-cta__btn-primary {
+  background: linear-gradient(135deg, #0B7A94, #15AFD1);
+  color: #fff;
+}
+[data-theme="light"] .sp-cta__btn-primary:hover { background: #15AFD1; }
+[data-theme="light"] .sp-cta__btn-ghost {
+  border-color: rgba(22,25,26,0.18);
+  color: rgba(22,25,26,0.65);
+}
+[data-theme="light"] .sp-cta__btn-ghost:hover { border-color: rgba(22,25,26,0.4); color: #16191A; }
+[data-theme="light"] .sp-cta__note { color: rgba(22,25,26,0.66); }

@@ -1,0 +1,6 @@
+{
+  "version": "1.0",
+  "note": "Pre-computed embeddings placeholder. In production, this will contain TF-IDF or neural embeddings for each FAQ chunk. Currently, the rag-engine.js computes TF-IDF vectors at runtime from knowledge-base.json.",
+  "model": "tfidf-runtime",
+  "vectors": []
+}
