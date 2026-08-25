@@ -4,7 +4,12 @@
   <meta charset="UTF-8">
   <meta name="robots" content="noindex, nofollow">
   <script>(function(){try{document.documentElement.setAttribute('data-theme',localStorage.getItem('axioma-theme')||'light')}catch(e){}})();</script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <link rel="preload" href="../assets/fonts/inter-cyr.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/cormorant-cyr.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192.png">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
   <meta name="description" content="Оценка недвижимости в Барнауле: квартиры, дома, доли, земля, гаражи — от 2 500 ₽ за 1–2 дня. Официальный отчёт для банков, судов и нотариуса.">
   <meta name="theme-color" content="#FAF9F7">
   <title>Оценка квартиры и недвижимости в Барнауле — от 2 500 ₽</title>
@@ -20,7 +25,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta property="og:locale" content="ru_RU">
 
-  <link rel="stylesheet" href="../css/fonts.css">
+  <link rel="stylesheet" href="../css/fonts.css?v=20260826a">
   <link rel="stylesheet" href="../css/main.css?v=20260825w">
   <link rel="stylesheet" href="../css/header.css?v=20260825t">
   <link rel="stylesheet" href="../css/sections.css?v=20260825u">
@@ -230,7 +235,7 @@
     /* Кнопки — каждая по 50% эталонной ширины блока */
     #heroActions { width: min(720px, 92vw); max-width: 100%; margin: 0 auto; gap: 0.9rem; }
     #heroActions > a { flex: 1 1 0; justify-content: center; }
-    @media (max-width: 560px) {
+    @media (max-width: 640px) {
       #heroActions { flex-direction: column; }
       #heroActions > a { width: 100%; flex: none; }
     }
@@ -1029,6 +1034,12 @@
       background: linear-gradient(118deg, var(--spa1), var(--spa2));
       color: var(--spaText);
     }
+  
+    /* мобайл: лид без «дырявого» justify — как на остальных страницах */
+    @media (max-width: 600px) {
+      .sp-hero__lead--typo .lead-l1, .sp-hero__lead--typo .lead-l2 {
+        text-align: left; text-align-last: left; -moz-text-align-last: left; }
+    }
   </style>
 </head>
 
@@ -1159,7 +1170,7 @@
         </div>
         <div class="sp-scenario__right">
           <div class="sp-scene">
-            <img src="../img/uslugi/scene-nedvizhimost.jpg" data-dark="../img/uslugi/scene-nedvizhimost-dark.jpg" alt="Семейный дом" class="sp-scene__img" loading="eager" data-img-prompt="family-house-barnaul-golden-hour">
+            <img src="../img/uslugi/scene-nedvizhimost.jpg" data-dark="../img/uslugi/scene-nedvizhimost-dark.jpg" alt="Семейный дом" class="sp-scene__img" loading="eager" data-img-prompt="family-house-barnaul-golden-hour" width="1408" height="768">
             <div class="sp-scene__overlay" style="background:linear-gradient(135deg,rgba(8,15,16,0.6) 0%,rgba(212,146,58,0.08) 100%)"></div>
             <span class="sp-scene__badge">Барнаул · Алтайский край</span>
           </div>
@@ -1171,8 +1182,8 @@
         <a href="#sec-prices" class="sp-card sp-card--family" data-card="apartment">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-apartment-light.jpg" data-dark="img/nedvizhimost/icon-apartment-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="apartment-icon-obsidian" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-apartment-glow.jpg" data-dark="img/nedvizhimost/icon-apartment-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="apartment-icon-crystal" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-apartment-light.jpg" data-dark="img/nedvizhimost/icon-apartment-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="apartment-icon-obsidian" loading="lazy" decoding="async" width="249" height="256">
+            <img src="img/nedvizhimost/icon-apartment-glow.jpg" data-dark="img/nedvizhimost/icon-apartment-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="apartment-icon-crystal" loading="lazy" decoding="async" width="249" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Квартиры</h3>
@@ -1194,8 +1205,8 @@
         <a href="#sec-prices" class="sp-card sp-card--family" data-card="house">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-house-light.jpg" data-dark="img/nedvizhimost/icon-house-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="house-icon-obsidian" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-house-glow.jpg" data-dark="img/nedvizhimost/icon-house-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="house-icon-crystal" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-house-light.jpg" data-dark="img/nedvizhimost/icon-house-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="house-icon-obsidian" loading="lazy" decoding="async" width="256" height="197">
+            <img src="img/nedvizhimost/icon-house-glow.jpg" data-dark="img/nedvizhimost/icon-house-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="house-icon-crystal" loading="lazy" decoding="async" width="256" height="197">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Жилой дом с участком</h3>
@@ -1217,8 +1228,8 @@
         <a href="#sec-prices" class="sp-card sp-card--family" data-card="share">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-share-light.jpg" data-dark="img/nedvizhimost/icon-share-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="share-icon-obsidian" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-share-glow.jpg" data-dark="img/nedvizhimost/icon-share-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="share-icon-crystal" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-share-light.jpg" data-dark="img/nedvizhimost/icon-share-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="share-icon-obsidian" loading="lazy" decoding="async" width="256" height="214">
+            <img src="img/nedvizhimost/icon-share-glow.jpg" data-dark="img/nedvizhimost/icon-share-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="share-icon-crystal" loading="lazy" decoding="async" width="256" height="214">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Доля в квартире</h3>
@@ -1240,8 +1251,8 @@
         <a href="#sec-prices" class="sp-card sp-card--family" data-card="land">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-land-light.jpg" data-dark="img/nedvizhimost/icon-land-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="land-icon-obsidian" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-land-glow.jpg" data-dark="img/nedvizhimost/icon-land-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="land-icon-crystal" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-land-light.jpg" data-dark="img/nedvizhimost/icon-land-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="land-icon-obsidian" loading="lazy" decoding="async" width="256" height="173">
+            <img src="img/nedvizhimost/icon-land-glow.jpg" data-dark="img/nedvizhimost/icon-land-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="land-icon-crystal" loading="lazy" decoding="async" width="256" height="173">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Земельный участок</h3>
@@ -1263,8 +1274,8 @@
         <a href="#sec-prices" class="sp-card sp-card--family" data-card="cottage">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-cottage-light.jpg" data-dark="img/nedvizhimost/icon-cottage-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="cottage-icon-obsidian" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-cottage-glow.jpg" data-dark="img/nedvizhimost/icon-cottage-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="cottage-icon-crystal" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-cottage-light.jpg" data-dark="img/nedvizhimost/icon-cottage-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="cottage-icon-obsidian" loading="lazy" decoding="async" width="256" height="199">
+            <img src="img/nedvizhimost/icon-cottage-glow.jpg" data-dark="img/nedvizhimost/icon-cottage-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="cottage-icon-crystal" loading="lazy" decoding="async" width="256" height="199">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Дача, коттедж</h3>
@@ -1286,8 +1297,8 @@
         <a href="#sec-prices" class="sp-card sp-card--family" data-card="garage">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-garage-light.jpg" data-dark="img/nedvizhimost/icon-garage-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="garage-icon-obsidian" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-garage-glow.jpg" data-dark="img/nedvizhimost/icon-garage-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="garage-icon-crystal" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-garage-light.jpg" data-dark="img/nedvizhimost/icon-garage-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="garage-icon-obsidian" loading="lazy" decoding="async" width="256" height="199">
+            <img src="img/nedvizhimost/icon-garage-glow.jpg" data-dark="img/nedvizhimost/icon-garage-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="garage-icon-crystal" loading="lazy" decoding="async" width="256" height="199">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Гараж, машиноместо</h3>
@@ -1333,7 +1344,7 @@
         </div>
         <div class="sp-scenario__right">
           <div class="sp-scene">
-            <img src="img/nedvizhimost/scene-expert.jpg" data-dark="img/nedvizhimost/scene-expert-dark.jpg" alt="Оценщик Аксиомы за работой в квартире" class="sp-scene__img" loading="lazy" data-img-prompt="expert-tablet-warm-office">
+            <img src="img/nedvizhimost/scene-expert.jpg" data-dark="img/nedvizhimost/scene-expert-dark.jpg" alt="Оценщик Аксиомы за работой в квартире" class="sp-scene__img" loading="lazy" data-img-prompt="expert-tablet-warm-office" width="1408" height="768">
             <div class="sp-scene__overlay" style="background:linear-gradient(135deg,rgba(8,15,16,0.6) 0%,rgba(21,175,209,0.05) 100%)"></div>
             <span class="sp-scene__badge">Рядом до готового отчёта</span>
           </div>
@@ -1345,8 +1356,8 @@
         <div class="sp-card sp-card--family">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-mortgage-light.jpg" data-dark="img/nedvizhimost/icon-mortgage-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-mortgage-glow.jpg" data-dark="img/nedvizhimost/icon-mortgage-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-mortgage-light.jpg" data-dark="img/nedvizhimost/icon-mortgage-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async" width="254" height="256">
+            <img src="img/nedvizhimost/icon-mortgage-glow.jpg" data-dark="img/nedvizhimost/icon-mortgage-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async" width="254" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Ипотека и залог</h3>
@@ -1366,8 +1377,8 @@
         <div class="sp-card sp-card--family">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-inherit-light.jpg" data-dark="img/nedvizhimost/icon-inherit-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-inherit-glow.jpg" data-dark="img/nedvizhimost/icon-inherit-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-inherit-light.jpg" data-dark="img/nedvizhimost/icon-inherit-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async" width="256" height="222">
+            <img src="img/nedvizhimost/icon-inherit-glow.jpg" data-dark="img/nedvizhimost/icon-inherit-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async" width="256" height="222">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Для нотариуса</h3>
@@ -1387,8 +1398,8 @@
         <div class="sp-card sp-card--family">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-divorce-light.jpg" data-dark="img/nedvizhimost/icon-divorce-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-divorce-glow.jpg" data-dark="img/nedvizhimost/icon-divorce-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-divorce-light.jpg" data-dark="img/nedvizhimost/icon-divorce-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async" width="219" height="256">
+            <img src="img/nedvizhimost/icon-divorce-glow.jpg" data-dark="img/nedvizhimost/icon-divorce-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async" width="219" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Раздел при разводе</h3>
@@ -1408,8 +1419,8 @@
         <div class="sp-card sp-card--family">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-sale-light.jpg" data-dark="img/nedvizhimost/icon-sale-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-sale-glow.jpg" data-dark="img/nedvizhimost/icon-sale-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-sale-light.jpg" data-dark="img/nedvizhimost/icon-sale-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async" width="241" height="256">
+            <img src="img/nedvizhimost/icon-sale-glow.jpg" data-dark="img/nedvizhimost/icon-sale-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async" width="241" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Дарение и купля-продажа</h3>
@@ -1429,8 +1440,8 @@
         <div class="sp-card sp-card--family">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-tax-light.jpg" data-dark="img/nedvizhimost/icon-tax-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-tax-glow.jpg" data-dark="img/nedvizhimost/icon-tax-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-tax-light.jpg" data-dark="img/nedvizhimost/icon-tax-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async" width="215" height="256">
+            <img src="img/nedvizhimost/icon-tax-glow.jpg" data-dark="img/nedvizhimost/icon-tax-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async" width="215" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Оценка для органов опеки</h3>
@@ -1450,8 +1461,8 @@
         <div class="sp-card sp-card--family">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-court-light.jpg" data-dark="img/nedvizhimost/icon-court-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-court-glow.jpg" data-dark="img/nedvizhimost/icon-court-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-court-light.jpg" data-dark="img/nedvizhimost/icon-court-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async" width="256" height="223">
+            <img src="img/nedvizhimost/icon-court-glow.jpg" data-dark="img/nedvizhimost/icon-court-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async" width="256" height="223">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Для суда</h3>
@@ -1495,7 +1506,7 @@
         </div>
         <div class="sp-scenario__right">
           <div class="sp-scene">
-            <img src="img/nedvizhimost/scene-documents.jpg" data-dark="img/nedvizhimost/scene-documents-dark.jpg" alt="Ключи и документы на столе в квартире" class="sp-scene__img" loading="lazy" data-img-prompt="documents-keys-table-warm">
+            <img src="img/nedvizhimost/scene-documents.jpg" data-dark="img/nedvizhimost/scene-documents-dark.jpg" alt="Ключи и документы на столе в квартире" class="sp-scene__img" loading="lazy" data-img-prompt="documents-keys-table-warm" width="1408" height="768">
             <div class="sp-scene__overlay" style="background:linear-gradient(135deg,rgba(8,15,16,0.6) 0%,rgba(212,146,58,0.08) 100%)"></div>
             <span class="sp-scene__badge">Простой процесс</span>
           </div>
@@ -1597,8 +1608,8 @@
         <div class="sp-card sp-card--family">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-doc-passport-light.jpg" data-dark="img/nedvizhimost/icon-doc-passport-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="passport-icon-obsidian" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-doc-passport-glow.jpg" data-dark="img/nedvizhimost/icon-doc-passport-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="passport-icon-crystal" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-doc-passport-light.jpg" data-dark="img/nedvizhimost/icon-doc-passport-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="passport-icon-obsidian" loading="lazy" decoding="async" width="212" height="256">
+            <img src="img/nedvizhimost/icon-doc-passport-glow.jpg" data-dark="img/nedvizhimost/icon-doc-passport-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="passport-icon-crystal" loading="lazy" decoding="async" width="212" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Паспорт заказчика</h3>
@@ -1617,8 +1628,8 @@
         <div class="sp-card sp-card--family">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-doc-title-light.jpg" data-dark="img/nedvizhimost/icon-doc-title-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="title-doc-icon-obsidian" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-doc-title-glow.jpg" data-dark="img/nedvizhimost/icon-doc-title-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="title-doc-icon-crystal" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-doc-title-light.jpg" data-dark="img/nedvizhimost/icon-doc-title-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="title-doc-icon-obsidian" loading="lazy" decoding="async" width="234" height="256">
+            <img src="img/nedvizhimost/icon-doc-title-glow.jpg" data-dark="img/nedvizhimost/icon-doc-title-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="title-doc-icon-crystal" loading="lazy" decoding="async" width="234" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Свидетельство о собственности / ЕГРН</h3>
@@ -1637,8 +1648,8 @@
         <div class="sp-card sp-card--family">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-doc-tech-light.jpg" data-dark="img/nedvizhimost/icon-doc-tech-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="tech-passport-icon-obsidian" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-doc-tech-glow.jpg" data-dark="img/nedvizhimost/icon-doc-tech-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="tech-passport-icon-crystal" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-doc-tech-light.jpg" data-dark="img/nedvizhimost/icon-doc-tech-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="tech-passport-icon-obsidian" loading="lazy" decoding="async" width="212" height="256">
+            <img src="img/nedvizhimost/icon-doc-tech-glow.jpg" data-dark="img/nedvizhimost/icon-doc-tech-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="tech-passport-icon-crystal" loading="lazy" decoding="async" width="212" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Технический паспорт</h3>
@@ -1686,8 +1697,8 @@
         <div class="sp-card sp-card--family">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-barnaul-light.jpg" data-dark="img/nedvizhimost/icon-barnaul-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-barnaul-glow.jpg" data-dark="img/nedvizhimost/icon-barnaul-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-barnaul-light.jpg" data-dark="img/nedvizhimost/icon-barnaul-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async" width="234" height="256">
+            <img src="img/nedvizhimost/icon-barnaul-glow.jpg" data-dark="img/nedvizhimost/icon-barnaul-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async" width="234" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Барнаул и Алтайский край</h3>
@@ -1713,8 +1724,8 @@
         <div class="sp-card sp-card--family">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-price-light.jpg" data-dark="img/nedvizhimost/icon-price-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-price-glow.jpg" data-dark="img/nedvizhimost/icon-price-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-price-light.jpg" data-dark="img/nedvizhimost/icon-price-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async" width="234" height="256">
+            <img src="img/nedvizhimost/icon-price-glow.jpg" data-dark="img/nedvizhimost/icon-price-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async" width="234" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Бесплатно с каждым отчётом</h3>
@@ -1739,8 +1750,8 @@
         <div class="sp-card sp-card--family">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-included-light.jpg" data-dark="img/nedvizhimost/icon-included-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-included-glow.jpg" data-dark="img/nedvizhimost/icon-included-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-included-light.jpg" data-dark="img/nedvizhimost/icon-included-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async" width="234" height="256">
+            <img src="img/nedvizhimost/icon-included-glow.jpg" data-dark="img/nedvizhimost/icon-included-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async" width="234" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Что включено</h3>
@@ -1780,7 +1791,7 @@
         <li><a class="sp-more__link" href="oborudovanie-i-transport.html">Оборудование и транспорт</a></li>
         <li><a class="sp-more__link" href="yuridicheskie-uslugi.html">Юридические услуги</a></li>
       </ul>
-      <p class="sp-more__tail">Все цены — на странице <a href="../ceny.html">Цены</a>. Адрес офиса и телефон — в <a href="../kontakty.html">Контактах</a>. Про компанию — <a href="../o-kompanii.html">О компании</a>.</p>
+      <p class="sp-more__tail">Все цены — на странице <a href="../ceny.html">Цены</a>. Адрес офиса и телефон — в <a href="../kontakty.html">Контактах</a>. Про компанию — <a href="../o-kompanii.html">О компании</a>. <a href="../politika-konfidencialnosti.html">Политика конфиденциальности</a>.</p>
     </div>
   </nav>
 
@@ -1792,96 +1803,96 @@
         <h2 class="s-faq__title">Коротко о главном — оценка недвижимости</h2>
       </div>
 
-      <div class="s-faq__content" itemscope itemtype="https://schema.org/FAQPage">
+      <div class="s-faq__content">
         <div class="s-faq__category is-active" data-category="single">
 
-          <div class="s-faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="s-faq__item" itemscope itemtype="https://schema.org/Question">
             <button class="s-faq__question" aria-expanded="false">
-              <span itemprop="name">Сколько стоит оценка квартиры в Барнауле?</span>
+              <span>Сколько стоит оценка квартиры в Барнауле?</span>
               <svg class="s-faq__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <div class="s-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div class="s-faq__answer-inner" itemprop="text">Оценка квартиры в Барнауле — от 2 500 ₽. Точную цену назовём на бесплатной консультации и зафиксируем в договоре — заплатите ровно эту сумму. Оценка доли — от 2 500 ₽, участка — от 3 000 ₽, дома с участком — от 6 000 ₽. Работаем по всей России.</div>
+            <div class="s-faq__answer" itemscope itemtype="https://schema.org/Answer">
+              <div class="s-faq__answer-inner">Оценка квартиры в Барнауле — от 2 500 ₽. Точную цену назовём на бесплатной консультации и зафиксируем в договоре — заплатите ровно эту сумму. Оценка доли — от 2 500 ₽, участка — от 3 000 ₽, дома с участком — от 6 000 ₽. Работаем по всей России.</div>
             </div>
           </div>
 
-          <div class="s-faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="s-faq__item" itemscope itemtype="https://schema.org/Question">
             <button class="s-faq__question" aria-expanded="false">
-              <span itemprop="name">Какие документы нужны для оценки квартиры?</span>
+              <span>Какие документы нужны для оценки квартиры?</span>
               <svg class="s-faq__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <div class="s-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div class="s-faq__answer-inner" itemprop="text">Для проведения оценки квартиры потребуется стандартный пакет документов. Паспорт заказчика (разворот с фото и страница с регистрацией). Правоустанавливающие документы: выписка из ЕГРН (или свидетельство о праве собственности), договор купли-продажи, дарения, долевого участия (ДДУ) или акт приема-передачи. Технические документы (при наличии): технический или кадастровый паспорт, поэтажный план и экспликация из БТИ. Оригиналы документов предоставлять не нужно — достаточно отправить чёткие фото или сканы на электронную почту.</div>
+            <div class="s-faq__answer" itemscope itemtype="https://schema.org/Answer">
+              <div class="s-faq__answer-inner">Для проведения оценки квартиры потребуется стандартный пакет документов. Паспорт заказчика (разворот с фото и страница с регистрацией). Правоустанавливающие документы: выписка из ЕГРН (или свидетельство о праве собственности), договор купли-продажи, дарения, долевого участия (ДДУ) или акт приема-передачи. Технические документы (при наличии): технический или кадастровый паспорт, поэтажный план и экспликация из БТИ. Оригиналы документов предоставлять не нужно — достаточно отправить чёткие фото или сканы на электронную почту.</div>
             </div>
           </div>
 
-          <div class="s-faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="s-faq__item" itemscope itemtype="https://schema.org/Question">
             <button class="s-faq__question" aria-expanded="false">
-              <span itemprop="name">Сколько действует отчёт об оценке квартиры?</span>
+              <span>Сколько действует отчёт об оценке квартиры?</span>
               <svg class="s-faq__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <div class="s-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div class="s-faq__answer-inner" itemprop="text">Согласно Федеральному закону № 135-ФЗ и стандартам оценки, срок действия итоговой рыночной стоимости в отчёте зависит от цели его составления. Стандартный срок (6 месяцев): отчёт действителен ровно полгода с даты проведения оценки. Этот срок действует для оформления ипотеки в банке, купли-продажи, органов опеки и большинства судебных споров. Для вступления в наследство: ограничение в 6 месяцев не применяется. Оценка выполняется строго на дату смерти наследодателя (дату открытия наследства), поэтому такой отчёт не имеет срока давности и принимается нотариусом в любое время. Если срок действия отчёта истек, а сделка или судебный процесс еще не завершены, мы оперативно актуализируем расчёты и выпустим обновлённый документ со скидкой.</div>
+            <div class="s-faq__answer" itemscope itemtype="https://schema.org/Answer">
+              <div class="s-faq__answer-inner">Согласно Федеральному закону № 135-ФЗ и стандартам оценки, срок действия итоговой рыночной стоимости в отчёте зависит от цели его составления. Стандартный срок (6 месяцев): отчёт действителен ровно полгода с даты проведения оценки. Этот срок действует для оформления ипотеки в банке, купли-продажи, органов опеки и большинства судебных споров. Для вступления в наследство: ограничение в 6 месяцев не применяется. Оценка выполняется строго на дату смерти наследодателя (дату открытия наследства), поэтому такой отчёт не имеет срока давности и принимается нотариусом в любое время. Если срок действия отчёта истек, а сделка или судебный процесс еще не завершены, мы оперативно актуализируем расчёты и выпустим обновлённый документ со скидкой.</div>
             </div>
           </div>
 
-          <div class="s-faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="s-faq__item" itemscope itemtype="https://schema.org/Question">
             <button class="s-faq__question" aria-expanded="false">
-              <span itemprop="name">Чем рыночная стоимость отличается от кадастровой?</span>
+              <span>Чем рыночная стоимость отличается от кадастровой?</span>
               <svg class="s-faq__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <div class="s-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div class="s-faq__answer-inner" itemprop="text">Кадастровую стоимость государство определяет массово, для налогов, и она не всегда учитывает особенности именно вашей квартиры. Рыночную стоимость оценщик считает индивидуально — по ценам похожих объектов на рынке. Для госпошлины по наследству закон разрешает взять наименьшую из этих стоимостей, и отчёт об оценке подтверждает рыночную.</div>
+            <div class="s-faq__answer" itemscope itemtype="https://schema.org/Answer">
+              <div class="s-faq__answer-inner">Кадастровую стоимость государство определяет массово, для налогов, и она не всегда учитывает особенности именно вашей квартиры. Рыночную стоимость оценщик считает индивидуально — по ценам похожих объектов на рынке. Для госпошлины по наследству закон разрешает взять наименьшую из этих стоимостей, и отчёт об оценке подтверждает рыночную.</div>
             </div>
           </div>
 
-          <div class="s-faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="s-faq__item" itemscope itemtype="https://schema.org/Question">
             <button class="s-faq__question" aria-expanded="false">
-              <span itemprop="name">Нужно ли приезжать на осмотр — можно оценить квартиру по фото?</span>
+              <span>Нужно ли приезжать на осмотр — можно оценить квартиру по фото?</span>
               <svg class="s-faq__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <div class="s-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div class="s-faq__answer-inner" itemprop="text">Оценку недвижимости ведём по вашим фотографиям и документам — приезжать к нам не нужно, работаем по всей России. Достоверность фото — ответственность клиента. По Барнаулу и Алтайскому краю эксперт при необходимости выезжает на объект. Для ипотеки требования к осмотру уточним у вашего банка заранее.</div>
+            <div class="s-faq__answer" itemscope itemtype="https://schema.org/Answer">
+              <div class="s-faq__answer-inner">Оценку недвижимости ведём по вашим фотографиям и документам — приезжать к нам не нужно, работаем по всей России. Достоверность фото — ответственность клиента. По Барнаулу и Алтайскому краю эксперт при необходимости выезжает на объект. Для ипотеки требования к осмотру уточним у вашего банка заранее.</div>
             </div>
           </div>
 
-          <div class="s-faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="s-faq__item" itemscope itemtype="https://schema.org/Question">
             <button class="s-faq__question" aria-expanded="false">
-              <span itemprop="name">Как быстро делается оценка квартиры?</span>
+              <span>Как быстро делается оценка квартиры?</span>
               <svg class="s-faq__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <div class="s-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div class="s-faq__answer-inner" itemprop="text">Отчёт об оценке квартиры обычно готов за 1–2 дня после получения документов и фотографий. Если нужно срочно, скажите на консультации — часто успеваем в тот же день. Точный срок называем заранее и соблюдаем его, чтобы вы вовремя вступили в наследство, вышли на сделку, оформили ипотеку.</div>
+            <div class="s-faq__answer" itemscope itemtype="https://schema.org/Answer">
+              <div class="s-faq__answer-inner">Отчёт об оценке квартиры обычно готов за 1–2 дня после получения документов и фотографий. Если нужно срочно, скажите на консультации — часто успеваем в тот же день. Точный срок называем заранее и соблюдаем его, чтобы вы вовремя вступили в наследство, вышли на сделку, оформили ипотеку.</div>
             </div>
           </div>
 
-          <div class="s-faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="s-faq__item" itemscope itemtype="https://schema.org/Question">
             <button class="s-faq__question" aria-expanded="false">
-              <span itemprop="name">Примут ли ваш отчёт в банке для ипотеки?</span>
+              <span>Примут ли ваш отчёт в банке для ипотеки?</span>
               <svg class="s-faq__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <div class="s-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div class="s-faq__answer-inner" itemprop="text">Отчёт об оценке готовим по 135-ФЗ и ФСО — этим стандартам следуют банки при ипотеке и залоге. Требования у банков разные, поэтому перед началом уточним условия именно вашего банка. Оценщики состоят в СРО, ответственность застрахована на 30 млн ₽.</div>
+            <div class="s-faq__answer" itemscope itemtype="https://schema.org/Answer">
+              <div class="s-faq__answer-inner">Отчёт об оценке готовим по 135-ФЗ и ФСО — этим стандартам следуют банки при ипотеке и залоге. Требования у банков разные, поэтому перед началом уточним условия именно вашего банка. Оценщики состоят в СРО, ответственность застрахована на 30 млн ₽.</div>
             </div>
           </div>
 
-          <div class="s-faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="s-faq__item" itemscope itemtype="https://schema.org/Question">
             <button class="s-faq__question" aria-expanded="false">
-              <span itemprop="name">Как сделать оценку квартиры для наследства?</span>
+              <span>Как сделать оценку квартиры для наследства?</span>
               <svg class="s-faq__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <div class="s-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div class="s-faq__answer-inner" itemprop="text">Оценка квартиры для нотариуса — от 2 500 ₽. Для наследства рыночную стоимость определяем на дату открытия наследства — от неё нотариус считает госпошлину, поэтому осмотр сегодня не требуется. Документы и фото пришлёте на электронную почту, а готовый отчёт по 135-ФЗ мы сами направим нотариусу с ЭЦП (электронно-цифровой подписью). Для пошлины закон разрешает взять наименьшую из рыночной или кадастровой стоимости.</div>
+            <div class="s-faq__answer" itemscope itemtype="https://schema.org/Answer">
+              <div class="s-faq__answer-inner">Оценка квартиры для нотариуса — от 2 500 ₽. Для наследства рыночную стоимость определяем на дату открытия наследства — от неё нотариус считает госпошлину, поэтому осмотр сегодня не требуется. Документы и фото пришлёте на электронную почту, а готовый отчёт по 135-ФЗ мы сами направим нотариусу с ЭЦП (электронно-цифровой подписью). Для пошлины закон разрешает взять наименьшую из рыночной или кадастровой стоимости.</div>
             </div>
           </div>
 
-          <div class="s-faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="s-faq__item" itemscope itemtype="https://schema.org/Question">
             <button class="s-faq__question" aria-expanded="false">
-              <span itemprop="name">Оценка квартиры для суда или раздела при разводе — как сделать?</span>
+              <span>Оценка квартиры для суда или раздела при разводе — как сделать?</span>
               <svg class="s-faq__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <div class="s-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div class="s-faq__answer-inner" itemprop="text">Оценка для суда или раздела при разводе — от 2 500 ₽. Готовим независимый отчёт или заключение о рыночной стоимости по 135-ФЗ и ФСО: он подходит и для мирного соглашения, и для суда. Оценим квартиру целиком или долю.</div>
+            <div class="s-faq__answer" itemscope itemtype="https://schema.org/Answer">
+              <div class="s-faq__answer-inner">Оценка для суда или раздела при разводе — от 2 500 ₽. Готовим независимый отчёт или заключение о рыночной стоимости по 135-ФЗ и ФСО: он подходит и для мирного соглашения, и для суда. Оценим квартиру целиком или долю.</div>
             </div>
           </div>
 
@@ -2129,9 +2140,9 @@
   </script>
 
   <!-- ══════════════ SCRIPTS ══════════════ -->
-  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
 
   <script src="../js/components/shared-components.js?v=20260825t" defer></script>
   <script src="../js/theme.js?v=20260825e" defer></script>
@@ -2169,10 +2180,12 @@
       gsap.ticker.lagSmoothing(0);
 
       /* ─── 2. Hero entrance ─── */
+      gsap.set('#heroH1 > span', { y: 26, opacity: 0 });
       const heroTl = gsap.timeline({ delay: 0.15 });
       heroTl
         .to('#heroTag',     { opacity:1, y:0, duration:0.8, ease:'power3.out' })
         .to('#heroH1',      { opacity:1, y:0, duration:1.0, ease:'power3.out' }, '-=0.55')
+        .to('#heroH1 > span', { y:0, opacity:1, duration:0.7, stagger:0.14, ease:'power3.out' }, '-=0.6')
         .to('#heroLead',    { opacity:1, y:0, duration:0.8, ease:'power3.out' }, '-=0.65')
         .to('#heroActions', { opacity:1, y:0, duration:0.7, ease:'power3.out' }, '-=0.5')
         .to('#heroTrust',   { opacity:1, y:0, duration:0.7, ease:'power3.out' }, '-=0.4');

@@ -4,7 +4,12 @@
   <meta charset="UTF-8">
   <meta name="robots" content="noindex, nofollow">
   <script>(function(){try{document.documentElement.setAttribute('data-theme',localStorage.getItem('axioma-theme')||'light')}catch(e){}})();</script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <link rel="preload" href="../assets/fonts/inter-cyr.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/cormorant-cyr.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192.png">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
   <meta name="description" content="Оценка для суда в Барнауле — от 2 500 ₽: недвижимость, авто, ущерб, бизнес. Отчёт по 135-ФЗ и экспертиза по 73-ФЗ. Вся Россия — по фото и документам.">
   <meta name="theme-color" content="#FAF9F7">
   <title>Оценка для суда в Барнауле — Аксиома | от 2 500 ₽</title>
@@ -20,7 +25,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta property="og:locale" content="ru_RU">
 
-  <link rel="stylesheet" href="../css/fonts.css">
+  <link rel="stylesheet" href="../css/fonts.css?v=20260826a">
   <link rel="stylesheet" href="../css/main.css?v=20260825w">
   <link rel="stylesheet" href="../css/header.css?v=20260825t">
   <link rel="stylesheet" href="../css/sections.css?v=20260825u">
@@ -169,6 +174,89 @@
       background-clip: text;
       -webkit-text-fill-color: transparent;
       color: transparent;
+    }
+
+    /* ─── Typographic hero (суд — графит; ключ «Всё объяснит») ─── */
+    .sp-hero {
+      min-height: calc(100vh - 88px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .sp-hero__h1--display {
+      display: block;
+      width: min(720px, 92vw); max-width: 100%;
+      margin: 0 auto 1.3rem;
+      line-height: 1;
+      letter-spacing: normal;
+      font-weight: 900;
+    }
+    .thd-l1, .thd-l2, .thd-l3 {
+      display: block;
+      width: 100%;
+      margin: 0;
+      text-align: justify;
+      text-align-last: justify;
+      -moz-text-align-last: justify;
+      text-justify: inter-character;
+    }
+    .thd-l1 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 900;
+      font-size: clamp(1.8rem, 8.3vw, 4.6rem);
+      text-transform: uppercase;
+      line-height: 0.86;
+      color: var(--color-text, #fff);
+    }
+    .thd-l2 {
+      font-family: 'Cormorant', 'Georgia', serif;
+      font-style: italic;
+      font-weight: 500;
+      font-size: clamp(1.7rem, 11vw, 5.3rem);
+      line-height: 0.98;
+      margin-top: 0.02em;
+      color: var(--color-text, #fff);
+      opacity: 0.96;
+    }
+    .thd-l3 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 900;
+      font-size: clamp(2rem, 10.9vw, 5.8rem);
+      text-transform: uppercase;
+      line-height: 0.92;
+      margin-top: 0.02em;
+      background: linear-gradient(118deg, #8A94A0 0%, #545C66 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+    /* Lead — эталонная ширина, текст по центру, кегль прежний */
+    #heroLead {
+      width: min(720px, 92vw);
+      max-width: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    @media (max-width: 600px) {
+      #heroLead {
+        text-align: left;
+        text-align-last: left;
+        -moz-text-align-last: left;
+      }
+    }
+    /* Кнопки — на всю эталонную ширину (цвета — переменные --spa*, не трогаем) */
+    #heroActions {
+      width: min(720px, 92vw);
+      max-width: 100%;
+      margin: 1.8rem auto 0;
+      gap: 0.9rem;
+      display: flex;
+    }
+    #heroActions > a { flex: 1 1 0; justify-content: center; }
+    @media (max-width: 640px) {
+      #heroActions { flex-direction: column; }
+      #heroActions > a { width: 100%; flex: none; }
     }
 
     .sp-hero__lead {
@@ -939,8 +1027,10 @@
         <span class="sp-hero__tag-line"></span>
       </div>
 
-      <h1 class="sp-hero__h1" id="heroH1">
-        Оценка для суда —<br><em>и эксперт, который всё объяснит</em>
+      <h1 class="sp-hero__h1 sp-hero__h1--display" id="heroH1">
+        <span class="thd-l1">Оценка для суда</span>
+        <span class="thd-l2">и эксперт, который</span>
+        <span class="thd-l3">всё объяснит</span>
       </h1>
 
       <p class="sp-hero__lead" id="heroLead">
@@ -1035,7 +1125,7 @@
         </div>
         <div class="sp-scenario__right">
           <div class="sp-scene">
-            <img src="../img/uslugi/scene-sud.jpg" data-dark="../img/uslugi/scene-sud-dark.jpg" alt="Оценка объектов для суда" class="sp-scene__img" loading="eager" data-img-prompt="courthouse-barnaul-golden-hour">
+            <img src="../img/uslugi/scene-sud.jpg" data-dark="../img/uslugi/scene-sud-dark.jpg" alt="Оценка объектов для суда" class="sp-scene__img" loading="eager" data-img-prompt="courthouse-barnaul-golden-hour" width="1408" height="768">
             <div class="sp-scene__overlay" style="background:linear-gradient(135deg,rgba(8,15,16,0.6) 0%,rgba(122,146,181,0.08) 100%)"></div>
             <span class="sp-scene__badge">Барнаул · по всей России</span>
           </div>
@@ -1047,8 +1137,8 @@
         <a href="#sec-prices" class="sp-card sp-card--family" data-card="apartment">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-apartment-light.jpg" data-dark="img/nedvizhimost/icon-apartment-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="apartment-icon-obsidian" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-apartment-glow.jpg" data-dark="img/nedvizhimost/icon-apartment-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="apartment-icon-crystal" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-apartment-light.jpg" data-dark="img/nedvizhimost/icon-apartment-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="apartment-icon-obsidian" loading="lazy" decoding="async" width="249" height="256">
+            <img src="img/nedvizhimost/icon-apartment-glow.jpg" data-dark="img/nedvizhimost/icon-apartment-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="apartment-icon-crystal" loading="lazy" decoding="async" width="249" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Недвижимость</h3>
@@ -1070,8 +1160,8 @@
         <a href="#sec-prices" class="sp-card sp-card--family" data-card="house">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/icons/icon-commercial-light.jpg" data-dark="img/icons/icon-commercial-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="commercial-icon-obsidian" loading="lazy" decoding="async">
-            <img src="img/icons/icon-commercial-glow.jpg" data-dark="img/icons/icon-commercial-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="commercial-icon-crystal" loading="lazy" decoding="async">
+            <img src="img/icons/icon-commercial-light.jpg" data-dark="img/icons/icon-commercial-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="commercial-icon-obsidian" loading="lazy" decoding="async" width="256" height="256">
+            <img src="img/icons/icon-commercial-glow.jpg" data-dark="img/icons/icon-commercial-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="commercial-icon-crystal" loading="lazy" decoding="async" width="256" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Коммерческая недвижимость</h3>
@@ -1093,8 +1183,8 @@
         <a href="#sec-prices" class="sp-card sp-card--family" data-card="share">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/icons/icon-stake-light.jpg" data-dark="img/icons/icon-stake-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="stake-icon-obsidian" loading="lazy" decoding="async">
-            <img src="img/icons/icon-stake-glow.jpg" data-dark="img/icons/icon-stake-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="stake-icon-crystal" loading="lazy" decoding="async">
+            <img src="img/icons/icon-stake-light.jpg" data-dark="img/icons/icon-stake-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="stake-icon-obsidian" loading="lazy" decoding="async" width="256" height="256">
+            <img src="img/icons/icon-stake-glow.jpg" data-dark="img/icons/icon-stake-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="stake-icon-crystal" loading="lazy" decoding="async" width="256" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Бизнес и доля</h3>
@@ -1116,8 +1206,8 @@
         <a href="#sec-prices" class="sp-card sp-card--family" data-card="land">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-land-light.jpg" data-dark="img/nedvizhimost/icon-land-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="land-icon-obsidian" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-land-glow.jpg" data-dark="img/nedvizhimost/icon-land-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="land-icon-crystal" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-land-light.jpg" data-dark="img/nedvizhimost/icon-land-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="land-icon-obsidian" loading="lazy" decoding="async" width="256" height="173">
+            <img src="img/nedvizhimost/icon-land-glow.jpg" data-dark="img/nedvizhimost/icon-land-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="land-icon-crystal" loading="lazy" decoding="async" width="256" height="173">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Земельный участок</h3>
@@ -1139,8 +1229,8 @@
         <a href="#sec-prices" class="sp-card sp-card--family" data-card="cottage">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/icons/icon-equipment-light.jpg" data-dark="img/icons/icon-equipment-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="equipment-icon-obsidian" loading="lazy" decoding="async">
-            <img src="img/icons/icon-equipment-glow.jpg" data-dark="img/icons/icon-equipment-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="equipment-icon-crystal" loading="lazy" decoding="async">
+            <img src="img/icons/icon-equipment-light.jpg" data-dark="img/icons/icon-equipment-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="equipment-icon-obsidian" loading="lazy" decoding="async" width="256" height="256">
+            <img src="img/icons/icon-equipment-glow.jpg" data-dark="img/icons/icon-equipment-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="equipment-icon-crystal" loading="lazy" decoding="async" width="256" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Оборудование и техника</h3>
@@ -1162,8 +1252,8 @@
         <a href="#sec-prices" class="sp-card sp-card--family" data-card="garage">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/icons/icon-car-light.jpg" data-dark="img/icons/icon-car-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="car-icon-obsidian" loading="lazy" decoding="async">
-            <img src="img/icons/icon-car-glow.jpg" data-dark="img/icons/icon-car-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="car-icon-crystal" loading="lazy" decoding="async">
+            <img src="img/icons/icon-car-light.jpg" data-dark="img/icons/icon-car-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="car-icon-obsidian" loading="lazy" decoding="async" width="256" height="256">
+            <img src="img/icons/icon-car-glow.jpg" data-dark="img/icons/icon-car-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="car-icon-crystal" loading="lazy" decoding="async" width="256" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Автомобиль и ущерб</h3>
@@ -1209,7 +1299,7 @@
         </div>
         <div class="sp-scenario__right">
           <div class="sp-scene">
-            <img src="img/sud/scene-ekspert.jpg" data-dark="img/sud/scene-ekspert-dark.jpg" alt="Эксперт готовит заключение для суда" class="sp-scene__img" loading="lazy" data-img-prompt="expert-tablet-warm-office">
+            <img src="img/sud/scene-ekspert.jpg" data-dark="img/sud/scene-ekspert-dark.jpg" alt="Эксперт готовит заключение для суда" class="sp-scene__img" loading="lazy" data-img-prompt="expert-tablet-warm-office" width="1280" height="720">
             <div class="sp-scene__overlay" style="background:linear-gradient(135deg,rgba(8,15,16,0.6) 0%,rgba(122,146,181,0.05) 100%)"></div>
             <span class="sp-scene__badge">Рядом до решения</span>
           </div>
@@ -1221,8 +1311,8 @@
         <div class="sp-card sp-card--family">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/icons/icon-bankruptcy-light.jpg" data-dark="img/icons/icon-bankruptcy-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="bankruptcy-icon-obsidian" loading="lazy" decoding="async">
-            <img src="img/icons/icon-bankruptcy-glow.jpg" data-dark="img/icons/icon-bankruptcy-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="bankruptcy-icon-crystal" loading="lazy" decoding="async">
+            <img src="img/icons/icon-bankruptcy-light.jpg" data-dark="img/icons/icon-bankruptcy-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="bankruptcy-icon-obsidian" loading="lazy" decoding="async" width="256" height="256">
+            <img src="img/icons/icon-bankruptcy-glow.jpg" data-dark="img/icons/icon-bankruptcy-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="bankruptcy-icon-crystal" loading="lazy" decoding="async" width="256" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Банкротство</h3>
@@ -1242,8 +1332,8 @@
         <div class="sp-card sp-card--family">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-inherit-light.jpg" data-dark="img/nedvizhimost/icon-inherit-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-inherit-glow.jpg" data-dark="img/nedvizhimost/icon-inherit-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-inherit-light.jpg" data-dark="img/nedvizhimost/icon-inherit-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async" width="256" height="222">
+            <img src="img/nedvizhimost/icon-inherit-glow.jpg" data-dark="img/nedvizhimost/icon-inherit-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async" width="256" height="222">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Наследственные дела</h3>
@@ -1263,8 +1353,8 @@
         <div class="sp-card sp-card--family">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-divorce-light.jpg" data-dark="img/nedvizhimost/icon-divorce-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-divorce-glow.jpg" data-dark="img/nedvizhimost/icon-divorce-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-divorce-light.jpg" data-dark="img/nedvizhimost/icon-divorce-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async" width="219" height="256">
+            <img src="img/nedvizhimost/icon-divorce-glow.jpg" data-dark="img/nedvizhimost/icon-divorce-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async" width="219" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Раздел имущества при разводе</h3>
@@ -1284,8 +1374,8 @@
         <div class="sp-card sp-card--family">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/icons/icon-value-light.jpg" data-dark="img/icons/icon-value-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="value-icon-obsidian" loading="lazy" decoding="async">
-            <img src="img/icons/icon-value-glow.jpg" data-dark="img/icons/icon-value-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="value-icon-crystal" loading="lazy" decoding="async">
+            <img src="img/icons/icon-value-light.jpg" data-dark="img/icons/icon-value-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="value-icon-obsidian" loading="lazy" decoding="async" width="256" height="256">
+            <img src="img/icons/icon-value-glow.jpg" data-dark="img/icons/icon-value-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="value-icon-crystal" loading="lazy" decoding="async" width="256" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Цена сделки под вопросом</h3>
@@ -1305,8 +1395,8 @@
         <div class="sp-card sp-card--family">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/icons/icon-receivables-light.jpg" data-dark="img/icons/icon-receivables-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="receivables-icon-obsidian" loading="lazy" decoding="async">
-            <img src="img/icons/icon-receivables-glow.jpg" data-dark="img/icons/icon-receivables-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="receivables-icon-crystal" loading="lazy" decoding="async">
+            <img src="img/icons/icon-receivables-light.jpg" data-dark="img/icons/icon-receivables-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="receivables-icon-obsidian" loading="lazy" decoding="async" width="256" height="256">
+            <img src="img/icons/icon-receivables-glow.jpg" data-dark="img/icons/icon-receivables-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="receivables-icon-crystal" loading="lazy" decoding="async" width="256" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Взыскание ущерба</h3>
@@ -1326,8 +1416,8 @@
         <div class="sp-card sp-card--family">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-court-light.jpg" data-dark="img/nedvizhimost/icon-court-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-court-glow.jpg" data-dark="img/nedvizhimost/icon-court-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-court-light.jpg" data-dark="img/nedvizhimost/icon-court-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async" width="256" height="223">
+            <img src="img/nedvizhimost/icon-court-glow.jpg" data-dark="img/nedvizhimost/icon-court-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async" width="256" height="223">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Оспаривание сделок</h3>
@@ -1376,8 +1466,8 @@
         <div class="sp-card sp-card--family">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-included-light.jpg" data-dark="img/nedvizhimost/icon-included-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-included-glow.jpg" data-dark="img/nedvizhimost/icon-included-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-included-light.jpg" data-dark="img/nedvizhimost/icon-included-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async" width="234" height="256">
+            <img src="img/nedvizhimost/icon-included-glow.jpg" data-dark="img/nedvizhimost/icon-included-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async" width="234" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Независимая позиция</h3>
@@ -1396,8 +1486,8 @@
         <div class="sp-card sp-card--family">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-court-light.jpg" data-dark="img/nedvizhimost/icon-court-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-court-glow.jpg" data-dark="img/nedvizhimost/icon-court-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-court-light.jpg" data-dark="img/nedvizhimost/icon-court-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async" width="256" height="223">
+            <img src="img/nedvizhimost/icon-court-glow.jpg" data-dark="img/nedvizhimost/icon-court-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async" width="256" height="223">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Специалист ответит на вопросы суда</h3>
@@ -1416,8 +1506,8 @@
         <div class="sp-card sp-card--family">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-doc-title-light.jpg" data-dark="img/nedvizhimost/icon-doc-title-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-doc-title-glow.jpg" data-dark="img/nedvizhimost/icon-doc-title-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-doc-title-light.jpg" data-dark="img/nedvizhimost/icon-doc-title-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async" width="234" height="256">
+            <img src="img/nedvizhimost/icon-doc-title-glow.jpg" data-dark="img/nedvizhimost/icon-doc-title-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async" width="234" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Второе мнение по чужому отчёту</h3>
@@ -1460,7 +1550,7 @@
         </div>
         <div class="sp-scenario__right">
           <div class="sp-scene">
-            <img src="img/sud/scene-dokumenty.jpg" data-dark="img/sud/scene-dokumenty-dark.jpg" alt="Материалы дела на столе" class="sp-scene__img" loading="lazy" data-img-prompt="documents-court-table-warm">
+            <img src="img/sud/scene-dokumenty.jpg" data-dark="img/sud/scene-dokumenty-dark.jpg" alt="Материалы дела на столе" class="sp-scene__img" loading="lazy" data-img-prompt="documents-court-table-warm" width="1280" height="720">
             <div class="sp-scene__overlay" style="background:linear-gradient(135deg,rgba(8,15,16,0.6) 0%,rgba(122,146,181,0.08) 100%)"></div>
             <span class="sp-scene__badge">Рядом до заседания</span>
           </div>
@@ -1562,8 +1652,8 @@
         <div class="sp-card sp-card--family">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-doc-passport-light.jpg" data-dark="img/nedvizhimost/icon-doc-passport-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="passport-icon-obsidian" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-doc-passport-glow.jpg" data-dark="img/nedvizhimost/icon-doc-passport-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="passport-icon-crystal" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-doc-passport-light.jpg" data-dark="img/nedvizhimost/icon-doc-passport-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="passport-icon-obsidian" loading="lazy" decoding="async" width="212" height="256">
+            <img src="img/nedvizhimost/icon-doc-passport-glow.jpg" data-dark="img/nedvizhimost/icon-doc-passport-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="passport-icon-crystal" loading="lazy" decoding="async" width="212" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Ваш паспорт</h3>
@@ -1582,8 +1672,8 @@
         <div class="sp-card sp-card--family">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-doc-title-light.jpg" data-dark="img/nedvizhimost/icon-doc-title-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="title-doc-icon-obsidian" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-doc-title-glow.jpg" data-dark="img/nedvizhimost/icon-doc-title-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="title-doc-icon-crystal" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-doc-title-light.jpg" data-dark="img/nedvizhimost/icon-doc-title-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="title-doc-icon-obsidian" loading="lazy" decoding="async" width="234" height="256">
+            <img src="img/nedvizhimost/icon-doc-title-glow.jpg" data-dark="img/nedvizhimost/icon-doc-title-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="title-doc-icon-crystal" loading="lazy" decoding="async" width="234" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Документы на объект</h3>
@@ -1602,8 +1692,8 @@
         <div class="sp-card sp-card--family">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-court-light.jpg" data-dark="img/nedvizhimost/icon-court-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="court-ruling-icon-obsidian" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-court-glow.jpg" data-dark="img/nedvizhimost/icon-court-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="court-ruling-icon-crystal" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-court-light.jpg" data-dark="img/nedvizhimost/icon-court-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="court-ruling-icon-obsidian" loading="lazy" decoding="async" width="256" height="223">
+            <img src="img/nedvizhimost/icon-court-glow.jpg" data-dark="img/nedvizhimost/icon-court-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="court-ruling-icon-crystal" loading="lazy" decoding="async" width="256" height="223">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Определение суда</h3>
@@ -1651,8 +1741,8 @@
         <div class="sp-card sp-card--family">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-barnaul-light.jpg" data-dark="img/nedvizhimost/icon-barnaul-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-barnaul-glow.jpg" data-dark="img/nedvizhimost/icon-barnaul-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-barnaul-light.jpg" data-dark="img/nedvizhimost/icon-barnaul-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async" width="234" height="256">
+            <img src="img/nedvizhimost/icon-barnaul-glow.jpg" data-dark="img/nedvizhimost/icon-barnaul-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async" width="234" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Барнаул · по всей России</h3>
@@ -1678,8 +1768,8 @@
         <div class="sp-card sp-card--family">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-included-light.jpg" data-dark="img/nedvizhimost/icon-included-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-included-glow.jpg" data-dark="img/nedvizhimost/icon-included-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-included-light.jpg" data-dark="img/nedvizhimost/icon-included-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async" width="234" height="256">
+            <img src="img/nedvizhimost/icon-included-glow.jpg" data-dark="img/nedvizhimost/icon-included-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async" width="234" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Бесплатно с каждым отчётом</h3>
@@ -1704,8 +1794,8 @@
         <div class="sp-card sp-card--family">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-included-light.jpg" data-dark="img/nedvizhimost/icon-included-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-included-glow.jpg" data-dark="img/nedvizhimost/icon-included-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-included-light.jpg" data-dark="img/nedvizhimost/icon-included-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async" width="234" height="256">
+            <img src="img/nedvizhimost/icon-included-glow.jpg" data-dark="img/nedvizhimost/icon-included-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async" width="234" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Что включено</h3>
@@ -1745,7 +1835,7 @@
         <li><a class="sp-more__link" href="oborudovanie-i-transport.html">Оборудование и транспорт</a></li>
         <li><a class="sp-more__link" href="yuridicheskie-uslugi.html">Юридические услуги</a></li>
       </ul>
-      <p class="sp-more__tail">Все цены — на странице <a href="../ceny.html">Цены</a>. Адрес офиса и телефон — в <a href="../kontakty.html">Контактах</a>. Про компанию — <a href="../o-kompanii.html">О компании</a>.</p>
+      <p class="sp-more__tail">Все цены — на странице <a href="../ceny.html">Цены</a>. Адрес офиса и телефон — в <a href="../kontakty.html">Контактах</a>. Про компанию — <a href="../o-kompanii.html">О компании</a>. <a href="../politika-konfidencialnosti.html">Политика конфиденциальности</a>.</p>
     </div>
   </nav>
 
@@ -1757,86 +1847,86 @@
         <h2 class="s-faq__title">Коротко о главном — оценка для суда</h2>
       </div>
 
-      <div class="s-faq__content" itemscope itemtype="https://schema.org/FAQPage">
+      <div class="s-faq__content">
         <div class="s-faq__category is-active" data-category="single">
 
-          <div class="s-faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="s-faq__item" itemscope itemtype="https://schema.org/Question">
             <button class="s-faq__question" aria-expanded="false">
-              <span itemprop="name">Сколько стоит оценка для суда?</span>
+              <span>Сколько стоит оценка для суда?</span>
               <svg class="s-faq__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <div class="s-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div class="s-faq__answer-inner" itemprop="text">Оценка для суда в «Аксиоме» (Барнаул) — от 2 500 ₽. Точную цену назовём на бесплатной консультации и зафиксируем в договоре. Стоимость зависит от объекта; бизнес и доли считаются отдельно. Если суд назначит экспертизу, её обычно оплачивает сторона, которая о ней ходатайствовала.</div>
+            <div class="s-faq__answer" itemscope itemtype="https://schema.org/Answer">
+              <div class="s-faq__answer-inner">Оценка для суда в «Аксиоме» (Барнаул) — от 2 500 ₽. Точную цену назовём на бесплатной консультации и зафиксируем в договоре. Стоимость зависит от объекта; бизнес и доли считаются отдельно. Если суд назначит экспертизу, её обычно оплачивает сторона, которая о ней ходатайствовала.</div>
             </div>
           </div>
 
-          <div class="s-faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="s-faq__item" itemscope itemtype="https://schema.org/Question">
             <button class="s-faq__question" aria-expanded="false">
-              <span itemprop="name">Как оценить имущество для раздела при разводе или наследстве?</span>
+              <span>Как оценить имущество для раздела при разводе или наследстве?</span>
               <svg class="s-faq__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <div class="s-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div class="s-faq__answer-inner" itemprop="text">Чтобы разделить квартиру, машину, бизнес или долю по справедливости, нужна независимая оценка их рыночной стоимости. «Аксиома» в Барнауле определит цену каждого объекта по 135-ФЗ и ФСО и обоснует её понятно — так суду и сторонам легче договориться о долях. Готовим по документам и фото, от 2 500 ₽.</div>
+            <div class="s-faq__answer" itemscope itemtype="https://schema.org/Answer">
+              <div class="s-faq__answer-inner">Чтобы разделить квартиру, машину, бизнес или долю по справедливости, нужна независимая оценка их рыночной стоимости. «Аксиома» в Барнауле определит цену каждого объекта по 135-ФЗ и ФСО и обоснует её понятно — так суду и сторонам легче договориться о долях. Готовим по документам и фото, от 2 500 ₽.</div>
             </div>
           </div>
 
-          <div class="s-faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="s-faq__item" itemscope itemtype="https://schema.org/Question">
             <button class="s-faq__question" aria-expanded="false">
-              <span itemprop="name">Примет ли суд ваш отчёт?</span>
+              <span>Примет ли суд ваш отчёт?</span>
               <svg class="s-faq__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <div class="s-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div class="s-faq__answer-inner" itemprop="text">Да. «Аксиома» готовит отчёт по 135-ФЗ и ФСО, который составлен членом СРО / квалифицированным специалистом (с дипломами, сертификатами, членством в реестрах). Отчёт содержит актуальные данные, расчёты и копии документов, подтверждающих квалификацию оценщика.</div>
+            <div class="s-faq__answer" itemscope itemtype="https://schema.org/Answer">
+              <div class="s-faq__answer-inner">Да. «Аксиома» готовит отчёт по 135-ФЗ и ФСО, который составлен членом СРО / квалифицированным специалистом (с дипломами, сертификатами, членством в реестрах). Отчёт содержит актуальные данные, расчёты и копии документов, подтверждающих квалификацию оценщика.</div>
             </div>
           </div>
 
-          <div class="s-faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="s-faq__item" itemscope itemtype="https://schema.org/Question">
             <button class="s-faq__question" aria-expanded="false">
-              <span itemprop="name">Мне нужен отчёт об оценке или судебная экспертиза?</span>
+              <span>Мне нужен отчёт об оценке или судебная экспертиза?</span>
               <svg class="s-faq__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <div class="s-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div class="s-faq__answer-inner" itemprop="text">Основание для проведения отчёта об оценке — договор между заказчиком и оценщиком (досудебный порядок). Основание для проведения судебной экспертизы — определение суда или постановление следователя.</div>
+            <div class="s-faq__answer" itemscope itemtype="https://schema.org/Answer">
+              <div class="s-faq__answer-inner">Основание для проведения отчёта об оценке — договор между заказчиком и оценщиком (досудебный порядок). Основание для проведения судебной экспертизы — определение суда или постановление следователя.</div>
             </div>
           </div>
 
-          <div class="s-faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="s-faq__item" itemscope itemtype="https://schema.org/Question">
             <button class="s-faq__question" aria-expanded="false">
-              <span itemprop="name">Вторая сторона принесла свою оценку — можно её оспорить?</span>
+              <span>Вторая сторона принесла свою оценку — можно её оспорить?</span>
               <svg class="s-faq__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <div class="s-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div class="s-faq__answer-inner" itemprop="text">Да. Если оценка или экспертиза второй стороны вызывает сомнения, эксперт «Аксиомы» проверит методику и расчёты и подготовит рецензию. Она помогает обосновать ходатайство о судебной экспертизе, а если экспертиза уже прошла — о повторной или дополнительной (ст. 87 ГПК РФ). Подскажем, как использовать её в деле.</div>
+            <div class="s-faq__answer" itemscope itemtype="https://schema.org/Answer">
+              <div class="s-faq__answer-inner">Да. Если оценка или экспертиза второй стороны вызывает сомнения, эксперт «Аксиомы» проверит методику и расчёты и подготовит рецензию. Она помогает обосновать ходатайство о судебной экспертизе, а если экспертиза уже прошла — о повторной или дополнительной (ст. 87 ГПК РФ). Подскажем, как использовать её в деле.</div>
             </div>
           </div>
 
-          <div class="s-faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="s-faq__item" itemscope itemtype="https://schema.org/Question">
             <button class="s-faq__question" aria-expanded="false">
-              <span itemprop="name">Какие документы нужны для оценки в суд?</span>
+              <span>Какие документы нужны для оценки в суд?</span>
               <svg class="s-faq__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <div class="s-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div class="s-faq__answer-inner" itemprop="text">Для подготовки отчёта об оценке для суда компании «Аксиома» потребуются документы на имущество (выписка ЕГРН, ПТС, устав и др.) и фото объекта. Точный список под вашу ситуацию подскажем на бесплатной консультации.</div>
+            <div class="s-faq__answer" itemscope itemtype="https://schema.org/Answer">
+              <div class="s-faq__answer-inner">Для подготовки отчёта об оценке для суда компании «Аксиома» потребуются документы на имущество (выписка ЕГРН, ПТС, устав и др.) и фото объекта. Точный список под вашу ситуацию подскажем на бесплатной консультации.</div>
             </div>
           </div>
 
-          <div class="s-faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="s-faq__item" itemscope itemtype="https://schema.org/Question">
             <button class="s-faq__question" aria-expanded="false">
-              <span itemprop="name">Сколько времени готовится оценка для суда?</span>
+              <span>Сколько времени готовится оценка для суда?</span>
               <svg class="s-faq__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <div class="s-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div class="s-faq__answer-inner" itemprop="text">Стандартный срок выполнения оценочных работ для судебных процессов составляет от 3 до 5 рабочих дней с момента предоставления полного пакета документов. Точные сроки зависят от специфики объекта (недвижимость и транспорт оцениваются в ускоренном режиме; бизнес и производственные комплексы требуют детального анализа). При наличии жёстких временных рамок и установленной даты судебного заседания мы готовы согласовать индивидуальный график подготовки отчёта.</div>
+            <div class="s-faq__answer" itemscope itemtype="https://schema.org/Answer">
+              <div class="s-faq__answer-inner">Стандартный срок выполнения оценочных работ для судебных процессов составляет от 3 до 5 рабочих дней с момента предоставления полного пакета документов. Точные сроки зависят от специфики объекта (недвижимость и транспорт оцениваются в ускоренном режиме; бизнес и производственные комплексы требуют детального анализа). При наличии жёстких временных рамок и установленной даты судебного заседания мы готовы согласовать индивидуальный график подготовки отчёта.</div>
             </div>
           </div>
 
-          <div class="s-faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="s-faq__item" itemscope itemtype="https://schema.org/Question">
             <button class="s-faq__question" aria-expanded="false">
-              <span itemprop="name">Я не в Барнауле — поможете дистанционно?</span>
+              <span>Я не в Барнауле — поможете дистанционно?</span>
               <svg class="s-faq__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <div class="s-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div class="s-faq__answer-inner" itemprop="text"><p>Да, мы успешно оказываем услуги дистанционно.</p><ul><li>Очный выезд: Барнаул и Алтайский край.</li><li>Дистанционная работа (вся Россия): оценка проводится на основе предоставленных вами документов и качественных фото/видеоматериалов.</li></ul><p>Подготовленный отчёт об оценке полностью соответствует требованиям законодательства РФ и принимается судами всех регионов. Мы сопровождаем дело на всех этапах: при необходимости подключаемся к заседаниям удалённо (через видеоконференцсвязь) и помогаем отстоять результаты оценки.</p></div>
+            <div class="s-faq__answer" itemscope itemtype="https://schema.org/Answer">
+              <div class="s-faq__answer-inner"><p>Да, мы успешно оказываем услуги дистанционно.</p><ul><li>Очный выезд: Барнаул и Алтайский край.</li><li>Дистанционная работа (вся Россия): оценка проводится на основе предоставленных вами документов и качественных фото/видеоматериалов.</li></ul><p>Подготовленный отчёт об оценке полностью соответствует требованиям законодательства РФ и принимается судами всех регионов. Мы сопровождаем дело на всех этапах: при необходимости подключаемся к заседаниям удалённо (через видеоконференцсвязь) и помогаем отстоять результаты оценки.</p></div>
             </div>
           </div>
 
@@ -2076,9 +2166,9 @@
   </script>
 
   <!-- ══════════════ SCRIPTS ══════════════ -->
-  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
 
   <script src="../js/components/shared-components.js?v=20260825t" defer></script>
   <script src="../js/theme.js?v=20260825e" defer></script>
@@ -2116,10 +2206,12 @@
       gsap.ticker.lagSmoothing(0);
 
       /* ─── 2. Hero entrance ─── */
+      gsap.set('#heroH1 > span', { y: 26, opacity: 0 });
       const heroTl = gsap.timeline({ delay: 0.15 });
       heroTl
         .to('#heroTag',     { opacity:1, y:0, duration:0.8, ease:'power3.out' })
         .to('#heroH1',      { opacity:1, y:0, duration:1.0, ease:'power3.out' }, '-=0.55')
+        .to('#heroH1 > span', { y:0, opacity:1, duration:0.7, stagger:0.14, ease:'power3.out' }, '-=0.6')
         .to('#heroLead',    { opacity:1, y:0, duration:0.8, ease:'power3.out' }, '-=0.65')
         .to('#heroActions', { opacity:1, y:0, duration:0.7, ease:'power3.out' }, '-=0.5')
         .to('#heroTrust',   { opacity:1, y:0, duration:0.7, ease:'power3.out' }, '-=0.4');
