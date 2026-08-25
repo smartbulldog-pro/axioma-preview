@@ -32,12 +32,12 @@
   <!-- Header styles -->
   <link rel="stylesheet" href="css/header.css?v=20260825t">
   <!-- Sections (footer, shared components) -->
-  <link rel="stylesheet" href="css/sections.css?v=20260825u">
+  <link rel="stylesheet" href="css/sections.css?v=20260826c">
   <!-- AI sidebar -->
   <link rel="stylesheet" href="css/ai-sidebar.css?v=20260711e">
   <link rel="stylesheet" href="css/osmotr-wizard.css?v=20260825v">
   <!-- Subpage design system -->
-  <link rel="stylesheet" href="css/subpage.css?v=20260825t">
+  <link rel="stylesheet" href="css/subpage.css?v=20260826c">
 
   <!-- Schema.org structured data -->
   <script type="application/ld+json">
@@ -1133,6 +1133,12 @@
     }
   
     .ceny-card__link { display: inline-flex; align-items: center; min-height: 44px; /* тап-мишень */ padding: 0 0.25rem; margin: -13px -0.25rem; }
+  
+    /* ховер-слой бонусных иконок */
+    .bonus-card__iconwrap { position: relative; width: 72px; height: 72px; display: inline-block; }
+    .bonus-card__iconwrap .bonus-card__icon { position: absolute; inset: 0; }
+    .bonus-card__icon--glow { opacity: 0; transition: opacity 0.35s ease; }
+    .bonus-card:hover .bonus-card__icon--glow { opacity: 1; }
   </style>
 </head>
 
@@ -1571,21 +1577,21 @@
         <div class="ceny-bonuses__grid" id="bonuses-grid">
           <!-- Bonus 1 -->
           <div class="bonus-card">
-            <img src="assets/img/icon-consultation-light.jpg" data-dark="assets/img/icon-consultation.jpg" alt="" class="bonus-card__icon" loading="lazy" width="72" height="72">
+            <span class="bonus-card__iconwrap"><img src="assets/img/icon-consultation-light.jpg" data-dark="assets/img/icon-consultation.jpg" alt="" class="bonus-card__icon" loading="lazy" width="72" height="72"><img src="assets/img/icon-consultation-glow.jpg" data-dark="assets/img/icon-consultation-cry.jpg" alt="" class="bonus-card__icon bonus-card__icon--glow" loading="lazy" width="72" height="72"></span>
             <div class="bonus-card__badge">Бесплатно</div>
             <h3 class="bonus-card__name">Экспертная консультация</h3>
             <p class="bonus-card__desc">Наш оценщик подробно разберёт вашу ситуацию — ещё до&nbsp;подписания договора, бесплатно.</p>
           </div>
           <!-- Bonus 2 -->
           <div class="bonus-card">
-            <img src="assets/img/icon-documents-light.jpg" data-dark="assets/img/icon-documents.jpg" alt="" class="bonus-card__icon" loading="lazy" width="72" height="72">
+            <span class="bonus-card__iconwrap"><img src="assets/img/icon-documents-light.jpg" data-dark="assets/img/icon-documents.jpg" alt="" class="bonus-card__icon" loading="lazy" width="72" height="72"><img src="assets/img/icon-documents-glow.jpg" data-dark="assets/img/icon-documents-cry.jpg" alt="" class="bonus-card__icon bonus-card__icon--glow" loading="lazy" width="72" height="72"></span>
             <div class="bonus-card__badge">Бесплатно</div>
             <h3 class="bonus-card__name">Печатные копии + PDF</h3>
             <p class="bonus-card__desc">Оригинальные прошитые экземпляры и&nbsp;электронная версия с&nbsp;УКЭП — для суда, банка, нотариуса</p>
           </div>
           <!-- Bonus 3 -->
           <div class="bonus-card">
-            <img src="assets/img/icon-delivery-light.jpg" data-dark="assets/img/icon-delivery.jpg" alt="" class="bonus-card__icon" loading="lazy" width="72" height="72">
+            <span class="bonus-card__iconwrap"><img src="assets/img/icon-delivery-light.jpg" data-dark="assets/img/icon-delivery.jpg" alt="" class="bonus-card__icon" loading="lazy" width="72" height="72"><img src="assets/img/icon-delivery-glow.jpg" data-dark="assets/img/icon-delivery-cry.jpg" alt="" class="bonus-card__icon bonus-card__icon--glow" loading="lazy" width="72" height="72"></span>
             <div class="bonus-card__badge">Бесплатно</div>
             <h3 class="bonus-card__name">Доставка документов</h3>
             <p class="bonus-card__desc">Привезём отчёт по&nbsp;Барнаулу — бесплатно. В&nbsp;другие города отправим почтой или СДЭК, удобный способ обсудим заранее.</p>
