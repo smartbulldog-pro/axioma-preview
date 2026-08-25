@@ -1248,3 +1248,6 @@ html.lenis, html.lenis body { height: auto; }
   transform: none !important;
   visibility: visible !important;
 }
+
+/* тап-мишень телефонной ссылки предподвального CTA */
+.s-cta__phone { display: inline-flex; align-items: center; min-height: 44px; /* тап */ }

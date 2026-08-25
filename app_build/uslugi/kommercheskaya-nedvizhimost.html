@@ -4,7 +4,12 @@
   <meta charset="UTF-8">
   <meta name="robots" content="noindex, nofollow">
   <script>(function(){try{document.documentElement.setAttribute('data-theme',localStorage.getItem('axioma-theme')||'light')}catch(e){}})();</script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <link rel="preload" href="../assets/fonts/inter-cyr.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/cormorant-cyr.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192.png">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
   <meta name="description" content="Оценка коммерческой недвижимости в Барнауле — от 5 000 ₽ за 2–4 дня. Офисы, склады, торговые и промышленные объекты. Отчёт для банков и инвесторов.">
   <meta name="theme-color" content="#FAF9F7">
   <title>Оценка коммерческой недвижимости в Барнауле — от 5 000 ₽</title>
@@ -20,7 +25,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta property="og:locale" content="ru_RU">
 
-  <link rel="stylesheet" href="../css/fonts.css">
+  <link rel="stylesheet" href="../css/fonts.css?v=20260826a">
   <link rel="stylesheet" href="../css/main.css?v=20260825w">
   <link rel="stylesheet" href="../css/header.css?v=20260825t">
   <link rel="stylesheet" href="../css/sections.css?v=20260825u">
@@ -184,7 +189,7 @@
 
     /* Типографик-хиро: 3 justified-строки в одну эталонную ширину; ключевое «уверены» — фирменным бирюзовым */
     .sp-hero__h1--display{
-      display:block; width:min(700px,92vw); max-width:100%;
+      display:block; width:min(720px,92vw); max-width:100%;
       margin:0 auto 1.4rem; line-height:1; letter-spacing:normal; font-weight:900;
     }
     .chd-l1,.chd-l2,.chd-l3{
@@ -211,13 +216,13 @@
     [data-theme="dark"] #heroLead .clead-key{ color:#6FB6EE; -webkit-text-fill-color:#6FB6EE; }
     @media(max-width:600px){ #heroLead .clead-l1,#heroLead .clead-l2,#heroLead .clead-l3{ text-align:left; text-align-last:left; -moz-text-align-last:left; } }
     /* Кнопки — на всю эталонную ширину + цвет бизнеса (синий) */
-    #heroActions{ width:min(700px,92vw); margin:1.8rem auto 0; gap:.9rem; }
+    #heroActions{ width:min(720px,92vw); margin:1.8rem auto 0; gap:.9rem; }
     #heroActions > a{ flex:1 1 0; justify-content:center; }
     #heroActions .sp-hero__btn-primary{ background:linear-gradient(118deg,#46A0DC 0%,#1E5A96 100%); color:#fff; box-shadow:0 14px 32px rgba(30,90,150,.26); }
     #heroActions .sp-hero__btn-primary:hover{ background:linear-gradient(118deg,#57ABE6 0%,#245F9E 100%); box-shadow:0 20px 48px rgba(30,90,150,.36); }
     #heroActions .sp-hero__btn-ghost{ border:1.5px solid rgba(30,90,150,.42); color:var(--color-text); }
     #heroActions .sp-hero__btn-ghost:hover{ border-color:#1E5A96; color:#1E5A96; background:rgba(30,90,150,.06); }
-    @media(max-width:560px){ #heroActions{ flex-direction:column; align-items:stretch; } #heroActions > a{ width:100%; flex:none; } }
+    @media(max-width:640px){ #heroActions{ flex-direction:column; align-items:stretch; } #heroActions > a{ width:100%; flex:none; } }
 
     .sp-hero__actions {
       display: flex;
@@ -944,6 +949,30 @@
       background: linear-gradient(118deg, var(--spa1), var(--spa2));
       color: var(--spaText);
     }
+  
+    /* ─── Доводка до эталона: у «Целей оценки» 5 карточек — без спанов
+       в сетке 3x2 оставалась дыра; ширина колонки хиро 700 -> 720 ─── */
+    @media (min-width:1101px){
+      #whenCards{ grid-template-columns: repeat(6,1fr); }
+      #whenCards .sp-card{ grid-column: span 2; }
+      #whenCards .sp-card:nth-child(4), #whenCards .sp-card:nth-child(5){ grid-column: span 3; }
+    }
+    @media (min-width:769px) and (max-width:1100px){
+      #whenCards .sp-card:nth-child(5){ grid-column: span 2; }
+    }
+  
+    /* доводка до эталона: хиро на высоту экрана; полоса доверия как у всех;
+       кнопки хиро — цветом раздела из переменных --spa* */
+    .sp-hero { min-height: calc(100vh - 88px); display: flex; align-items: center; }
+    .sp-hero__trust { gap: 2.5rem; }
+    .sp-hero__trust-value { font-size: clamp(1.6rem, 3vw, 2.2rem); }
+    #heroActions .sp-hero__btn-primary {
+      background: linear-gradient(118deg, var(--spa1), var(--spa2)); color: var(--spaText); }
+    #heroActions .sp-hero__btn-primary:hover {
+      background: linear-gradient(118deg, var(--spa1h), var(--spa2h));
+      box-shadow: 0 20px 50px rgba(var(--spaGlow), 0.32); }
+    #heroActions .sp-hero__btn-ghost { border-color: rgba(var(--spaGlow), 0.5); color: var(--spaInk); }
+    [data-theme="dark"] #heroActions .sp-hero__btn-ghost { color: var(--spaDark); }
   </style>
 </head>
 
@@ -1075,7 +1104,7 @@
         </div>
         <div class="sp-scenario__right">
           <div class="sp-scene">
-            <img src="../img/uslugi/scene-kommercheskaya.jpg" data-dark="../img/uslugi/scene-kommercheskaya-dark.jpg" alt="Коммерческая недвижимость" class="sp-scene__img" loading="eager" data-img-prompt="warehouse-industrial">
+            <img src="../img/uslugi/scene-kommercheskaya.jpg" data-dark="../img/uslugi/scene-kommercheskaya-dark.jpg" alt="Коммерческая недвижимость" class="sp-scene__img" loading="eager" data-img-prompt="warehouse-industrial" width="1408" height="768">
             <div class="sp-scene__overlay" style="background:linear-gradient(135deg,rgba(8,15,16,0.6) 0%,rgba(21,175,209,0.08) 100%)"></div>
             <span class="sp-scene__badge">Цифра, которой верят</span>
           </div>
@@ -1087,8 +1116,8 @@
         <a href="#sec-prices" class="sp-card sp-card--business" data-card="office">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/icons/icon-company-light.jpg" data-dark="img/icons/icon-company-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="company-icon-obsidian" loading="lazy" decoding="async">
-            <img src="img/icons/icon-company-glow.jpg" data-dark="img/icons/icon-company-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="company-icon-crystal" loading="lazy" decoding="async">
+            <img src="img/icons/icon-company-light.jpg" data-dark="img/icons/icon-company-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="company-icon-obsidian" loading="lazy" decoding="async" width="256" height="256">
+            <img src="img/icons/icon-company-glow.jpg" data-dark="img/icons/icon-company-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="company-icon-crystal" loading="lazy" decoding="async" width="256" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Офисы и БЦ</h3>
@@ -1109,8 +1138,8 @@
         <a href="#sec-prices" class="sp-card sp-card--business" data-card="warehouse">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/icons/icon-warehouse-light.jpg" data-dark="img/icons/icon-warehouse-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="warehouse-icon-obsidian" loading="lazy" decoding="async">
-            <img src="img/icons/icon-warehouse-glow.jpg" data-dark="img/icons/icon-warehouse-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="warehouse-icon-crystal" loading="lazy" decoding="async">
+            <img src="img/icons/icon-warehouse-light.jpg" data-dark="img/icons/icon-warehouse-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="warehouse-icon-obsidian" loading="lazy" decoding="async" width="256" height="256">
+            <img src="img/icons/icon-warehouse-glow.jpg" data-dark="img/icons/icon-warehouse-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="warehouse-icon-crystal" loading="lazy" decoding="async" width="256" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Склады и логистика</h3>
@@ -1131,8 +1160,8 @@
         <a href="#sec-prices" class="sp-card sp-card--business" data-card="retail">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/icons/icon-commercial-light.jpg" data-dark="img/icons/icon-commercial-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="commercial-icon-obsidian" loading="lazy" decoding="async">
-            <img src="img/icons/icon-commercial-glow.jpg" data-dark="img/icons/icon-commercial-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="commercial-icon-crystal" loading="lazy" decoding="async">
+            <img src="img/icons/icon-commercial-light.jpg" data-dark="img/icons/icon-commercial-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="commercial-icon-obsidian" loading="lazy" decoding="async" width="256" height="256">
+            <img src="img/icons/icon-commercial-glow.jpg" data-dark="img/icons/icon-commercial-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="commercial-icon-crystal" loading="lazy" decoding="async" width="256" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Торговые площади</h3>
@@ -1153,8 +1182,8 @@
         <a href="#sec-prices" class="sp-card sp-card--business" data-card="land">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-land-light.jpg" data-dark="img/nedvizhimost/icon-land-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-land-glow.jpg" data-dark="img/nedvizhimost/icon-land-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-land-light.jpg" data-dark="img/nedvizhimost/icon-land-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async" width="256" height="173">
+            <img src="img/nedvizhimost/icon-land-glow.jpg" data-dark="img/nedvizhimost/icon-land-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async" width="256" height="173">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Коммерческая земля</h3>
@@ -1199,7 +1228,7 @@
         </div>
         <div class="sp-scenario__right">
           <div class="sp-scene">
-            <img src="img/kommercheskaya/scene-peregovory.jpg" data-dark="img/kommercheskaya/scene-peregovory-dark.jpg" alt="Переговоры" class="sp-scene__img" loading="lazy" data-img-prompt="negotiation-handshake">
+            <img src="img/kommercheskaya/scene-peregovory.jpg" data-dark="img/kommercheskaya/scene-peregovory-dark.jpg" alt="Переговоры" class="sp-scene__img" loading="lazy" data-img-prompt="negotiation-handshake" width="1024" height="768">
             <div class="sp-scene__overlay" style="background:linear-gradient(135deg,rgba(8,15,16,0.6) 0%,rgba(21,175,209,0.05) 100%)"></div>
             <span class="sp-scene__badge">Ясная картина</span>
           </div>
@@ -1211,8 +1240,8 @@
         <div class="sp-card sp-card--business">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/icons/icon-value-light.jpg" data-dark="img/icons/icon-value-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="value-icon-obsidian" loading="lazy" decoding="async">
-            <img src="img/icons/icon-value-glow.jpg" data-dark="img/icons/icon-value-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="value-icon-crystal" loading="lazy" decoding="async">
+            <img src="img/icons/icon-value-light.jpg" data-dark="img/icons/icon-value-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="value-icon-obsidian" loading="lazy" decoding="async" width="256" height="256">
+            <img src="img/icons/icon-value-glow.jpg" data-dark="img/icons/icon-value-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="value-icon-crystal" loading="lazy" decoding="async" width="256" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Купля-продажа и аренда</h3>
@@ -1231,8 +1260,8 @@
         <div class="sp-card sp-card--business">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/icons/icon-shares-light.jpg" data-dark="img/icons/icon-shares-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="shares-icon-obsidian" loading="lazy" decoding="async">
-            <img src="img/icons/icon-shares-glow.jpg" data-dark="img/icons/icon-shares-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="shares-icon-crystal" loading="lazy" decoding="async">
+            <img src="img/icons/icon-shares-light.jpg" data-dark="img/icons/icon-shares-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="shares-icon-obsidian" loading="lazy" decoding="async" width="256" height="256">
+            <img src="img/icons/icon-shares-glow.jpg" data-dark="img/icons/icon-shares-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="shares-icon-crystal" loading="lazy" decoding="async" width="256" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Баланс и отчётность</h3>
@@ -1251,8 +1280,8 @@
         <div class="sp-card sp-card--business">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/icons/icon-pledge-light.jpg" data-dark="img/icons/icon-pledge-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="pledge-icon-obsidian" loading="lazy" decoding="async">
-            <img src="img/icons/icon-pledge-glow.jpg" data-dark="img/icons/icon-pledge-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="pledge-icon-crystal" loading="lazy" decoding="async">
+            <img src="img/icons/icon-pledge-light.jpg" data-dark="img/icons/icon-pledge-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="pledge-icon-obsidian" loading="lazy" decoding="async" width="256" height="256">
+            <img src="img/icons/icon-pledge-glow.jpg" data-dark="img/icons/icon-pledge-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="pledge-icon-crystal" loading="lazy" decoding="async" width="256" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Кредитование под залог</h3>
@@ -1271,8 +1300,8 @@
         <div class="sp-card sp-card--business">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/icons/icon-stake-light.jpg" data-dark="img/icons/icon-stake-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="stake-icon-obsidian" loading="lazy" decoding="async">
-            <img src="img/icons/icon-stake-glow.jpg" data-dark="img/icons/icon-stake-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="stake-icon-crystal" loading="lazy" decoding="async">
+            <img src="img/icons/icon-stake-light.jpg" data-dark="img/icons/icon-stake-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="stake-icon-obsidian" loading="lazy" decoding="async" width="256" height="256">
+            <img src="img/icons/icon-stake-glow.jpg" data-dark="img/icons/icon-stake-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="stake-icon-crystal" loading="lazy" decoding="async" width="256" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Взнос в уставный капитал</h3>
@@ -1291,8 +1320,8 @@
         <div class="sp-card sp-card--business">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-court-light.jpg" data-dark="img/nedvizhimost/icon-court-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-court-glow.jpg" data-dark="img/nedvizhimost/icon-court-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-court-light.jpg" data-dark="img/nedvizhimost/icon-court-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async" width="256" height="223">
+            <img src="img/nedvizhimost/icon-court-glow.jpg" data-dark="img/nedvizhimost/icon-court-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async" width="256" height="223">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Суды и арбитраж</h3>
@@ -1335,7 +1364,7 @@
         </div>
         <div class="sp-scenario__right">
           <div class="sp-scene">
-            <img src="img/kommercheskaya/scene-otchet.jpg" data-dark="img/kommercheskaya/scene-otchet-dark.jpg" alt="Отчёт об оценке на рабочем столе" class="sp-scene__img" loading="lazy" data-img-prompt="valuation-report-desk">
+            <img src="img/kommercheskaya/scene-otchet.jpg" data-dark="img/kommercheskaya/scene-otchet-dark.jpg" alt="Отчёт об оценке на рабочем столе" class="sp-scene__img" loading="lazy" data-img-prompt="valuation-report-desk" width="1024" height="768">
             <div class="sp-scene__overlay" style="background:linear-gradient(135deg,rgba(8,15,16,0.6) 0%,rgba(21,175,209,0.08) 100%)"></div>
             <span class="sp-scene__badge">По-настоящему независимо</span>
           </div>
@@ -1437,8 +1466,8 @@
         <div class="sp-card sp-card--business">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-doc-title-light.jpg" data-dark="img/nedvizhimost/icon-doc-title-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-doc-title-glow.jpg" data-dark="img/nedvizhimost/icon-doc-title-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-doc-title-light.jpg" data-dark="img/nedvizhimost/icon-doc-title-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async" width="234" height="256">
+            <img src="img/nedvizhimost/icon-doc-title-glow.jpg" data-dark="img/nedvizhimost/icon-doc-title-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async" width="234" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Правоустанавливающие документы</h3>
@@ -1457,8 +1486,8 @@
         <div class="sp-card sp-card--business">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-doc-tech-light.jpg" data-dark="img/nedvizhimost/icon-doc-tech-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-doc-tech-glow.jpg" data-dark="img/nedvizhimost/icon-doc-tech-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-doc-tech-light.jpg" data-dark="img/nedvizhimost/icon-doc-tech-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async" width="212" height="256">
+            <img src="img/nedvizhimost/icon-doc-tech-glow.jpg" data-dark="img/nedvizhimost/icon-doc-tech-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async" width="212" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Техническая документация</h3>
@@ -1477,8 +1506,8 @@
         <div class="sp-card sp-card--business">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-doc-passport-light.jpg" data-dark="img/nedvizhimost/icon-doc-passport-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-doc-passport-glow.jpg" data-dark="img/nedvizhimost/icon-doc-passport-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-doc-passport-light.jpg" data-dark="img/nedvizhimost/icon-doc-passport-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async" width="212" height="256">
+            <img src="img/nedvizhimost/icon-doc-passport-glow.jpg" data-dark="img/nedvizhimost/icon-doc-passport-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async" width="212" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Реквизиты заказчика</h3>
@@ -1526,8 +1555,8 @@
         <div class="sp-card sp-card--business">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-apartment-light.jpg" data-dark="img/nedvizhimost/icon-apartment-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-apartment-glow.jpg" data-dark="img/nedvizhimost/icon-apartment-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-apartment-light.jpg" data-dark="img/nedvizhimost/icon-apartment-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async" width="249" height="256">
+            <img src="img/nedvizhimost/icon-apartment-glow.jpg" data-dark="img/nedvizhimost/icon-apartment-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async" width="249" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Встроенные помещения</h3>
@@ -1549,8 +1578,8 @@
         <div class="sp-card sp-card--business">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-garage-light.jpg" data-dark="img/nedvizhimost/icon-garage-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-garage-glow.jpg" data-dark="img/nedvizhimost/icon-garage-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-garage-light.jpg" data-dark="img/nedvizhimost/icon-garage-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async" width="256" height="199">
+            <img src="img/nedvizhimost/icon-garage-glow.jpg" data-dark="img/nedvizhimost/icon-garage-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async" width="256" height="199">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Отдельно стоящие здания</h3>
@@ -1572,8 +1601,8 @@
         <div class="sp-card sp-card--business">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-included-light.jpg" data-dark="img/nedvizhimost/icon-included-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-included-glow.jpg" data-dark="img/nedvizhimost/icon-included-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-included-light.jpg" data-dark="img/nedvizhimost/icon-included-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async" width="234" height="256">
+            <img src="img/nedvizhimost/icon-included-glow.jpg" data-dark="img/nedvizhimost/icon-included-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async" width="234" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Что входит в цену</h3>
@@ -1609,7 +1638,7 @@
         <li><a class="sp-more__link" href="oborudovanie-i-transport.html">Оборудование и транспорт</a></li>
         <li><a class="sp-more__link" href="yuridicheskie-uslugi.html">Юридические услуги</a></li>
       </ul>
-      <p class="sp-more__tail">Все цены — на странице <a href="../ceny.html">Цены</a>. Адрес офиса и телефон — в <a href="../kontakty.html">Контактах</a>. Про компанию — <a href="../o-kompanii.html">О компании</a>.</p>
+      <p class="sp-more__tail">Все цены — на странице <a href="../ceny.html">Цены</a>. Адрес офиса и телефон — в <a href="../kontakty.html">Контактах</a>. Про компанию — <a href="../o-kompanii.html">О компании</a>. <a href="../politika-konfidencialnosti.html">Политика конфиденциальности</a>.</p>
     </div>
   </nav>
 
@@ -1621,96 +1650,96 @@
         <h2 class="s-faq__title">Коротко о главном — оценка коммерческой недвижимости</h2>
       </div>
 
-      <div class="s-faq__content" itemscope itemtype="https://schema.org/FAQPage">
+      <div class="s-faq__content">
         <div class="s-faq__category is-active" data-category="single">
 
-          <div class="s-faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="s-faq__item" itemscope itemtype="https://schema.org/Question">
             <button class="s-faq__question" aria-expanded="false">
-              <span itemprop="name">Сколько стоит оценка коммерческой недвижимости?</span>
+              <span>Сколько стоит оценка коммерческой недвижимости?</span>
               <svg class="s-faq__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <div class="s-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div class="s-faq__answer-inner" itemprop="text">Оценка коммерческой недвижимости в «Аксиоме» (Барнаул) — от 5 000 ₽. Итоговую цену назовём на бесплатной консультации и зафиксируем в договоре до старта. Она зависит от площади, типа объекта и цели отчёта: встроенное помещение — по базовой ставке, отдельно стоящее здание с землёй — дороже. Работаем по всей России.</div>
+            <div class="s-faq__answer" itemscope itemtype="https://schema.org/Answer">
+              <div class="s-faq__answer-inner">Оценка коммерческой недвижимости в «Аксиоме» (Барнаул) — от 5 000 ₽. Итоговую цену назовём на бесплатной консультации и зафиксируем в договоре до старта. Она зависит от площади, типа объекта и цели отчёта: встроенное помещение — по базовой ставке, отдельно стоящее здание с землёй — дороже. Работаем по всей России.</div>
             </div>
           </div>
 
-          <div class="s-faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="s-faq__item" itemscope itemtype="https://schema.org/Question">
             <button class="s-faq__question" aria-expanded="false">
-              <span itemprop="name">Что относится к коммерческой недвижимости?</span>
+              <span>Что относится к коммерческой недвижимости?</span>
               <svg class="s-faq__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <div class="s-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div class="s-faq__answer-inner" itemprop="text">К коммерческой недвижимости относят: офисы и бизнес-центры, склады и терминалы, магазины и торговые площади, помещения свободного назначения, землю под бизнес, в том числе объекты с действующими арендаторами. «Аксиома» в Барнауле оценит объект любого масштаба — от кабинета до производственного комплекса.</div>
+            <div class="s-faq__answer" itemscope itemtype="https://schema.org/Answer">
+              <div class="s-faq__answer-inner">К коммерческой недвижимости относят: офисы и бизнес-центры, склады и терминалы, магазины и торговые площади, помещения свободного назначения, землю под бизнес, в том числе объекты с действующими арендаторами. «Аксиома» в Барнауле оценит объект любого масштаба — от кабинета до производственного комплекса.</div>
             </div>
           </div>
 
-          <div class="s-faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="s-faq__item" itemscope itemtype="https://schema.org/Question">
             <button class="s-faq__question" aria-expanded="false">
-              <span itemprop="name">Нужна ли оценка для продажи или сдачи в аренду?</span>
+              <span>Нужна ли оценка для продажи или сдачи в аренду?</span>
               <svg class="s-faq__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <div class="s-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div class="s-faq__answer-inner" itemprop="text">Да. Перед продажей независимая оценка обоснует справедливую цену объекта, а для аренды поможет назначить рыночную ставку. «Аксиома» рассчитает стоимость по реальным сделкам, доходности и состоянию объекта — отчёт по 135-ФЗ и ФСО станет аргументом в переговорах с покупателем или арендатором.</div>
+            <div class="s-faq__answer" itemscope itemtype="https://schema.org/Answer">
+              <div class="s-faq__answer-inner">Да. Перед продажей независимая оценка обоснует справедливую цену объекта, а для аренды поможет назначить рыночную ставку. «Аксиома» рассчитает стоимость по реальным сделкам, доходности и состоянию объекта — отчёт по 135-ФЗ и ФСО станет аргументом в переговорах с покупателем или арендатором.</div>
             </div>
           </div>
 
-          <div class="s-faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="s-faq__item" itemscope itemtype="https://schema.org/Question">
             <button class="s-faq__question" aria-expanded="false">
-              <span itemprop="name">Примет ли банк отчёт об оценке для залога?</span>
+              <span>Примет ли банк отчёт об оценке для залога?</span>
               <svg class="s-faq__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <div class="s-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div class="s-faq__answer-inner" itemprop="text">Да. «Аксиома» готовит отчёт по 135-ФЗ и ФСО, банки принимают его для залога и кредита под коммерческую недвижимость. Оценщик — член СРО, ответственность застрахована на 30 млн ₽. Для залога банк обычно сам настаивает на очном осмотре объекта оценщиком — уточним требования вашего банка заранее.</div>
+            <div class="s-faq__answer" itemscope itemtype="https://schema.org/Answer">
+              <div class="s-faq__answer-inner">Да. «Аксиома» готовит отчёт по 135-ФЗ и ФСО, банки принимают его для залога и кредита под коммерческую недвижимость. Оценщик — член СРО, ответственность застрахована на 30 млн ₽. Для залога банк обычно сам настаивает на очном осмотре объекта оценщиком — уточним требования вашего банка заранее.</div>
             </div>
           </div>
 
-          <div class="s-faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="s-faq__item" itemscope itemtype="https://schema.org/Question">
             <button class="s-faq__question" aria-expanded="false">
-              <span itemprop="name">Какие документы нужны для оценки?</span>
+              <span>Какие документы нужны для оценки?</span>
               <svg class="s-faq__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <div class="s-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div class="s-faq__answer-inner" itemprop="text">Достаточно базового пакета: выписка из ЕГРН (или свидетельство о праве), технический паспорт БТИ (или технический план, если есть) и реквизиты организации. Документы и фото объекта достаточно отправить на электронную почту, без визита в офис.</div>
+            <div class="s-faq__answer" itemscope itemtype="https://schema.org/Answer">
+              <div class="s-faq__answer-inner">Достаточно базового пакета: выписка из ЕГРН (или свидетельство о праве), технический паспорт БТИ (или технический план, если есть) и реквизиты организации. Документы и фото объекта достаточно отправить на электронную почту, без визита в офис.</div>
             </div>
           </div>
 
-          <div class="s-faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="s-faq__item" itemscope itemtype="https://schema.org/Question">
             <button class="s-faq__question" aria-expanded="false">
-              <span itemprop="name">Сколько действует отчёт об оценке коммерческой недвижимости?</span>
+              <span>Сколько действует отчёт об оценке коммерческой недвижимости?</span>
               <svg class="s-faq__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <div class="s-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div class="s-faq__answer-inner" itemprop="text">По 135-ФЗ и ФСО итоговая стоимость в отчёте рекомендована в течение 6 месяцев с даты составления. Понадобится позже — «Аксиома» пересчитает на новую дату по свежим рыночным данным.</div>
+            <div class="s-faq__answer" itemscope itemtype="https://schema.org/Answer">
+              <div class="s-faq__answer-inner">По 135-ФЗ и ФСО итоговая стоимость в отчёте рекомендована в течение 6 месяцев с даты составления. Понадобится позже — «Аксиома» пересчитает на новую дату по свежим рыночным данным.</div>
             </div>
           </div>
 
-          <div class="s-faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="s-faq__item" itemscope itemtype="https://schema.org/Question">
             <button class="s-faq__question" aria-expanded="false">
-              <span itemprop="name">Можно ли заказать оценку дистанционно по всей России?</span>
+              <span>Можно ли заказать оценку дистанционно по всей России?</span>
               <svg class="s-faq__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <div class="s-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div class="s-faq__answer-inner" itemprop="text">Да. Офис «Аксиомы» — в Барнауле, но заказать оценку коммерческой недвижимости можно из любого города России: направьте фото объекта и документы на электронную почту — подготовим отчёт дистанционно. Очный выезд эксперта — по Барнаулу и Алтайскому краю. Готовый отчёт присылаем в формате PDF с печатью и подписью.</div>
+            <div class="s-faq__answer" itemscope itemtype="https://schema.org/Answer">
+              <div class="s-faq__answer-inner">Да. Офис «Аксиомы» — в Барнауле, но заказать оценку коммерческой недвижимости можно из любого города России: направьте фото объекта и документы на электронную почту — подготовим отчёт дистанционно. Очный выезд эксперта — по Барнаулу и Алтайскому краю. Готовый отчёт присылаем в формате PDF с печатью и подписью.</div>
             </div>
           </div>
 
-          <div class="s-faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="s-faq__item" itemscope itemtype="https://schema.org/Question">
             <button class="s-faq__question" aria-expanded="false">
-              <span itemprop="name">Сколько времени займёт оценка коммерческой недвижимости?</span>
+              <span>Сколько времени займёт оценка коммерческой недвижимости?</span>
               <svg class="s-faq__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <div class="s-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div class="s-faq__answer-inner" itemprop="text">Отчёт по коммерческому объекту «Аксиома» обычно готовит за 2–4 дня. Небольшое встроенное помещение оценим быстрее, крупный комплекс с глубокой аналитикой — чуть дольше. Нужно срочнее — скажите на консультации, подстроимся под ваши сроки. Точные даты согласуем в договоре.</div>
+            <div class="s-faq__answer" itemscope itemtype="https://schema.org/Answer">
+              <div class="s-faq__answer-inner">Отчёт по коммерческому объекту «Аксиома» обычно готовит за 2–4 дня. Небольшое встроенное помещение оценим быстрее, крупный комплекс с глубокой аналитикой — чуть дольше. Нужно срочнее — скажите на консультации, подстроимся под ваши сроки. Точные даты согласуем в договоре.</div>
             </div>
           </div>
 
-          <div class="s-faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="s-faq__item" itemscope itemtype="https://schema.org/Question">
             <button class="s-faq__question" aria-expanded="false">
-              <span itemprop="name">Чем рыночная стоимость отличается от кадастровой?</span>
+              <span>Чем рыночная стоимость отличается от кадастровой?</span>
               <svg class="s-faq__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <div class="s-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div class="s-faq__answer-inner" itemprop="text">Рыночная стоимость отражает реальную цену коммерческой недвижимости при открытой продаже, а кадастровая — это административная оценка государства, используемая преимущественно для расчёта налогов и сборов.</div>
+            <div class="s-faq__answer" itemscope itemtype="https://schema.org/Answer">
+              <div class="s-faq__answer-inner">Рыночная стоимость отражает реальную цену коммерческой недвижимости при открытой продаже, а кадастровая — это административная оценка государства, используемая преимущественно для расчёта налогов и сборов.</div>
             </div>
           </div>
 
@@ -1956,9 +1985,9 @@
   </script>
 
   <!-- Скрипты -->
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js" defer></script>
 
   <script src="../js/components/shared-components.js?v=20260825t" defer></script>
   <script src="../js/theme.js?v=20260825e" defer></script>
@@ -1994,10 +2023,12 @@
       gsap.ticker.lagSmoothing(0);
 
       /* ─── 2. Hero entrance ─── */
+      gsap.set('#heroH1 > span', { y: 26, opacity: 0 });
       const heroTl = gsap.timeline({ delay: 0.15 });
       heroTl
         .to('#heroTag',     { opacity:1, y:0, duration:0.8, ease:'power3.out' })
         .to('#heroH1',      { opacity:1, y:0, duration:1.0, ease:'power3.out' }, '-=0.55')
+        .to('#heroH1 > span', { y:0, opacity:1, duration:0.7, stagger:0.14, ease:'power3.out' }, '-=0.6')
         .to('#heroLead',    { opacity:1, y:0, duration:0.8, ease:'power3.out' }, '-=0.65')
         .to('#heroActions', { opacity:1, y:0, duration:0.7, ease:'power3.out' }, '-=0.5')
         .to('#heroTrust',   { opacity:1, y:0, duration:0.7, ease:'power3.out' }, '-=0.4');

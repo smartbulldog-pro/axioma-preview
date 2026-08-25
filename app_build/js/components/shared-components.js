@@ -71,7 +71,7 @@
       </svg>
     </button>
 
-    <div class="menu-overlay__scroll">
+    <div class="menu-overlay__scroll" data-lenis-prevent>
       <div class="menu-nav">
         <!-- Главная -->
         <div class="menu-nav__item">
@@ -273,7 +273,7 @@
       <span class="s-footer__copy">© 2026 АКСИОМА — независимая оценка и юридическая помощь. Барнаул</span>
       <span class="s-footer__studio">
         <span>Сайт создан студией</span>
-        <img src="assets/img/vkv-logo.png" alt="VKV — New Vision" class="s-footer__studio-logo" width="80" height="auto">
+        <img src="assets/img/vkv-logo.png" alt="VKV — New Vision" class="s-footer__studio-logo" width="80" >
       </span>
     </div>
   </footer>
@@ -324,7 +324,7 @@
           </div>
         </div>
 
-        <div class="ai-panel__scroll" id="ai-chat-messages">
+        <div class="ai-panel__scroll" id="ai-chat-messages" data-lenis-prevent>
 
           <!-- Greeting -->
           <div class="ai-greeting" id="ai-greeting">
@@ -391,7 +391,7 @@
 
       <!-- ─── WIZARD PANEL (Онлайн-осмотр) ─── -->
       <div class="ai-panel" id="ai-panel-wizard">
-        <div class="ai-panel__scroll">
+        <div class="ai-panel__scroll" data-lenis-prevent>
           <div class="ai-wizard">
 
             <!-- Progress bar -->

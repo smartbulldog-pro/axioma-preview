@@ -4,7 +4,12 @@
   <meta charset="UTF-8">
   <meta name="robots" content="noindex, nofollow">
   <script>(function(){try{document.documentElement.setAttribute('data-theme',localStorage.getItem('axioma-theme')||'light')}catch(e){}})();</script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <link rel="preload" href="../assets/fonts/inter-cyr.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/cormorant-cyr.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192.png">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
   <meta name="description" content="Оценка бизнеса и доли в ООО в Барнауле и по всей России: продажа, выход участника, инвестор, суд — от 15 000 ₽ за 5–10 дней. Отчёт по 135-ФЗ.">
   <meta name="theme-color" content="#FAF9F7">
   <title>Оценка бизнеса в Барнауле — Аксиома | от 15 000 ₽</title>
@@ -21,7 +26,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta property="og:locale" content="ru_RU">
 
-  <link rel="stylesheet" href="../css/fonts.css">
+  <link rel="stylesheet" href="../css/fonts.css?v=20260826a">
   <link rel="stylesheet" href="../css/main.css?v=20260825w">
   <link rel="stylesheet" href="../css/header.css?v=20260825t">
   <link rel="stylesheet" href="../css/sections.css?v=20260825u">
@@ -92,7 +97,8 @@
       display: grid;
       place-items: center;
       overflow: hidden;
-      padding: 4rem 2rem 6rem;
+      padding: 0.5rem 2rem 2rem;
+      min-height: calc(100vh - 88px);
     }
 
     .sp-hero__bg {
@@ -170,6 +176,84 @@
       background-clip: text;
       -webkit-text-fill-color: transparent;
       color: transparent;
+    }
+
+    /* ─── Typographic hero (бизнес — синий; ключ «Ваше дело») ─── */
+    .sp-hero .sp-hero__content { max-width: min(1120px, 92vw); }
+    .sp-hero__h1--display {
+      display: block;
+      width: min(720px, 92vw); max-width: 100%;
+      margin: 0 auto 1.3rem;
+      line-height: 1;
+      letter-spacing: normal;
+      font-weight: 900;
+    }
+    .thd-l1, .thd-l2, .thd-l3 {
+      display: block;
+      width: 100%;
+      margin: 0;
+      text-align: justify;
+      text-align-last: justify;
+      -moz-text-align-last: justify;
+      text-justify: inter-character;
+    }
+    .thd-l1 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 900;
+      font-size: clamp(2.2rem, 12.5vw, 7.3rem);
+      text-transform: uppercase;
+      line-height: 0.86;
+      color: var(--color-text, #fff);
+    }
+    .thd-l2 {
+      font-family: 'Cormorant', 'Georgia', serif;
+      font-style: italic;
+      font-weight: 500;
+      font-size: clamp(1.6rem, 10.5vw, 5rem);
+      line-height: 0.98;
+      margin-top: 0.02em;
+      color: var(--color-text, #fff);
+      opacity: 0.96;
+    }
+    .thd-l3 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 900;
+      font-size: clamp(2.3rem, 13vw, 7.7rem);
+      text-transform: uppercase;
+      line-height: 0.92;
+      margin-top: 0.02em;
+      background: linear-gradient(118deg, #46A0DC 0%, #1E5A96 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+    /* Lead — эталонная ширина, по центру */
+    #heroLead {
+      width: min(720px, 92vw);
+      max-width: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    @media (max-width: 600px) {
+      #heroLead {
+        text-align: left;
+        text-align-last: left;
+        -moz-text-align-last: left;
+      }
+    }
+    /* Кнопки — на всю эталонную ширину; цвета кнопок — переменные --spa*, не трогаем */
+    #heroActions {
+      width: min(720px, 92vw);
+      max-width: 100%;
+      margin: 1.8rem auto 0;
+      gap: 0.9rem;
+      display: flex;
+    }
+    #heroActions > a { flex: 1 1 0; justify-content: center; }
+    @media (max-width: 640px) {
+      #heroActions { flex-direction: column; width: 100%; }
+      #heroActions > a { width: 100%; flex: none; }
     }
 
     .sp-hero__lead {
@@ -940,8 +1024,10 @@
         <span class="sp-hero__tag-line"></span>
       </div>
 
-      <h1 class="sp-hero__h1" id="heroH1">
-        Сколько на самом деле<br><em>стоит ваше дело</em>
+      <h1 class="sp-hero__h1 sp-hero__h1--display" id="heroH1">
+        <span class="thd-l1">Сколько</span>
+        <span class="thd-l2">на самом деле стоит</span>
+        <span class="thd-l3">ваше дело</span>
       </h1>
 
       <p class="sp-hero__lead" id="heroLead">
@@ -1032,7 +1118,7 @@
         </div>
         <div class="sp-scenario__right">
           <div class="sp-scene">
-            <img src="../img/uslugi/scene-biznes.jpg" data-dark="../img/uslugi/scene-biznes-dark.jpg" alt="Оценка бизнеса и доли в ООО" class="sp-scene__img" loading="eager" data-img-prompt="business-office-barnaul-golden-hour">
+            <img src="../img/uslugi/scene-biznes.jpg" data-dark="../img/uslugi/scene-biznes-dark.jpg" alt="Оценка бизнеса и доли в ООО" class="sp-scene__img" loading="eager" data-img-prompt="business-office-barnaul-golden-hour" width="1408" height="768">
             <div class="sp-scene__overlay" style="background:linear-gradient(135deg,rgba(8,15,16,0.6) 0%,rgba(21,175,209,0.08) 100%)"></div>
             <span class="sp-scene__badge">Барнаул · по всей России</span>
           </div>
@@ -1044,8 +1130,8 @@
         <a href="#sec-prices" class="sp-card sp-card--family" data-card="dolya">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/icons/icon-stake-light.jpg" data-dark="img/icons/icon-stake-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="stake-icon-obsidian" loading="lazy" decoding="async">
-            <img src="img/icons/icon-stake-glow.jpg" data-dark="img/icons/icon-stake-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="stake-icon-crystal" loading="lazy" decoding="async">
+            <img src="img/icons/icon-stake-light.jpg" data-dark="img/icons/icon-stake-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="stake-icon-obsidian" loading="lazy" decoding="async" width="256" height="256">
+            <img src="img/icons/icon-stake-glow.jpg" data-dark="img/icons/icon-stake-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="stake-icon-crystal" loading="lazy" decoding="async" width="256" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Доля в ООО</h3>
@@ -1067,8 +1153,8 @@
         <a href="#sec-prices" class="sp-card sp-card--family" data-card="akcii">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/icons/icon-shares-light.jpg" data-dark="img/icons/icon-shares-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="shares-icon-obsidian" loading="lazy" decoding="async">
-            <img src="img/icons/icon-shares-glow.jpg" data-dark="img/icons/icon-shares-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="shares-icon-crystal" loading="lazy" decoding="async">
+            <img src="img/icons/icon-shares-light.jpg" data-dark="img/icons/icon-shares-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="shares-icon-obsidian" loading="lazy" decoding="async" width="256" height="256">
+            <img src="img/icons/icon-shares-glow.jpg" data-dark="img/icons/icon-shares-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="shares-icon-crystal" loading="lazy" decoding="async" width="256" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Пакет акций</h3>
@@ -1090,8 +1176,8 @@
         <a href="#sec-prices" class="sp-card sp-card--family" data-card="whole">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/icons/icon-company-light.jpg" data-dark="img/icons/icon-company-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="company-icon-obsidian" loading="lazy" decoding="async">
-            <img src="img/icons/icon-company-glow.jpg" data-dark="img/icons/icon-company-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="company-icon-crystal" loading="lazy" decoding="async">
+            <img src="img/icons/icon-company-light.jpg" data-dark="img/icons/icon-company-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="company-icon-obsidian" loading="lazy" decoding="async" width="256" height="256">
+            <img src="img/icons/icon-company-glow.jpg" data-dark="img/icons/icon-company-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="company-icon-crystal" loading="lazy" decoding="async" width="256" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Действующий бизнес целиком</h3>
@@ -1113,8 +1199,8 @@
         <a href="#sec-prices" class="sp-card sp-card--family" data-card="intangible">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/icons/icon-brand-light.jpg" data-dark="img/icons/icon-brand-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="brand-icon-obsidian" loading="lazy" decoding="async">
-            <img src="img/icons/icon-brand-glow.jpg" data-dark="img/icons/icon-brand-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="brand-icon-crystal" loading="lazy" decoding="async">
+            <img src="img/icons/icon-brand-light.jpg" data-dark="img/icons/icon-brand-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="brand-icon-obsidian" loading="lazy" decoding="async" width="256" height="256">
+            <img src="img/icons/icon-brand-glow.jpg" data-dark="img/icons/icon-brand-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="brand-icon-crystal" loading="lazy" decoding="async" width="256" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Нематериальные активы</h3>
@@ -1136,8 +1222,8 @@
         <a href="#sec-prices" class="sp-card sp-card--family" data-card="assets">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/icons/icon-equipment-light.jpg" data-dark="img/icons/icon-equipment-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="equipment-icon-obsidian" loading="lazy" decoding="async">
-            <img src="img/icons/icon-equipment-glow.jpg" data-dark="img/icons/icon-equipment-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="equipment-icon-crystal" loading="lazy" decoding="async">
+            <img src="img/icons/icon-equipment-light.jpg" data-dark="img/icons/icon-equipment-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="equipment-icon-obsidian" loading="lazy" decoding="async" width="256" height="256">
+            <img src="img/icons/icon-equipment-glow.jpg" data-dark="img/icons/icon-equipment-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="equipment-icon-crystal" loading="lazy" decoding="async" width="256" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Оборудование и активы</h3>
@@ -1159,8 +1245,8 @@
         <a href="#sec-prices" class="sp-card sp-card--family" data-card="receivables">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/icons/icon-receivables-light.jpg" data-dark="img/icons/icon-receivables-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="receivables-icon-obsidian" loading="lazy" decoding="async">
-            <img src="img/icons/icon-receivables-glow.jpg" data-dark="img/icons/icon-receivables-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="receivables-icon-crystal" loading="lazy" decoding="async">
+            <img src="img/icons/icon-receivables-light.jpg" data-dark="img/icons/icon-receivables-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="receivables-icon-obsidian" loading="lazy" decoding="async" width="256" height="256">
+            <img src="img/icons/icon-receivables-glow.jpg" data-dark="img/icons/icon-receivables-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="receivables-icon-crystal" loading="lazy" decoding="async" width="256" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Деньги, которые вам должны</h3>
@@ -1206,7 +1292,7 @@
         </div>
         <div class="sp-scenario__right">
           <div class="sp-scene">
-            <img src="img/biznes/scene-ekspert.jpg" data-dark="img/biznes/scene-ekspert-dark.jpg" alt="Эксперт-оценщик за работой" class="sp-scene__img" loading="lazy" data-img-prompt="expert-tablet-warm-office">
+            <img src="img/biznes/scene-ekspert.jpg" data-dark="img/biznes/scene-ekspert-dark.jpg" alt="Эксперт-оценщик за работой" class="sp-scene__img" loading="lazy" data-img-prompt="expert-tablet-warm-office" width="1280" height="720">
             <div class="sp-scene__overlay" style="background:linear-gradient(135deg,rgba(8,15,16,0.6) 0%,rgba(21,175,209,0.05) 100%)"></div>
             <span class="sp-scene__badge">Рядом до результата</span>
           </div>
@@ -1218,8 +1304,8 @@
         <div class="sp-card sp-card--family">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/icons/icon-value-light.jpg" data-dark="img/icons/icon-value-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="value-icon-obsidian" loading="lazy" decoding="async">
-            <img src="img/icons/icon-value-glow.jpg" data-dark="img/icons/icon-value-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="value-icon-crystal" loading="lazy" decoding="async">
+            <img src="img/icons/icon-value-light.jpg" data-dark="img/icons/icon-value-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="value-icon-obsidian" loading="lazy" decoding="async" width="256" height="256">
+            <img src="img/icons/icon-value-glow.jpg" data-dark="img/icons/icon-value-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="value-icon-crystal" loading="lazy" decoding="async" width="256" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Продажа или покупка бизнеса</h3>
@@ -1239,8 +1325,8 @@
         <div class="sp-card sp-card--family">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/icons/icon-stake-light.jpg" data-dark="img/icons/icon-stake-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="stake-icon-obsidian" loading="lazy" decoding="async">
-            <img src="img/icons/icon-stake-glow.jpg" data-dark="img/icons/icon-stake-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="stake-icon-crystal" loading="lazy" decoding="async">
+            <img src="img/icons/icon-stake-light.jpg" data-dark="img/icons/icon-stake-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="stake-icon-obsidian" loading="lazy" decoding="async" width="256" height="256">
+            <img src="img/icons/icon-stake-glow.jpg" data-dark="img/icons/icon-stake-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="stake-icon-crystal" loading="lazy" decoding="async" width="256" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Выход участника из ООО</h3>
@@ -1260,8 +1346,8 @@
         <div class="sp-card sp-card--family">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-included-light.jpg" data-dark="img/nedvizhimost/icon-included-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-included-glow.jpg" data-dark="img/nedvizhimost/icon-included-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-included-light.jpg" data-dark="img/nedvizhimost/icon-included-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async" width="234" height="256">
+            <img src="img/nedvizhimost/icon-included-glow.jpg" data-dark="img/nedvizhimost/icon-included-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async" width="234" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Привлечение инвестора</h3>
@@ -1281,8 +1367,8 @@
         <div class="sp-card sp-card--family">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-court-light.jpg" data-dark="img/nedvizhimost/icon-court-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-court-glow.jpg" data-dark="img/nedvizhimost/icon-court-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-court-light.jpg" data-dark="img/nedvizhimost/icon-court-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async" width="256" height="223">
+            <img src="img/nedvizhimost/icon-court-glow.jpg" data-dark="img/nedvizhimost/icon-court-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async" width="256" height="223">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Для суда и раздела</h3>
@@ -1302,8 +1388,8 @@
         <div class="sp-card sp-card--family">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/icons/icon-pledge-light.jpg" data-dark="img/icons/icon-pledge-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="pledge-icon-obsidian" loading="lazy" decoding="async">
-            <img src="img/icons/icon-pledge-glow.jpg" data-dark="img/icons/icon-pledge-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="pledge-icon-crystal" loading="lazy" decoding="async">
+            <img src="img/icons/icon-pledge-light.jpg" data-dark="img/icons/icon-pledge-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="pledge-icon-obsidian" loading="lazy" decoding="async" width="256" height="256">
+            <img src="img/icons/icon-pledge-glow.jpg" data-dark="img/icons/icon-pledge-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="pledge-icon-crystal" loading="lazy" decoding="async" width="256" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Залог для кредита</h3>
@@ -1323,8 +1409,8 @@
         <div class="sp-card sp-card--family">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/icons/icon-receivables-light.jpg" data-dark="img/icons/icon-receivables-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="receivables-icon-obsidian" loading="lazy" decoding="async">
-            <img src="img/icons/icon-receivables-glow.jpg" data-dark="img/icons/icon-receivables-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="receivables-icon-crystal" loading="lazy" decoding="async">
+            <img src="img/icons/icon-receivables-light.jpg" data-dark="img/icons/icon-receivables-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="receivables-icon-obsidian" loading="lazy" decoding="async" width="256" height="256">
+            <img src="img/icons/icon-receivables-glow.jpg" data-dark="img/icons/icon-receivables-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="receivables-icon-crystal" loading="lazy" decoding="async" width="256" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Вклад в уставный капитал</h3>
@@ -1368,7 +1454,7 @@
         </div>
         <div class="sp-scenario__right">
           <div class="sp-scene">
-            <img src="img/biznes/scene-dokumenty.jpg" data-dark="img/biznes/scene-dokumenty-dark.jpg" alt="Финансовые документы бизнеса на столе" class="sp-scene__img" loading="lazy" data-img-prompt="documents-finance-table-warm">
+            <img src="img/biznes/scene-dokumenty.jpg" data-dark="img/biznes/scene-dokumenty-dark.jpg" alt="Финансовые документы бизнеса на столе" class="sp-scene__img" loading="lazy" data-img-prompt="documents-finance-table-warm" width="1280" height="720">
             <div class="sp-scene__overlay" style="background:linear-gradient(135deg,rgba(8,15,16,0.6) 0%,rgba(21,175,209,0.08) 100%)"></div>
             <span class="sp-scene__badge">От звонка до отчёта</span>
           </div>
@@ -1470,8 +1556,8 @@
         <div class="sp-card sp-card--family">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-doc-title-light.jpg" data-dark="img/nedvizhimost/icon-doc-title-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="charter-icon-obsidian" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-doc-title-glow.jpg" data-dark="img/nedvizhimost/icon-doc-title-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="charter-icon-crystal" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-doc-title-light.jpg" data-dark="img/nedvizhimost/icon-doc-title-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="charter-icon-obsidian" loading="lazy" decoding="async" width="234" height="256">
+            <img src="img/nedvizhimost/icon-doc-title-glow.jpg" data-dark="img/nedvizhimost/icon-doc-title-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="charter-icon-crystal" loading="lazy" decoding="async" width="234" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Учредительные документы</h3>
@@ -1490,8 +1576,8 @@
         <div class="sp-card sp-card--family">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-doc-tech-light.jpg" data-dark="img/nedvizhimost/icon-doc-tech-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="balance-icon-obsidian" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-doc-tech-glow.jpg" data-dark="img/nedvizhimost/icon-doc-tech-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="balance-icon-crystal" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-doc-tech-light.jpg" data-dark="img/nedvizhimost/icon-doc-tech-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="balance-icon-obsidian" loading="lazy" decoding="async" width="212" height="256">
+            <img src="img/nedvizhimost/icon-doc-tech-glow.jpg" data-dark="img/nedvizhimost/icon-doc-tech-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="balance-icon-crystal" loading="lazy" decoding="async" width="212" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Бухгалтерская отчётность</h3>
@@ -1510,8 +1596,8 @@
         <div class="sp-card sp-card--family">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-doc-passport-light.jpg" data-dark="img/nedvizhimost/icon-doc-passport-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="details-icon-obsidian" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-doc-passport-glow.jpg" data-dark="img/nedvizhimost/icon-doc-passport-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="details-icon-crystal" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-doc-passport-light.jpg" data-dark="img/nedvizhimost/icon-doc-passport-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" data-img-prompt="details-icon-obsidian" loading="lazy" decoding="async" width="212" height="256">
+            <img src="img/nedvizhimost/icon-doc-passport-glow.jpg" data-dark="img/nedvizhimost/icon-doc-passport-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" data-img-prompt="details-icon-crystal" loading="lazy" decoding="async" width="212" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Расшифровки статей баланса</h3>
@@ -1559,8 +1645,8 @@
         <div class="sp-card sp-card--family">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-barnaul-light.jpg" data-dark="img/nedvizhimost/icon-barnaul-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-barnaul-glow.jpg" data-dark="img/nedvizhimost/icon-barnaul-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-barnaul-light.jpg" data-dark="img/nedvizhimost/icon-barnaul-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async" width="234" height="256">
+            <img src="img/nedvizhimost/icon-barnaul-glow.jpg" data-dark="img/nedvizhimost/icon-barnaul-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async" width="234" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Барнаул · по всей России</h3>
@@ -1586,8 +1672,8 @@
         <div class="sp-card sp-card--family">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-included-light.jpg" data-dark="img/nedvizhimost/icon-included-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-included-glow.jpg" data-dark="img/nedvizhimost/icon-included-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-included-light.jpg" data-dark="img/nedvizhimost/icon-included-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async" width="234" height="256">
+            <img src="img/nedvizhimost/icon-included-glow.jpg" data-dark="img/nedvizhimost/icon-included-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async" width="234" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Бесплатно с каждым отчётом</h3>
@@ -1612,8 +1698,8 @@
         <div class="sp-card sp-card--family">
           <div class="sp-card__light" aria-hidden="true"></div>
           <div class="sp-card__icon">
-            <img src="img/nedvizhimost/icon-included-light.jpg" data-dark="img/nedvizhimost/icon-included-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async">
-            <img src="img/nedvizhimost/icon-included-glow.jpg" data-dark="img/nedvizhimost/icon-included-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async">
+            <img src="img/nedvizhimost/icon-included-light.jpg" data-dark="img/nedvizhimost/icon-included-obs.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--obs" loading="lazy" decoding="async" width="234" height="256">
+            <img src="img/nedvizhimost/icon-included-glow.jpg" data-dark="img/nedvizhimost/icon-included-cry.jpg" alt="" class="sp-card__icon-img sp-card__icon-img--cry" loading="lazy" decoding="async" width="234" height="256">
             <span class="sp-card__icon-particles"></span>
           </div>
           <h3 class="sp-card__title">Что включено</h3>
@@ -1653,7 +1739,7 @@
         <li><a class="sp-more__link" href="oborudovanie-i-transport.html">Оборудование и транспорт</a></li>
         <li><a class="sp-more__link" href="yuridicheskie-uslugi.html">Юридические услуги</a></li>
       </ul>
-      <p class="sp-more__tail">Все цены — на странице <a href="../ceny.html">Цены</a>. Адрес офиса и телефон — в <a href="../kontakty.html">Контактах</a>. Про компанию — <a href="../o-kompanii.html">О компании</a>.</p>
+      <p class="sp-more__tail">Все цены — на странице <a href="../ceny.html">Цены</a>. Адрес офиса и телефон — в <a href="../kontakty.html">Контактах</a>. Про компанию — <a href="../o-kompanii.html">О компании</a>. <a href="../politika-konfidencialnosti.html">Политика конфиденциальности</a>.</p>
     </div>
   </nav>
 
@@ -1665,86 +1751,86 @@
         <h2 class="s-faq__title">Коротко о главном — оценка бизнеса</h2>
       </div>
 
-      <div class="s-faq__content" itemscope itemtype="https://schema.org/FAQPage">
+      <div class="s-faq__content">
         <div class="s-faq__category is-active" data-category="single">
 
-          <div class="s-faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="s-faq__item" itemscope itemtype="https://schema.org/Question">
             <button class="s-faq__question" aria-expanded="false">
-              <span itemprop="name">Сколько стоит оценка бизнеса?</span>
+              <span>Сколько стоит оценка бизнеса?</span>
               <svg class="s-faq__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <div class="s-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div class="s-faq__answer-inner" itemprop="text">Стоимость оценки бизнеса в «Аксиоме» — от 15 000 ₽. Цена зависит от организационно-правовой формы (ИП или ООО), масштаба предприятия, объёма активов и количества направлений деятельности. Точную стоимость фиксируем в договоре на бесплатной первичной консультации — доплат не потребуется. Работаем со всеми регионами России в удобном дистанционном формате.</div>
+            <div class="s-faq__answer" itemscope itemtype="https://schema.org/Answer">
+              <div class="s-faq__answer-inner">Стоимость оценки бизнеса в «Аксиоме» — от 15 000 ₽. Цена зависит от организационно-правовой формы (ИП или ООО), масштаба предприятия, объёма активов и количества направлений деятельности. Точную стоимость фиксируем в договоре на бесплатной первичной консультации — доплат не потребуется. Работаем со всеми регионами России в удобном дистанционном формате.</div>
             </div>
           </div>
 
-          <div class="s-faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="s-faq__item" itemscope itemtype="https://schema.org/Question">
             <button class="s-faq__question" aria-expanded="false">
-              <span itemprop="name">Какие документы нужны для оценки бизнеса?</span>
+              <span>Какие документы нужны для оценки бизнеса?</span>
               <svg class="s-faq__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <div class="s-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div class="s-faq__answer-inner" itemprop="text">Базовый пакет включает: учредительные документы (устав, свидетельства ОГРН/ИНН, выписку из ЕГРЮЛ/ЕГРИП), бухгалтерскую отчётность (формы № 1 и № 2) за последние 1–3 года, расшифровку основных средств, нематериальных активов и перечень ключевых договоров. Для ИП потребуются данные книги учёта доходов и расходов (КУДиР) и налоговые декларации. Точный список под специфику вашей компании эксперт сформирует на первой консультации.</div>
+            <div class="s-faq__answer" itemscope itemtype="https://schema.org/Answer">
+              <div class="s-faq__answer-inner">Базовый пакет включает: учредительные документы (устав, свидетельства ОГРН/ИНН, выписку из ЕГРЮЛ/ЕГРИП), бухгалтерскую отчётность (формы № 1 и № 2) за последние 1–3 года, расшифровку основных средств, нематериальных активов и перечень ключевых договоров. Для ИП потребуются данные книги учёта доходов и расходов (КУДиР) и налоговые декларации. Точный список под специфику вашей компании эксперт сформирует на первой консультации.</div>
             </div>
           </div>
 
-          <div class="s-faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="s-faq__item" itemscope itemtype="https://schema.org/Question">
             <button class="s-faq__question" aria-expanded="false">
-              <span itemprop="name">Как оценить долю в ООО при выходе участника?</span>
+              <span>Как оценить долю в ООО при выходе участника?</span>
               <svg class="s-faq__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <div class="s-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div class="s-faq__answer-inner" itemprop="text">По закону «Об ООО» (ст. 14 и 23) участнику выплачивается действительная стоимость доли, пропорциональная чистым активам компании. Если участник или само общество не согласны с расчётом по данным бухгалтерского баланса, действительную стоимость можно определить на основании рыночной оценки чистых активов независимым оценщиком (ФЗ № 514-ФЗ). «Аксиома» выполняет расчёт действительной и рыночной стоимости долей в строгом соответствии с законодательством.</div>
+            <div class="s-faq__answer" itemscope itemtype="https://schema.org/Answer">
+              <div class="s-faq__answer-inner">По закону «Об ООО» (ст. 14 и 23) участнику выплачивается действительная стоимость доли, пропорциональная чистым активам компании. Если участник или само общество не согласны с расчётом по данным бухгалтерского баланса, действительную стоимость можно определить на основании рыночной оценки чистых активов независимым оценщиком (ФЗ № 514-ФЗ). «Аксиома» выполняет расчёт действительной и рыночной стоимости долей в строгом соответствии с законодательством.</div>
             </div>
           </div>
 
-          <div class="s-faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="s-faq__item" itemscope itemtype="https://schema.org/Question">
             <button class="s-faq__question" aria-expanded="false">
-              <span itemprop="name">Нужна ли оценка для продажи бизнеса или сделки?</span>
+              <span>Нужна ли оценка для продажи бизнеса или сделки?</span>
               <svg class="s-faq__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <div class="s-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div class="s-faq__answer-inner" itemprop="text">Да. Независимый отчёт об оценке служит объективным обоснованием цены сделки как для продавца, так и для инвестора или покупателя. Оценка позволяет определить справедливую стоимость предприятия целиком, отдельной доли или пакета акций с учётом материальных активов, финансовых потоков и нематериальных активов (деловой репутации, товарных знаков). Это исключает занижение цены и ускоряет переговоры.</div>
+            <div class="s-faq__answer" itemscope itemtype="https://schema.org/Answer">
+              <div class="s-faq__answer-inner">Да. Независимый отчёт об оценке служит объективным обоснованием цены сделки как для продавца, так и для инвестора или покупателя. Оценка позволяет определить справедливую стоимость предприятия целиком, отдельной доли или пакета акций с учётом материальных активов, финансовых потоков и нематериальных активов (деловой репутации, товарных знаков). Это исключает занижение цены и ускоряет переговоры.</div>
             </div>
           </div>
 
-          <div class="s-faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="s-faq__item" itemscope itemtype="https://schema.org/Question">
             <button class="s-faq__question" aria-expanded="false">
-              <span itemprop="name">Подойдёт ли отчёт об оценке бизнеса для суда?</span>
+              <span>Подойдёт ли отчёт об оценке бизнеса для суда?</span>
               <svg class="s-faq__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <div class="s-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div class="s-faq__answer-inner" itemprop="text">Да, в полном объёме. Отчёты «Аксиомы» имеют доказательственную силу для арбитражных судов и судов общей юрисдикции при разрешении корпоративных споров, банкротстве и разделе имущества. Документы составляются в строгом соответствии с Федеральным законом № 135-ФЗ и федеральными стандартами оценки (ФСО).</div>
+            <div class="s-faq__answer" itemscope itemtype="https://schema.org/Answer">
+              <div class="s-faq__answer-inner">Да, в полном объёме. Отчёты «Аксиомы» имеют доказательственную силу для арбитражных судов и судов общей юрисдикции при разрешении корпоративных споров, банкротстве и разделе имущества. Документы составляются в строгом соответствии с Федеральным законом № 135-ФЗ и федеральными стандартами оценки (ФСО).</div>
             </div>
           </div>
 
-          <div class="s-faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="s-faq__item" itemscope itemtype="https://schema.org/Question">
             <button class="s-faq__question" aria-expanded="false">
-              <span itemprop="name">Останутся ли данные компании конфиденциальными при оценке бизнеса?</span>
+              <span>Останутся ли данные компании конфиденциальными при оценке бизнеса?</span>
               <svg class="s-faq__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <div class="s-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div class="s-faq__answer-inner" itemprop="text">Да, безусловно. Вся финансовая и управленческая информация используется исключительно для проведения расчётов. Результаты оценки и итоговый отчёт являются конфиденциальными и передаются только заказчику.</div>
+            <div class="s-faq__answer" itemscope itemtype="https://schema.org/Answer">
+              <div class="s-faq__answer-inner">Да, безусловно. Вся финансовая и управленческая информация используется исключительно для проведения расчётов. Результаты оценки и итоговый отчёт являются конфиденциальными и передаются только заказчику.</div>
             </div>
           </div>
 
-          <div class="s-faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="s-faq__item" itemscope itemtype="https://schema.org/Question">
             <button class="s-faq__question" aria-expanded="false">
-              <span itemprop="name">Сколько времени занимает оценка бизнеса?</span>
+              <span>Сколько времени занимает оценка бизнеса?</span>
               <svg class="s-faq__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <div class="s-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div class="s-faq__answer-inner" itemprop="text">Стандартный срок проведения оценки — от 5 до 10 рабочих дней с момента предоставления полного пакета документов. Срок зависит от структуры бизнеса и объёма активов. При необходимости срочной подготовки отчёта для суда, банка или сделки мы можем сократить сроки.</div>
+            <div class="s-faq__answer" itemscope itemtype="https://schema.org/Answer">
+              <div class="s-faq__answer-inner">Стандартный срок проведения оценки — от 5 до 10 рабочих дней с момента предоставления полного пакета документов. Срок зависит от структуры бизнеса и объёма активов. При необходимости срочной подготовки отчёта для суда, банка или сделки мы можем сократить сроки.</div>
             </div>
           </div>
 
-          <div class="s-faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="s-faq__item" itemscope itemtype="https://schema.org/Question">
             <button class="s-faq__question" aria-expanded="false">
-              <span itemprop="name">Оценивает ли «Аксиома» бизнес в других городах России?</span>
+              <span>Оценивает ли «Аксиома» бизнес в других городах России?</span>
               <svg class="s-faq__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <div class="s-faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div class="s-faq__answer-inner" itemprop="text">Да. Головной офис «Аксиомы» расположен в Барнауле, однако мы проводим оценку предприятий по всей территории РФ. Работа выстроена дистанционно: документы передаются в электронном виде, готовый отчёт об оценке заверяется усиленной квалифицированной электронной подписью (УКЭП) в соответствии с ФЗ № 63-ФЗ, что даёт ему полную юридическую силу во всех инстанциях. При необходимости осмотра объекта специалистом условия оговариваются отдельно.</div>
+            <div class="s-faq__answer" itemscope itemtype="https://schema.org/Answer">
+              <div class="s-faq__answer-inner">Да. Головной офис «Аксиомы» расположен в Барнауле, однако мы проводим оценку предприятий по всей территории РФ. Работа выстроена дистанционно: документы передаются в электронном виде, готовый отчёт об оценке заверяется усиленной квалифицированной электронной подписью (УКЭП) в соответствии с ФЗ № 63-ФЗ, что даёт ему полную юридическую силу во всех инстанциях. При необходимости осмотра объекта специалистом условия оговариваются отдельно.</div>
             </div>
           </div>
 
@@ -1984,9 +2070,9 @@
   </script>
 
   <!-- ══════════════ SCRIPTS ══════════════ -->
-  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
 
   <script src="../js/components/shared-components.js?v=20260825t" defer></script>
   <script src="../js/theme.js?v=20260825e" defer></script>
@@ -2024,10 +2110,12 @@
       gsap.ticker.lagSmoothing(0);
 
       /* ─── 2. Hero entrance ─── */
+      gsap.set('#heroH1 > span', { y: 26, opacity: 0 });
       const heroTl = gsap.timeline({ delay: 0.15 });
       heroTl
         .to('#heroTag',     { opacity:1, y:0, duration:0.8, ease:'power3.out' })
         .to('#heroH1',      { opacity:1, y:0, duration:1.0, ease:'power3.out' }, '-=0.55')
+        .to('#heroH1 > span', { y:0, opacity:1, duration:0.7, stagger:0.14, ease:'power3.out' }, '-=0.6')
         .to('#heroLead',    { opacity:1, y:0, duration:0.8, ease:'power3.out' }, '-=0.65')
         .to('#heroActions', { opacity:1, y:0, duration:0.7, ease:'power3.out' }, '-=0.5')
         .to('#heroTrust',   { opacity:1, y:0, duration:0.7, ease:'power3.out' }, '-=0.4');

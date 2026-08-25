@@ -21,8 +21,8 @@
 
   ready(function () {
     var css =
-      '.cookie-bar{position:fixed;left:0;right:0;bottom:0;z-index:9000;transform:translateY(130%);' +
-      'transition:transform .45s cubic-bezier(.16,.84,.44,1);padding:0 16px 16px;pointer-events:none}' +
+      '.cookie-bar{position:fixed;left:0;right:0;bottom:0;z-index:150;transform:translateY(130%);' +
+      'transition:transform .45s cubic-bezier(.16,.84,.44,1);padding:0 16px 16px;padding-bottom:calc(env(safe-area-inset-bottom,0px) + 14px);pointer-events:none}' +
       '.cookie-bar.is-visible{transform:translateY(0)}' +
       '.cookie-bar__inner{max-width:1120px;margin:0 auto;pointer-events:auto;background:#fff;' +
       'border:1px solid rgba(16,25,26,.1);box-shadow:0 20px 60px rgba(16,25,26,.14);border-radius:16px;' +
