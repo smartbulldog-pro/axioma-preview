@@ -31,7 +31,7 @@
   <link rel="stylesheet" href="css/main.css?v=20260825w">
   <link rel="stylesheet" href="css/sections.css?v=20260826c">
   <link rel="stylesheet" href="css/header.css?v=20260825t">
-  <link rel="stylesheet" href="css/subpage.css?v=20260826c">
+  <link rel="stylesheet" href="css/subpage.css?v=20260827a">
   <link rel="stylesheet" href="css/ai-sidebar.css?v=20260711e">
   <link rel="stylesheet" href="css/osmotr-wizard.css?v=20260825v">
 </head>
@@ -310,7 +310,14 @@
         }
         .subpage-hero__btn-ghost:hover{ border-color:var(--color-accent); background:rgba(21,175,209,.08); transform:translateY(-2px); }
         @media (max-width:560px){ .subpage-hero__actions{ flex-direction:column; } }
-      </style>
+      
+      /* ─── ХИРО ПО ЦЕНТРУ (стандарт сайта) ─── */
+      .subpage-hero__inner { text-align: center; }
+      .subpage-hero__title--typo, .subpage-hero__subtitle--typo,
+      .subpage-hero__subtitle, .subpage-hero__actions {
+        margin-left: auto !important; margin-right: auto !important; }
+      .subpage-hero__actions { justify-content: center; }
+    </style>
       <h1 class="subpage-hero__title subpage-hero__title--typo reveal" id="contactHeroH1">
         <span class="ktd-l1">Пишите, звоните</span>
         <span class="ktd-l2">или заходите —</span>
@@ -347,33 +354,25 @@
 
         <div class="fact-cards reveal">
           <div class="fact-card">
-            <div class="fact-card__icon-wrap">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
+            <span class="fact-card__iconwrap"><img class="fact-card__icon" src="assets/img/icons/light-wiz-land.jpg" data-dark="assets/img/icons/obs-wiz-land.jpg" alt="" width="144" height="144" loading="lazy" decoding="async"><img class="fact-card__icon fact-card__icon--glow" src="assets/img/icons/glow-wiz-land.jpg" data-dark="assets/img/icons/cry-wiz-land.jpg" alt="" width="144" height="144" loading="lazy" decoding="async"></span>
             <h3 class="fact-card__name">Адрес</h3>
             <p class="fact-card__desc">г. Барнаул, ул. Молодёжная, 26, 6 этаж, офис 618</p>
           </div>
 
           <div class="fact-card">
-            <div class="fact-card__icon-wrap">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            </div>
+            <span class="fact-card__iconwrap"><img class="fact-card__icon" src="assets/img/icons/light-phone.webp" data-dark="assets/img/icons/obs-phone.webp" alt="" width="144" height="144" loading="lazy" decoding="async"><img class="fact-card__icon fact-card__icon--glow" src="assets/img/icons/glow-phone.webp" data-dark="assets/img/icons/cry-phone.webp" alt="" width="144" height="144" loading="lazy" decoding="async"></span>
             <h3 class="fact-card__name">Телефон</h3>
             <p class="fact-card__desc"><a href="tel:+79130998881" style="color: var(--color-accent-ink);">+7 913 099-88-81</a></p>
           </div>
 
           <div class="fact-card">
-            <div class="fact-card__icon-wrap">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
-            </div>
+            <span class="fact-card__iconwrap"><img class="fact-card__icon" src="assets/img/icon-delivery-light.jpg" data-dark="assets/img/icon-delivery.jpg" alt="" width="144" height="144" loading="lazy" decoding="async"><img class="fact-card__icon fact-card__icon--glow" src="assets/img/icon-delivery-glow.jpg" data-dark="assets/img/icon-delivery-cry.jpg" alt="" width="144" height="144" loading="lazy" decoding="async"></span>
             <h3 class="fact-card__name">Email</h3>
             <p class="fact-card__desc"><a href="mailto:aksiomaok@mail.ru" style="color: var(--color-accent-ink);">aksiomaok@mail.ru</a></p>
           </div>
 
           <div class="fact-card">
-            <div class="fact-card__icon-wrap">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-            </div>
+            <span class="fact-card__iconwrap"><img class="fact-card__icon" src="assets/img/icons/light-chat.webp" data-dark="assets/img/icons/obs-chat.webp" alt="" width="144" height="144" loading="lazy" decoding="async"><img class="fact-card__icon fact-card__icon--glow" src="assets/img/icons/glow-chat.webp" data-dark="assets/img/icons/cry-chat.webp" alt="" width="144" height="144" loading="lazy" decoding="async"></span>
             <h3 class="fact-card__name">MAX-мессенджер</h3>
             <p class="fact-card__desc"><a href="https://max.ru/u/f9LHodD0cOL0n-mRdnryGsw7EJZ7Zxtw55dK3RKrty99-5P9BsmoWjZU3_8" target="_blank" rel="noopener" style="color: var(--color-accent-ink);">Написать в MAX</a></p>
           </div>
