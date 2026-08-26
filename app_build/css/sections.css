@@ -1259,6 +1259,10 @@ html.lenis, html.lenis body { height: auto; }
 /* каменные иконки блока доверия */
 .s-trust-card__icon img { width: 100%; height: 100%; object-fit: cover; border-radius: inherit; }
 
+/* стартовая поза GSAP сцен (x:40) не должна растягивать документ вбок:
+   clip не создаёт скролл-контейнер и не трогает sticky */
+.sp-scenario { overflow-x: clip; }
+
 /* ховер-слой каменных иконок блока доверия */
 .s-trust-card__icon { position: relative; }
 .s-trust-icon--glow { position: absolute; inset: 0; width: 100%; height: 100%;
