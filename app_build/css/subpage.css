@@ -832,9 +832,9 @@
 }
 
 .fact-card__icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
+  width: 144px;
+  height: 144px;
+  border-radius: 32px;
   object-fit: cover;
   background: rgba(255, 255, 255, 0.03);
   border: 0.5px solid rgba(255, 255, 255, 0.06);
@@ -1245,7 +1245,7 @@
 }
 
 /* ховер-слой иконок квалификации */
-.fact-card__iconwrap { position: relative; width: 44px; height: 44px;
+.fact-card__iconwrap { position: relative; width: 144px; height: 144px;
   flex-shrink: 0; display: block; }
 .fact-card__iconwrap .fact-card__icon { position: absolute; inset: 0; }
 .fact-card__icon--glow { opacity: 0; transition: opacity 0.35s ease; }

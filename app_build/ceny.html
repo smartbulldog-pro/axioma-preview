@@ -37,7 +37,7 @@
   <link rel="stylesheet" href="css/ai-sidebar.css?v=20260711e">
   <link rel="stylesheet" href="css/osmotr-wizard.css?v=20260825v">
   <!-- Subpage design system -->
-  <link rel="stylesheet" href="css/subpage.css?v=20260826c">
+  <link rel="stylesheet" href="css/subpage.css?v=20260827a">
 
   <!-- Schema.org structured data -->
   <script type="application/ld+json">
@@ -598,19 +598,18 @@
     }
 
     .ceny-card__icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 14px;
+      width: 144px;
+      height: 144px;
+      border-radius: 32px;
       object-fit: cover;
       background: rgba(255, 255, 255, 0.025);
       border: 0.5px solid rgba(255, 255, 255, 0.06);
-      transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
-                  filter 0.4s ease;
     }
-    .ceny-card:hover .ceny-card__icon {
-      transform: scale(1.08) rotate(-2deg);
-      filter: brightness(1.15) drop-shadow(0 0 8px rgba(21, 175, 209, 0.3));
-    }
+    /* каменная иконка + ховер-слой тоном услуги */
+    .ceny-card__iconwrap { position: relative; width: 144px; height: 144px; display: block; }
+    .ceny-card__iconwrap .ceny-card__icon { position: absolute; inset: 0; }
+    .ceny-card__icon--glow { opacity: 0; transition: opacity 0.35s ease; }
+    .ceny-card:hover .ceny-card__icon--glow { opacity: 1; }
 
     .ceny-card__name {
       font-family: 'Cormorant', Georgia, serif;
@@ -775,9 +774,9 @@
     }
 
     .bonus-card__icon {
-      width: 72px;
-      height: 72px;
-      border-radius: 18px;
+      width: 144px;
+      height: 144px;
+      border-radius: 32px;
       margin: 0 auto 1.25rem;
       display: block;
       object-fit: cover;
@@ -1135,10 +1134,15 @@
     .ceny-card__link { display: inline-flex; align-items: center; min-height: 44px; /* тап-мишень */ padding: 0 0.25rem; margin: -13px -0.25rem; }
   
     /* ховер-слой бонусных иконок */
-    .bonus-card__iconwrap { position: relative; width: 72px; height: 72px; display: inline-block; }
+    .bonus-card__iconwrap { position: relative; width: 144px; height: 144px; display: inline-block; }
     .bonus-card__iconwrap .bonus-card__icon { position: absolute; inset: 0; }
     .bonus-card__icon--glow { opacity: 0; transition: opacity 0.35s ease; }
     .bonus-card:hover .bonus-card__icon--glow { opacity: 1; }
+  
+    /* ─── ХИРО ПО ЦЕНТРУ (стандарт сайта) ─── */
+    .ceny-hero__inner { text-align: center; }
+    .ceny-hero__title--typo, #hero-subtitle, .ceny-hero__subtitle {
+      margin-left: auto !important; margin-right: auto !important; }
   </style>
 </head>
 
@@ -1358,7 +1362,7 @@
           }
           .ctd-l3{
             font-family:'Inter',sans-serif; font-weight:900;
-            font-size:clamp(1.6rem,8.4vw,4.15rem);
+            font-size:clamp(1.6rem,7.8vw,4.15rem);
             text-transform:uppercase; line-height:.96; margin-top:.03em;
             background:linear-gradient(118deg,#2AC6E6 0%,#0B7A94 100%);
             -webkit-background-clip:text; background-clip:text;
@@ -1425,7 +1429,7 @@
 
         <!-- Card 1: Жилая недвижимость -->
         <article class="ceny-card" >
-          <img src="assets/img/icons/svc-house-light.jpg" data-dark="assets/img/icons/svc-house.jpg" alt="" class="ceny-card__icon" loading="lazy" width="48" height="48">
+          <span class="ceny-card__iconwrap"><img src="assets/img/icons/light-nedvizhimost.webp" data-dark="assets/img/icons/obs-nedvizhimost.webp" alt="" class="ceny-card__icon" loading="lazy" width="144" height="144"><img src="assets/img/icons/glow-nedvizhimost.webp" data-dark="assets/img/icons/cry-nedvizhimost.webp" alt="" class="ceny-card__icon ceny-card__icon--glow" loading="lazy" width="144" height="144"></span>
           <h3 class="ceny-card__name">Оценка недвижимости</h3>
           <p class="ceny-card__story">Квартира, дом, доля, земля — для ипотеки, наследства или&nbsp;раздела имущества. Готовим отчёт по&nbsp;стандартам, которые принимают ведущие банки и&nbsp;суды</p>
           <div class="ceny-card__price-block">
@@ -1442,7 +1446,7 @@
 
         <!-- Card 2: Коммерческая недвижимость -->
         <article class="ceny-card" >
-          <img src="assets/img/icons/svc-building-light.jpg" data-dark="assets/img/icons/svc-building.jpg" alt="" class="ceny-card__icon" loading="lazy" width="48" height="48">
+          <span class="ceny-card__iconwrap"><img src="assets/img/icons/light-commercial.webp" data-dark="assets/img/icons/obs-commercial.webp" alt="" class="ceny-card__icon" loading="lazy" width="144" height="144"><img src="assets/img/icons/glow-commercial.webp" data-dark="assets/img/icons/cry-commercial.webp" alt="" class="ceny-card__icon ceny-card__icon--glow" loading="lazy" width="144" height="144"></span>
           <h3 class="ceny-card__name">Коммерческая недвижимость</h3>
           <p class="ceny-card__story">Офисы, склады, торговые центры — для банка, инвестора или сделки купли-продажи</p>
           <div class="ceny-card__price-block">
@@ -1459,7 +1463,7 @@
 
         <!-- Card 3: Для нотариуса -->
         <article class="ceny-card" >
-          <img src="assets/img/icons/svc-notary-light.jpg" data-dark="assets/img/icons/svc-notary.jpg" alt="" class="ceny-card__icon" loading="lazy" width="48" height="48">
+          <span class="ceny-card__iconwrap"><img src="assets/img/icons/light-notarius.webp" data-dark="assets/img/icons/obs-notarius.webp" alt="" class="ceny-card__icon" loading="lazy" width="144" height="144"><img src="assets/img/icons/glow-notarius.webp" data-dark="assets/img/icons/cry-notarius.webp" alt="" class="ceny-card__icon ceny-card__icon--glow" loading="lazy" width="144" height="144"></span>
           <h3 class="ceny-card__name">Оценка для нотариуса</h3>
           <p class="ceny-card__story">Наследство, дарение — дистанционно и с заботой. Оформим отчёт электронно с&nbsp;УКЭП и&nbsp;сами передадим его вашему нотариусу</p>
           <div class="ceny-card__price-block">
@@ -1476,7 +1480,7 @@
 
         <!-- Card 4: Для суда -->
         <article class="ceny-card" >
-          <img src="assets/img/icons/svc-court-light.jpg" data-dark="assets/img/icons/svc-court.jpg" alt="" class="ceny-card__icon" loading="lazy" width="48" height="48">
+          <span class="ceny-card__iconwrap"><img src="assets/img/icons/light-sud.webp" data-dark="assets/img/icons/obs-sud.webp" alt="" class="ceny-card__icon" loading="lazy" width="144" height="144"><img src="assets/img/icons/glow-sud.webp" data-dark="assets/img/icons/cry-sud.webp" alt="" class="ceny-card__icon ceny-card__icon--glow" loading="lazy" width="144" height="144"></span>
           <h3 class="ceny-card__name">Оценка для суда</h3>
           <p class="ceny-card__story">Отчёт по&nbsp;135&#8209;ФЗ и&nbsp;ФСО — для районных и&nbsp;арбитражных судов. Если суд назначит судебную экспертизу, проведём её по&nbsp;73&#8209;ФЗ</p>
           <div class="ceny-card__price-block">
@@ -1493,7 +1497,7 @@
 
         <!-- Card 5: Ущерб -->
         <article class="ceny-card" >
-          <img src="assets/img/icons/svc-damage-light.jpg" data-dark="assets/img/icons/svc-damage.jpg" alt="" class="ceny-card__icon" loading="lazy" width="48" height="48">
+          <span class="ceny-card__iconwrap"><img src="assets/img/icons/light-ushherb.webp" data-dark="assets/img/icons/obs-ushherb.webp" alt="" class="ceny-card__icon" loading="lazy" width="144" height="144"><img src="assets/img/icons/glow-ushherb.webp" data-dark="assets/img/icons/cry-ushherb.webp" alt="" class="ceny-card__icon ceny-card__icon--glow" loading="lazy" width="144" height="144"></span>
           <h3 class="ceny-card__name">Оценка ущерба</h3>
           <p class="ceny-card__story">Залив, пожар, ДТП — аккуратно зафиксируем каждый дефект по&nbsp;официальной методике расчёта и&nbsp;посчитаем точную сумму для&nbsp;страховой</p>
           <div class="ceny-card__price-block">
@@ -1510,7 +1514,7 @@
 
         <!-- Card 6: Бизнес -->
         <article class="ceny-card" >
-          <img src="assets/img/icons/svc-business-light.jpg" data-dark="assets/img/icons/svc-business.jpg" alt="" class="ceny-card__icon" loading="lazy" width="48" height="48">
+          <span class="ceny-card__iconwrap"><img src="assets/img/icons/light-biznes.webp" data-dark="assets/img/icons/obs-biznes.webp" alt="" class="ceny-card__icon" loading="lazy" width="144" height="144"><img src="assets/img/icons/glow-biznes.webp" data-dark="assets/img/icons/cry-biznes.webp" alt="" class="ceny-card__icon ceny-card__icon--glow" loading="lazy" width="144" height="144"></span>
           <h3 class="ceny-card__name">Оценка бизнеса</h3>
           <p class="ceny-card__story">ООО, акции, доли, патенты — покажем реальную ценность вашей компании: конфиденциально, с&nbsp;подписанием соглашения о&nbsp;неразглашении</p>
           <div class="ceny-card__price-block">
@@ -1527,7 +1531,7 @@
 
         <!-- Card 7: Оборудование и транспорт -->
         <article class="ceny-card" >
-          <img src="assets/img/icons/svc-equipment-light.jpg" data-dark="assets/img/icons/svc-equipment.jpg" alt="" class="ceny-card__icon" loading="lazy" width="48" height="48">
+          <span class="ceny-card__iconwrap"><img src="assets/img/icons/light-oborudovanie.webp" data-dark="assets/img/icons/obs-oborudovanie.webp" alt="" class="ceny-card__icon" loading="lazy" width="144" height="144"><img src="assets/img/icons/glow-oborudovanie.webp" data-dark="assets/img/icons/cry-oborudovanie.webp" alt="" class="ceny-card__icon ceny-card__icon--glow" loading="lazy" width="144" height="144"></span>
           <h3 class="ceny-card__name">Оборудование и&nbsp;транспорт</h3>
           <p class="ceny-card__story">Станки, комбайны, катера, грузовики — для залога, модернизации или грамотного списания техники</p>
           <div class="ceny-card__price-block">
@@ -1544,7 +1548,7 @@
 
         <!-- Card 8: Юридические услуги -->
         <article class="ceny-card" >
-          <img src="assets/img/icons/svc-legal-light.jpg" data-dark="assets/img/icons/svc-legal.jpg" alt="" class="ceny-card__icon" loading="lazy" width="48" height="48">
+          <span class="ceny-card__iconwrap"><img src="assets/img/icons/light-yuridicheskie.webp" data-dark="assets/img/icons/obs-yuridicheskie.webp" alt="" class="ceny-card__icon" loading="lazy" width="144" height="144"><img src="assets/img/icons/glow-yuridicheskie.webp" data-dark="assets/img/icons/cry-yuridicheskie.webp" alt="" class="ceny-card__icon ceny-card__icon--glow" loading="lazy" width="144" height="144"></span>
           <h3 class="ceny-card__name">Юридические услуги</h3>
           <p class="ceny-card__story">Сначала пробуем решить дело миром — через переговоры (медиацию). Если потребуется суд — берём на себя полное представительство «под&nbsp;ключ». Отдельные услуги — договор, претензия — от&nbsp;5 000&nbsp;₽</p>
           <div class="ceny-card__price-block">
@@ -1577,21 +1581,21 @@
         <div class="ceny-bonuses__grid" id="bonuses-grid">
           <!-- Bonus 1 -->
           <div class="bonus-card">
-            <span class="bonus-card__iconwrap"><img src="assets/img/icon-consultation-light.jpg" data-dark="assets/img/icon-consultation.jpg" alt="" class="bonus-card__icon" loading="lazy" width="72" height="72"><img src="assets/img/icon-consultation-glow.jpg" data-dark="assets/img/icon-consultation-cry.jpg" alt="" class="bonus-card__icon bonus-card__icon--glow" loading="lazy" width="72" height="72"></span>
+            <span class="bonus-card__iconwrap"><img src="assets/img/icon-consultation-light.jpg" data-dark="assets/img/icon-consultation.jpg" alt="" class="bonus-card__icon" loading="lazy" width="144" height="144"><img src="assets/img/icon-consultation-glow.jpg" data-dark="assets/img/icon-consultation-cry.jpg" alt="" class="bonus-card__icon bonus-card__icon--glow" loading="lazy" width="144" height="144"></span>
             <div class="bonus-card__badge">Бесплатно</div>
             <h3 class="bonus-card__name">Экспертная консультация</h3>
             <p class="bonus-card__desc">Наш оценщик подробно разберёт вашу ситуацию — ещё до&nbsp;подписания договора, бесплатно.</p>
           </div>
           <!-- Bonus 2 -->
           <div class="bonus-card">
-            <span class="bonus-card__iconwrap"><img src="assets/img/icon-documents-light.jpg" data-dark="assets/img/icon-documents.jpg" alt="" class="bonus-card__icon" loading="lazy" width="72" height="72"><img src="assets/img/icon-documents-glow.jpg" data-dark="assets/img/icon-documents-cry.jpg" alt="" class="bonus-card__icon bonus-card__icon--glow" loading="lazy" width="72" height="72"></span>
+            <span class="bonus-card__iconwrap"><img src="assets/img/icon-documents-light.jpg" data-dark="assets/img/icon-documents.jpg" alt="" class="bonus-card__icon" loading="lazy" width="144" height="144"><img src="assets/img/icon-documents-glow.jpg" data-dark="assets/img/icon-documents-cry.jpg" alt="" class="bonus-card__icon bonus-card__icon--glow" loading="lazy" width="144" height="144"></span>
             <div class="bonus-card__badge">Бесплатно</div>
             <h3 class="bonus-card__name">Печатные копии + PDF</h3>
             <p class="bonus-card__desc">Оригинальные прошитые экземпляры и&nbsp;электронная версия с&nbsp;УКЭП — для суда, банка, нотариуса</p>
           </div>
           <!-- Bonus 3 -->
           <div class="bonus-card">
-            <span class="bonus-card__iconwrap"><img src="assets/img/icon-delivery-light.jpg" data-dark="assets/img/icon-delivery.jpg" alt="" class="bonus-card__icon" loading="lazy" width="72" height="72"><img src="assets/img/icon-delivery-glow.jpg" data-dark="assets/img/icon-delivery-cry.jpg" alt="" class="bonus-card__icon bonus-card__icon--glow" loading="lazy" width="72" height="72"></span>
+            <span class="bonus-card__iconwrap"><img src="assets/img/icon-delivery-light.jpg" data-dark="assets/img/icon-delivery.jpg" alt="" class="bonus-card__icon" loading="lazy" width="144" height="144"><img src="assets/img/icon-delivery-glow.jpg" data-dark="assets/img/icon-delivery-cry.jpg" alt="" class="bonus-card__icon bonus-card__icon--glow" loading="lazy" width="144" height="144"></span>
             <div class="bonus-card__badge">Бесплатно</div>
             <h3 class="bonus-card__name">Доставка документов</h3>
             <p class="bonus-card__desc">Привезём отчёт по&nbsp;Барнаулу — бесплатно. В&nbsp;другие города отправим почтой или СДЭК, удобный способ обсудим заранее.</p>
@@ -2039,7 +2043,15 @@
      CENY.HTML — Animation Engine
      GSAP + ScrollTrigger + Lenis
      ═══════════════════════════════════════ */
-  (function() {
+  document.addEventListener('DOMContentLoaded', () => {
+    /* CDN-скрипты подключены с defer — код ждёт их через DOMContentLoaded.
+       Если библиотек нет (CDN недоступен), проявляем скрытое и выходим. */
+    if (typeof gsap === 'undefined' || typeof Lenis === 'undefined') {
+      document.querySelectorAll('.ceny-card, .bonus-card, .trust-card, #ceny-cta, #philosophy-quote, #hero-eyebrow, #hero-title, #hero-subtitle, #gift-icon').forEach(el => {
+        el.style.opacity = '1'; el.style.transform = 'none';
+      });
+      return;
+    }
     'use strict';
 
     // ─── Lenis Smooth Scroll ───
@@ -2244,7 +2256,7 @@
       });
     }
 
-  })();
+  });
   </script>
 
   <script src="js/cookie-banner.js?v=20260825u" defer></script>
