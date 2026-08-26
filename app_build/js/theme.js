@@ -53,6 +53,15 @@
 
   function init() {
     apply(current());
+    // Разметка помощника/мастера вставляется скриптами позже DOMContentLoaded —
+    // досвапливаем картинки новых узлов под уже действующую тему.
+    if (window.MutationObserver && document.body) {
+      new MutationObserver(function (muts) {
+        for (var i = 0; i < muts.length; i++) {
+          if (muts[i].addedNodes.length) { swapScenes(current()); break; }
+        }
+      }).observe(document.body, { childList: true, subtree: true });
+    }
     var btn = document.getElementById('theme-toggle');
     if (!btn) return;
     btn.addEventListener('click', function () {
